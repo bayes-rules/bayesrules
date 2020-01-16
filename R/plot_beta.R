@@ -5,12 +5,14 @@
 #'
 #' @param alpha,beta non-negative parameters of the Beta distribution 
 #'
-#' @return A ggplot with x axis set between 0 and 1
+#' @return A \code{\link{ggplot2::ggplot}} with x axis set between 0 and 1
 #' @export
+#' @import ggplot2
 #'
 #' @examples
+#' \dontrun{
 #' plot_beta(1,12)
-
+#' }
 plot_beta <- function(alpha, beta){
   ggplot(data = data.frame(x = c(0, 1)),
          aes(x)) +

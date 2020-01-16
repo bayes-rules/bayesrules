@@ -1,4 +1,4 @@
-#' Plot Bayesian Beta Binomial Models
+#' Plot Beta-Binomial Models
 #'
 #' @param alpha,beta shape parameters of the prior Beta distribution.
 #' @param x number of successes
@@ -7,13 +7,17 @@
 #' @param likelihood a logical value indicating whether the scaled likelihood should be plotted.
 #' @param posterior a logical value indicating whether posterior distribution should be plotted.
 #'
-#' @return
+#' @return a ggplot
 #' @export
-#'
+#' @import ggplot2
 #' @examples
 #' 
+#' \dontrun{
 #' plot_beta_binomial(alpha = 1, beta = 13, x = 25, n = 50)
+#' }
+#' \dontrun{
 #' plot_beta_binomial(alpha = 1, beta = 13, x = 25, n = 50, posterior = FALSE)
+#' }
 
 plot_beta_binomial <- function (alpha,
                                 beta,
