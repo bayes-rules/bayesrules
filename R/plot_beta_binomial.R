@@ -1,17 +1,20 @@
 #' Plot Bayesian Beta Binomial Models
 #'
-#' @param alpha
-#' @param beta
-#' @param x
-#' @param n
-#' @param prior
-#' @param likelihood
-#' @param posterior
+#' @param alpha,beta shape parameters of the prior Beta distribution.
+#' @param x number of successes
+#' @param n number of trials
+#' @param prior a logical value indicating whether the prior distribution should be plotted.
+#' @param likelihood a logical value indicating whether the scaled likelihood should be plotted.
+#' @param posterior a logical value indicating whether posterior distribution should be plotted.
 #'
 #' @return
 #' @export
 #'
 #' @examples
+#' 
+#' plot_beta_binomial(alpha = 1, beta = 13, x = 25, n = 50)
+#' plot_beta_binomial(alpha = 1, beta = 13, x = 25, n = 50, posterior = FALSE)
+
 plot_beta_binomial <- function (alpha,
                                 beta,
                                 x = NULL,
