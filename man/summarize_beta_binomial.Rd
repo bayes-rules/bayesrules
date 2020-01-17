@@ -17,10 +17,11 @@ summarize_beta_binomial(alpha, beta, x = NULL, n = NULL)
 a summary table
 }
 \description{
-Summarizes the expected value, variance, and
+Summarizes the mean, and mode of the prior and posterior Beta distributions
 }
 \examples{
+
 \dontrun{
-summarize_beta_binomial(1, 15, x = 25, n = 50)
+#' summarize_beta_binomial(1, 15, x = 25, n = 50)
 }
 }

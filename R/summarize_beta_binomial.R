@@ -1,7 +1,7 @@
 #' @title Summarize Beta Binomial
 #' 
-#' @description Summarizes the expected value, variance, and mode of the prior and posterior Beta distributions 
-#'
+#' @description Summarizes the mean, and mode of the prior and posterior Beta distributions 
+#' 
 #' @param alpha,beta shape parameters of the prior Beta distribution.
 #' @param x number of successes
 #' @param n number of trials
@@ -9,11 +9,11 @@
 #' @return a summary table
 #' @export
 #'
-#' @examples
+#' @examples 
+#' 
 #' \dontrun{
-#' summarize_beta_binomial(1, 15, x = 25, n = 50)
+#' #' summarize_beta_binomial(1, 15, x = 25, n = 50)
 #' }
-
 summarize_beta_binomial <- function (alpha, 
                                      beta, 
                                      x = NULL, 
