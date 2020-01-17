@@ -3,5 +3,6 @@
 export(plot_beta)
 export(plot_beta_binomial)
 export(plot_poisson_gamma)
+export(summarize_beta)
 export(summarize_beta_binomial)
 import(ggplot2)
