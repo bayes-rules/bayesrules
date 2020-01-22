@@ -15,9 +15,6 @@ plot_binomial_likelihood(x, n, pi = seq(0, 1, by = 0.01), mle = FALSE)
 
 \item{mle}{a logical value indicating whether maximum likelihood estimation should be plotted}
 }
-\value{
-
-}
 \description{
 Plot Binomial Likelihood
 }

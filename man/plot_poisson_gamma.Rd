@@ -4,15 +4,8 @@
 \alias{plot_poisson_gamma}
 \title{Title}
 \usage{
-plot_poisson_gamma(
-  s,
-  r,
-  sum_x = NULL,
-  n = NULL,
-  prior = TRUE,
-  likelihood = TRUE,
-  posterior = TRUE
-)
+plot_poisson_gamma(s, r, sum_x = NULL, n = NULL, prior = TRUE,
+  likelihood = TRUE, posterior = TRUE)
 }
 \arguments{
 \item{s}{}
@@ -28,9 +21,6 @@ plot_poisson_gamma(
 \item{likelihood}{}
 
 \item{posterior}{}
-}
-\value{
-
 }
 \description{
 Title
