@@ -19,5 +19,5 @@ to install the devtools package if you do not have it installed already.
 
 ``` r
 #install.packages("devtools") 
-install.packages("mdogucu/bayesrules")
+devtools::install_github("mdogucu/bayesrules")
 ```
