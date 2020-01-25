@@ -3,9 +3,9 @@
 #'
 #' @description Plots the Probability Density Function for Beta Prior/Posterior
 #'
-#' @param alpha,beta non-negative parameters of the Beta distribution 
+#' @param alpha,beta non-negative parameters of the Beta distribution
 #'
-#' @return A \code{\link{ggplot2::ggplot}} with x axis set between 0 and 1
+#' @return A density plot for the Beta distribution.
 #' @export
 #' @import ggplot2
 #'
@@ -20,7 +20,7 @@ plot_beta <- function(alpha, beta){
                   n = 101,
                   args = list(shape1 = alpha,
                               shape2=beta)) +
-    labs(x = expression(pi), 
+    labs(x = expression(pi),
          y = expression(paste("f(",pi,")")))
 }
 

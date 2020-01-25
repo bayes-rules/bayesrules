@@ -10,7 +10,7 @@ plot_beta(alpha, beta)
 \item{alpha, beta}{non-negative parameters of the Beta distribution}
 }
 \value{
-A \code{\link{ggplot2::ggplot}} with x axis set between 0 and 1
+A density plot for the Beta distribution.
 }
 \description{
 Plots the Probability Density Function for Beta Prior/Posterior
