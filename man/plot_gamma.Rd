@@ -4,12 +4,12 @@
 \alias{plot_gamma}
 \title{Plot Gamma Prior/Posterior}
 \usage{
-plot_gamma(alpha, beta, lambda = c(0, 3))
+plot_gamma(shape, rate, lambda = c(0, 3))
 }
 \arguments{
-\item{alpha}{A non-negative shape parameter of the Gamma distribution.}
+\item{shape}{A non-negative shape parameter of the Gamma distribution.}
 
-\item{beta}{A non-negative rate parameter of the Gamma distribution.}
+\item{rate}{A non-negative rate parameter of the Gamma distribution.}
 
 \item{lambda}{A range of non-negative values for the Gamma distribution.}
 }
