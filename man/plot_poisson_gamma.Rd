@@ -4,23 +4,26 @@
 \alias{plot_poisson_gamma}
 \title{Title}
 \usage{
-plot_poisson_gamma(s, r, sum_x = NULL, n = NULL, prior = TRUE,
+plot_poisson_gamma(shape, rate, sum_x = NULL, n = NULL, prior = TRUE,
   likelihood = TRUE, posterior = TRUE)
 }
 \arguments{
-\item{s}{}
+\item{shape}{A non-negative shape parameter of the Gamma distribution.}
 
-\item{r}{}
+\item{rate}{A non-negative rate parameter of the Gamma distribution.}
 
-\item{sum_x}{}
+\item{sum_x}{sum of observed values for the Poisson likelihood.}
 
-\item{n}{}
+\item{n}{number of observations for the Poisson likelihood.}
 
-\item{prior}{}
+\item{prior}{a logical value indicating whether the prior distribution should be plotted.}
 
-\item{likelihood}{}
+\item{likelihood}{a logical value indicating whether the scaled likelihood should be plotted.}
 
-\item{posterior}{}
+\item{posterior}{a logical value indicating whether posterior distribution should be plotted.}
+}
+\value{
+a ggplot2
 }
 \description{
 Title

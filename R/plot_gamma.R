@@ -7,6 +7,8 @@
 #' @return A density plot for the Gamma distribution.
 #' @export
 #'
+#' @import ggplot2
+#'
 #' @examples
 #' \dontrun{
 #' plot_gamma(2,11)
