@@ -10,4 +10,5 @@
 #'   \item{title}{The title of the movie}
 #'   \item{binary}{Bechdel test result (PASS, FAIL)}
 #' }
+#' @source <https://github.com/fivethirtyeight/data/tree/master/bechdel>
 "bechdel"
