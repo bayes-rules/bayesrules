@@ -15,6 +15,9 @@ summarize_poisson_gamma(shape, rate, sum_x = NULL, n = NULL)
 
 \item{n}{number of observations for the Poisson likelihood.}
 }
+\value{
+
+}
 \description{
 Summarize the Poisson-Gamma Model
 }

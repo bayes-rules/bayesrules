@@ -4,8 +4,15 @@
 \alias{plot_poisson_gamma}
 \title{Title}
 \usage{
-plot_poisson_gamma(shape, rate, sum_x = NULL, n = NULL, prior = TRUE,
-  likelihood = TRUE, posterior = TRUE)
+plot_poisson_gamma(
+  shape,
+  rate,
+  sum_x = NULL,
+  n = NULL,
+  prior = TRUE,
+  likelihood = TRUE,
+  posterior = TRUE
+)
 }
 \arguments{
 \item{shape}{A non-negative shape parameter of the Gamma distribution.}

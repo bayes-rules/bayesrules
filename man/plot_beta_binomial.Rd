@@ -4,8 +4,15 @@
 \alias{plot_beta_binomial}
 \title{Plot Beta-Binomial Models}
 \usage{
-plot_beta_binomial(alpha, beta, x = NULL, n = NULL, prior = TRUE,
-  likelihood = TRUE, posterior = TRUE)
+plot_beta_binomial(
+  alpha,
+  beta,
+  x = NULL,
+  n = NULL,
+  prior = TRUE,
+  likelihood = TRUE,
+  posterior = TRUE
+)
 }
 \arguments{
 \item{alpha, beta}{shape parameters of the prior Beta distribution.}
