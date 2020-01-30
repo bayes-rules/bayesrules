@@ -1,4 +1,4 @@
-#' Summarize the Poisson-Gamma Model
+#' Summarize the Gamma-Poisson Model
 #'
 #' @param shape A non-negative shape parameter of the Gamma distribution.
 #' @param rate A non-negative rate parameter of the Gamma distribution.
@@ -10,9 +10,9 @@
 #'
 #' @examples
 #' #' \dontrun{
-#' summaruze_poisson_gamma(3, 4, 7, 12)
+#' summarize_gamma_poisson(3, 4, 7, 12)
 #' }
-summarize_poisson_gamma <- function (shape,
+summarize_gamma_poisson <- function (shape,
                                      rate,
                                      sum_x = NULL,
                                      n = NULL){

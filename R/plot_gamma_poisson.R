@@ -14,7 +14,7 @@
 #' @import ggplot2
 #'
 #' @examples
-plot_poisson_gamma <- function (shape, rate,
+plot_gamma_poisson <- function (shape, rate,
                                 sum_x = NULL,
                                 n = NULL,
                                 prior = TRUE,
