@@ -58,7 +58,7 @@ summarize_gamma_poisson <- function (shape,
     return(data.frame(model = c("prior",
                                 "posterior"),
                       shape = c(shape, post_s),
-                      rare = c(rate, post_r),
+                      rate = c(rate, post_r),
                       mean = c(prior_mean, post_mean),
                       mode = c(prior_mode, post_mode),
                       var = c(prior_var, post_var)))
