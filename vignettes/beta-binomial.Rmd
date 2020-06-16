@@ -1,0 +1,40 @@
+---
+title: "The Beta-Binomial Model"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{bayesian-models}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+```{r setup}
+library(bayesrules)
+```
+
+The **bayesrules** package has four functions to support learning about the beta-binomial model. The two of the functions, `plot_beta()` and `summarize_beta()` are intended to be used for understanding the prior (or the posterior) Beta distribution.
+
+```{r fig.align='center'}
+plot_beta(alpha = 3, beta = 13, mean = TRUE, mode = TRUE)
+```
+
+```{r}
+summarize_beta(alpha = 3, beta = 13)
+```
+
+The two other functions `plot_beta_binomial()` and `summarize_beta_binomial()` require both the prior parameters and the data for the likelihood. 
+
+```{r fig.align='center', warning = FALSE, fig.height=6, fig.width=5}
+plot_beta_binomial(alpha = 3, beta = 13, x = 5, n = 10, 
+                   prior = TRUE, #the default 
+                   likelihood = TRUE,  #the default
+                   posterior = TRUE #the default
+                   )
+```
+
