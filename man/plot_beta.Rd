@@ -4,10 +4,12 @@
 \alias{plot_beta}
 \title{Plot Beta Prior/Posterior}
 \usage{
-plot_beta(alpha, beta)
+plot_beta(alpha, beta, mean = FALSE, mode = FALSE)
 }
 \arguments{
 \item{alpha, beta}{non-negative parameters of the Beta distribution}
+
+\item{mean, mode}{provides choices whether to display the mean and the mode of the distribution}
 }
 \value{
 A density plot for the Beta distribution.
