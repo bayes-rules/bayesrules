@@ -14,22 +14,31 @@
 #' @import ggplot2
 #'
 #' @examples
+#' \dontrun{
+#' plot_gamma_poisson(100,20, sum_x = 39, n =6)
+#' }
 plot_gamma_poisson <- function (shape, rate,
                                 sum_x = NULL,
                                 n = NULL,
                                 prior = TRUE,
                                 likelihood = TRUE,
                                 posterior = TRUE){
+  
   if (is.null(sum_x) | is.null(n))
     warning("To visualize the posterior,
             specify information about the data: sum_x and n")
+  
+ 
+  
   x_min <- min(qgamma(1e-05, shape, rate),
                qgamma(1e-05,
                       shape + sum_x,
-                      rate + n))
+                      rate + n),
+               qgamma(1e-05, sum_x+1, n))
   x_max <- max(qgamma(0.99999, shape, rate),
                qgamma(0.99999, shape + sum_x,
-                      rate + n))
+                      rate + n),
+               qgamma(0.99999, sum_x+1, n))
   g <- ggplot(NULL, aes(x = c(x_min, x_max))) +
     labs(x = expression(lambda),
          y = "density") +

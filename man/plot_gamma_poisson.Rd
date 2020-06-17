@@ -35,3 +35,8 @@ a ggplot2
 \description{
 Title
 }
+\examples{
+\dontrun{
+plot_gamma_poisson(100,20, sum_x = 39, n =6)
+}
+}
