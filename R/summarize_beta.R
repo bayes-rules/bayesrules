@@ -10,12 +10,10 @@
 #'
 #' @examples
 #' \dontrun{
-#' summarize_beta_binomial(1, 15)
+#' summarize_beta(1, 15)
 #' }
 
-summarize_beta <- function (alpha, 
-                                     beta)
-{
+summarize_beta <- function (alpha, beta){
 
   mean <- alpha / (alpha + beta)
   mode <- (alpha - 1)/(alpha + beta - 2)

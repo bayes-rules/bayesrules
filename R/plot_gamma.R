@@ -11,10 +11,16 @@
 #'
 #' @examples
 #' \dontrun{
-#' plot_gamma(2,11)
+#' plot_gamma(shape = 2, rate = 11)
 #' }
-plot_gamma <- function(shape, rate, lambda = c(0, 3)){
-  ggplot(data = data.frame(x = lambda),
+#' 
+plot_gamma <- function(shape, rate, 
+                       lambda = c(0, 3),
+                       mean = FALSE,
+                       mode = FALSE){
+  
+  
+  p <- ggplot(data = data.frame(x = lambda),
          aes(x)) +
     stat_function(fun = dgamma,
                   n = 101,

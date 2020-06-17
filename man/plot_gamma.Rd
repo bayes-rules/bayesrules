@@ -4,7 +4,7 @@
 \alias{plot_gamma}
 \title{Plot Gamma Prior/Posterior}
 \usage{
-plot_gamma(shape, rate, lambda = c(0, 3))
+plot_gamma(shape, rate, lambda = c(0, 3), mean = FALSE, mode = FALSE)
 }
 \arguments{
 \item{shape}{A non-negative shape parameter of the Gamma distribution.}
@@ -21,6 +21,7 @@ Plot Gamma Prior/Posterior
 }
 \examples{
 \dontrun{
-plot_gamma(2,11)
+plot_gamma(shape = 2, rate = 11)
 }
+
 }

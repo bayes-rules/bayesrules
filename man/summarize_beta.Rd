@@ -17,6 +17,6 @@ Summarizes the expected value, variance, and mode of the Beta distribution
 }
 \examples{
 \dontrun{
-summarize_beta_binomial(1, 15)
+summarize_beta(1, 15)
 }
 }

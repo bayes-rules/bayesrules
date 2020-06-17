@@ -4,7 +4,8 @@
 \name{fake_news}
 \alias{fake_news}
 \title{A collection of 150 news articles}
-\format{A data frame with 150 rows and 6 variables:
+\format{
+A data frame with 150 rows and 6 variables:
 \describe{
   \item{title}{The title of the news article}
   \item{text}{Text of the article}
@@ -12,7 +13,8 @@
   \item{authors}{Authors of the article}
   \item{type}{Binary variable indicating whether the article presents fake or real news(fake, real)}
   \item{title_exclamation}{Binary variable indicating whether the title of the article includes an exlamation point or not(TRUE, FALSE)}
-}}
+}
+}
 \source{
 Shu, K., Mahudeswaran, D., Wang, S., Lee, D. and Liu, H. (2018) FakeNewsNet: A Data Repository with News Content, Social Context and Dynamic Information for Studying Fake News on Social Media
 }
