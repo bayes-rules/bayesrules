@@ -2,8 +2,8 @@
 #' 
 #' @description Summarizes the expected value, variance, and mode of the Gamma distribution 
 #'
-#' @param shape,rate shape and rate parameters of the  Gamma distribution.
-
+#' @param shape A non-negative shape parameter of the Gamma distribution.
+#' @param rate A non-negative rate parameter of the Gamma distribution.
 #'
 #' @return a summary table
 #' @export

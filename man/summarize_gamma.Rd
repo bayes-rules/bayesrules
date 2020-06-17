@@ -7,7 +7,9 @@
 summarize_gamma(shape, rate)
 }
 \arguments{
-\item{shape, rate}{shape and rate parameters of the  Gamma distribution.}
+\item{shape}{A non-negative shape parameter of the Gamma distribution.}
+
+\item{rate}{A non-negative rate parameter of the Gamma distribution.}
 }
 \value{
 a summary table

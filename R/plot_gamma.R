@@ -3,6 +3,7 @@
 #' @param shape A non-negative shape parameter of the Gamma distribution.
 #' @param rate A non-negative rate parameter of the Gamma distribution.
 #' @param lambda A range of non-negative values for the Gamma distribution.
+#' @param mean,mode provides choices whether to display the mean and the mode of the distribution  
 #'
 #' @return A density plot for the Gamma distribution.
 #' @export
@@ -28,4 +29,67 @@ plot_gamma <- function(shape, rate,
                               rate = rate)) +
     labs(x = expression(lambda),
          y = expression(paste("f(",lambda,")")))
+  
+  if (mean == TRUE & mode == FALSE){
+    mean <- shape/rate
+    
+    p <- p +
+      geom_segment(aes(x = mean, y = 0, 
+                       xend = mean, 
+                       yend = dgamma(mean, shape, rate),
+                       linetype = "mean")) +
+      scale_linetype_manual(values = c(mean = "solid")) +
+      theme(legend.title = element_blank())
+  }
+  
+  if (mean == FALSE & mode == TRUE){
+    
+    if (shape >= 1){
+      mode <- (shape - 1)/rate
+      
+      p <- p +
+        geom_segment(aes(x = mode, y = 0, 
+                         xend = mode, 
+                         yend = dgamma(mode, shape, rate), 
+                         linetype = "mode"))+
+        scale_linetype_manual(values = c(mode = "dashed")) +
+        theme(legend.title = element_blank())
+      
+    } else {
+      stop("In order to plot the mode the shape parameter must be greater than
+           or equal to 1.")
+      
+    } # end of shape>=1 ifelse
+    
+  
+  }
+  
+  if (mean == TRUE & mode == TRUE){
+    
+    mean <- shape/rate
+    
+    
+    if (shape >= 1){
+      mode <- (shape - 1)/rate
+      
+      p <- p +
+        geom_segment(aes(x = mean, y = 0, 
+                         xend = mean, 
+                         yend = dgamma(mean, shape, rate),
+                         linetype = "mean")) +
+        geom_segment(aes(x = mode, y = 0, 
+                         xend = mode, 
+                         yend = dgamma(mode, shape, rate), 
+                         linetype = "mode"))+
+        scale_linetype_manual(values = c(mean = "solid", mode = "dashed")) +
+        theme(legend.title = element_blank())
+      
+    } else {
+      stop("In order to plot the mode the shape parameter must be greater than
+           or equal to 1.")
+      
+    } # end of shape>=1 ifelse
+    
+  }
+  p 
 }
