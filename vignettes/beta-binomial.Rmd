@@ -2,7 +2,7 @@
 title: "The Beta-Binomial Model"
 output: rmarkdown::html_vignette
 vignette: >
-  %\VignetteIndexEntry{bayesian-models}
+  %\VignetteIndexEntry{beta-binomial}
   %\VignetteEngine{knitr::rmarkdown}
   %\VignetteEncoding{UTF-8}
 ---
@@ -18,7 +18,9 @@ knitr::opts_chunk$set(
 library(bayesrules)
 ```
 
-The **bayesrules** package has four functions to support learning about the beta-binomial model. The two of the functions, `plot_beta()` and `summarize_beta()` are intended to be used for understanding the prior (or the posterior) Beta distribution.
+The **bayesrules** package has five functions to support learning about the beta-binomial model. The two of the functions, `plot_beta()` and `summarize_beta()` are intended to be used for understanding the prior (or the posterior) Beta distribution.
+
+## Prior
 
 ```{r fig.align='center'}
 plot_beta(alpha = 3, beta = 13, mean = TRUE, mode = TRUE)
@@ -28,9 +30,28 @@ plot_beta(alpha = 3, beta = 13, mean = TRUE, mode = TRUE)
 summarize_beta(alpha = 3, beta = 13)
 ```
 
+
+## Likelihood
+
+In addition `plot_binomial_likelihood()` helps users visualize the likelihood function and shows the maximum likelihood estimation.
+
+```{r fig.align='center', fig.height=4, fig.width=5, message = FALSE}
+plot_binomial_likelihood(x = 3, n = 15, mle = TRUE)
+```
+
+
+This function is solely built for educational purposes and the default setting for values $\pi$ is `seq(0, 1, by = 0.01)`. However users can specify the support with the `pi` argument. One can make pi purely discrete by setting pi to specific values such as `pi = c(0, 0.25, 0.4, 0.92)` or trick to function to make the support of pi more like continuous.
+
+```{r fig.align='center', fig.height=4, fig.width=5, message = FALSE}
+plot_binomial_likelihood(x = 3, n = 15, mle = TRUE, seq(0, 1, by = 0.002))
+```
+
+
+## Prior-Likelihood-Posterior
+
 The two other functions `plot_beta_binomial()` and `summarize_beta_binomial()` require both the prior parameters and the data for the likelihood. 
 
-```{r fig.align='center', warning = FALSE, fig.height=6, fig.width=5}
+```{r fig.align='center', warning = FALSE, fig.height=4, fig.width=5}
 plot_beta_binomial(alpha = 3, beta = 13, x = 5, n = 10, 
                    prior = TRUE, #the default 
                    likelihood = TRUE,  #the default
