@@ -22,7 +22,7 @@ The **bayesrules** package has five functions to support learning about the beta
 
 ## Prior
 
-```{r fig.align='center'}
+```{r fig.align='center', fig.height=4, fig.width=5}
 plot_beta(alpha = 3, beta = 13, mean = TRUE, mode = TRUE)
 ```
 
