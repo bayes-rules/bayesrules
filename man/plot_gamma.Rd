@@ -4,16 +4,16 @@
 \alias{plot_gamma}
 \title{Plot Gamma Prior/Posterior}
 \usage{
-plot_gamma(shape, rate, lambda = c(0, 3), mean = FALSE, mode = FALSE)
+plot_gamma(shape, rate, mean = FALSE, mode = FALSE)
 }
 \arguments{
 \item{shape}{A non-negative shape parameter of the Gamma distribution.}
 
 \item{rate}{A non-negative rate parameter of the Gamma distribution.}
 
-\item{lambda}{A range of non-negative values for the Gamma distribution.}
+\item{mean, mode}{take logical values indicating whether mean and the mode of the distribution should be displayed.}
 
-\item{mean, mode}{provides choices whether to display the mean and the mode of the distribution}
+\item{lambda}{A range of non-negative values for the Gamma distribution.}
 }
 \value{
 A density plot for the Gamma distribution.

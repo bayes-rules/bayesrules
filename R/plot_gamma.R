@@ -3,7 +3,7 @@
 #' @param shape A non-negative shape parameter of the Gamma distribution.
 #' @param rate A non-negative rate parameter of the Gamma distribution.
 #' @param lambda A range of non-negative values for the Gamma distribution.
-#' @param mean,mode provides choices whether to display the mean and the mode of the distribution  
+#' @param mean,mode take logical values indicating whether mean and the mode of the distribution should be displayed. 
 #'
 #' @return A density plot for the Gamma distribution.
 #' @export
@@ -16,19 +16,22 @@
 #' }
 #' 
 plot_gamma <- function(shape, rate, 
-                       lambda = c(0, 3),
                        mean = FALSE,
                        mode = FALSE){
   
+  x_min <- qgamma(1e-25, shape, rate)
+                
+  x_max <- qgamma(0.99999, shape, rate)
+               
   
-  p <- ggplot(data = data.frame(x = lambda),
+  p <- ggplot(data = data.frame(x = c(x_min, x_max)),
          aes(x)) +
     stat_function(fun = dgamma,
                   n = 101,
                   args = list(shape = shape,
                               rate = rate)) +
     labs(x = expression(lambda),
-         y = expression(paste("f(",lambda,")")))
+         y = expression(paste("f(",lambda,")"))) 
   
   if (mean == TRUE & mode == FALSE){
     mean <- shape/rate
@@ -53,7 +56,8 @@ plot_gamma <- function(shape, rate,
                          yend = dgamma(mode, shape, rate), 
                          linetype = "mode"))+
         scale_linetype_manual(values = c(mode = "dashed")) +
-        theme(legend.title = element_blank())
+        theme(legend.title = element_blank()) +
+        xlim(x_min, x_max)
       
     } else {
       stop("In order to plot the mode the shape parameter must be greater than
