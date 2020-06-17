@@ -4,20 +4,25 @@
 \alias{plot_binomial_likelihood}
 \title{Plot Binomial Likelihood}
 \usage{
-plot_binomial_likelihood(x, n, pi = seq(0, 1, by = 0.01), mle = FALSE)
+plot_binomial_likelihood(x, n, mle = FALSE)
 }
 \arguments{
 \item{x}{number of successes}
 
 \item{n}{number of trials}
 
-\item{pi}{sample space of pi}
-
 \item{mle}{a logical value indicating whether maximum likelihood estimation should be plotted}
+
+\item{pi}{support of pi}
 }
 \value{
 
 }
 \description{
 Plot Binomial Likelihood
+}
+\examples{
+\dontrun{
+plot_binomial_likelihood(x = 3, n = 10, mle = TRUE)
+}
 }

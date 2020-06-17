@@ -9,47 +9,35 @@
 #' 
 #' @import magrittr
 #' @importFrom dplyr filter
-#'
 #' @examples
+#' \dontrun{
+#' plot_binomial_likelihood(x = 3, n = 10, mle = TRUE)
+#' }
+
 plot_binomial_likelihood <-function(x, 
                                     n, 
-                                    mle = FALSE,
-                                    pi = seq(0, 1, by = 0.05)){
+                                    mle = FALSE){
   
-  message("Note that this function shows discrete values of pi.
-          You can trick it into making it look more like continuous by defining a better argument for pi")
-
-
-  lhood <- dbinom(x = x, size = n, prob = pi)
-  
-  data <-data.frame(likelihood = lhood, pi = pi)
-  
-  max_data <- data %>% 
-    dplyr::filter(likelihood == max(likelihood))
-  
-  g <- data %>% 
-    ggplot(aes(x = pi, y = lhood)) +
-    
-    geom_point() +
-    
-    geom_segment(data = data, 
-                 x = pi, 
-                 xend = pi, 
-                 y = 0, 
-                 yend = lhood) +
-    
+  g <- ggplot(data = data.frame(x = c(0, 1)), aes(x)) +
+    stat_function(fun = dbinom, args = list(x = x, size = n)) +
     labs(x = expression(pi),
          y = expression(paste("L(",pi,"|(X=", x, "))")))
   
   
   
   if (mle == TRUE){
+    
+    max <- x/n
+    
+    success <- x # the line segment does not work since x is an argument in ggplot
+    
     g <- g +
-      geom_segment(aes(x = max_data$pi, 
-                       xend = max_data$pi, 
+      
+      geom_segment(aes(x = max, 
+                       xend = max, 
                        y = 0, 
-                       yend = max_data$likelihood, 
-                       color ="red")) +
+                       yend = dbinom(success, n, max)),
+                   color = "cyan4") +
       theme(legend.position = "none") 
     
     
@@ -57,5 +45,5 @@ plot_binomial_likelihood <-function(x,
   
   g
   
-} # end of function
+}# end of function
 
