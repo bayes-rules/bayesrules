@@ -30,7 +30,7 @@ plot_beta_binomial <- function (alpha,
     warning("To visualize the posterior,
             specify data x and n")
 
-  g <- ggplot(NULL, aes(x = c(0, 1))) +
+  g <- ggplot(data = data.frame(x = c(0, 1)), aes(x)) +
     labs(x = expression(pi),
          y = "density") +
     scale_fill_manual("",

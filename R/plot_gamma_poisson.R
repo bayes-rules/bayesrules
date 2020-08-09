@@ -39,7 +39,7 @@ plot_gamma_poisson <- function (shape, rate,
                qgamma(0.99999, shape + sum_x,
                       rate + n),
                qgamma(0.99999, sum_x+1, n))
-  g <- ggplot(NULL, aes(x = c(x_min, x_max))) +
+  g <- ggplot(data = data.frame(x = c(x_min, x_max)), aes(x)) +
     labs(x = expression(lambda),
          y = "density") +
     scale_fill_manual("",
