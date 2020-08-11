@@ -95,7 +95,8 @@ plot_gamma <- function(shape, rate,
     } # end of shape>=1 ifelse
     
   }
-  p 
-  message("Note that the support of lambda is from 0 to positive infinity 
-          but for visualization purposes the x-axis shows a subset of the support.")
+  
+  p
+  
+
 }
