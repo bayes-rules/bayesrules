@@ -2,6 +2,7 @@
 
 export(plot_beta)
 export(plot_beta_binomial)
+export(plot_beta_ci)
 export(plot_binomial_likelihood)
 export(plot_gamma)
 export(plot_gamma_poisson)
