@@ -1,17 +1,15 @@
-#' @title Summarize Beta Trends
+#' @title Summarize Beta Trends for \eqn{\pi} 
 #' 
-#' @description Summarizes the expected value, variance, and mode of the Beta distribution 
+#' @description Summarizes the expected value, variance, and mode of \eqn{\pi} following a Beta distribution 
 #'
-#' @param alpha,beta shape parameters of the  Beta distribution.
-
+#' @param alpha,beta non-negative parameters of the Beta distribution
 #'
 #' @return a summary table
 #' @export
 #'
 #' @examples
-#' \dontrun{
-#' summarize_beta(1, 15)
-#' }
+#' summarize_beta(alpha = 1, beta = 15)
+
 
 summarize_beta <- function (alpha, beta){
 

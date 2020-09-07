@@ -7,7 +7,7 @@
 summarize_beta_binomial(alpha, beta, x = NULL, n = NULL)
 }
 \arguments{
-\item{alpha, beta}{shape parameters of the prior Beta distribution.}
+\item{alpha, beta}{non-negative parameters of the prior Beta distribution.}
 
 \item{x}{number of successes}
 
@@ -17,11 +17,9 @@ summarize_beta_binomial(alpha, beta, x = NULL, n = NULL)
 a summary table
 }
 \description{
-Summarizes the mean, and mode of the prior and posterior Beta distributions
+Summarizes the mean, and mode of the prior and posterior Beta distributions of \eqn{\pi} which represents the probability of success in a Binomial likelihood.
 }
 \examples{
 
-\dontrun{
-#' summarize_beta_binomial(1, 15, x = 25, n = 50)
-}
+summarize_beta_binomial(1, 15, x = 25, n = 50)
 }

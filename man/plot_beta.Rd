@@ -2,7 +2,7 @@
 % Please edit documentation in R/plot_beta.R
 \name{plot_beta}
 \alias{plot_beta}
-\title{Plot Beta Prior/Posterior}
+\title{Plot Beta Prior/Posterior for \eqn{\pi}}
 \usage{
 plot_beta(alpha, beta, mean = FALSE, mode = FALSE)
 }
@@ -15,10 +15,8 @@ plot_beta(alpha, beta, mean = FALSE, mode = FALSE)
 A density plot for the Beta distribution.
 }
 \description{
-Plots the Probability Density Function for Beta Prior/Posterior
+Plots the Probability Density Function for Beta Prior/Posterior \eqn{\pi} which represents the probability of success in a Binomial likelihood.
 }
 \examples{
-\dontrun{
-plot_beta(1,12)
-}
+plot_beta(alpha = 1, beta = 12)
 }

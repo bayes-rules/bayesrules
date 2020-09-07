@@ -2,21 +2,19 @@
 % Please edit documentation in R/summarize_beta.R
 \name{summarize_beta}
 \alias{summarize_beta}
-\title{Summarize Beta Trends}
+\title{Summarize Beta Trends for \eqn{\pi}}
 \usage{
 summarize_beta(alpha, beta)
 }
 \arguments{
-\item{alpha, beta}{shape parameters of the  Beta distribution.}
+\item{alpha, beta}{non-negative parameters of the Beta distribution}
 }
 \value{
 a summary table
 }
 \description{
-Summarizes the expected value, variance, and mode of the Beta distribution
+Summarizes the expected value, variance, and mode of \eqn{\pi} following a Beta distribution
 }
 \examples{
-\dontrun{
-summarize_beta(1, 15)
-}
+summarize_beta(alpha = 1, beta = 15)
 }

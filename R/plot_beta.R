@@ -1,7 +1,7 @@
 
-#' @title Plot Beta Prior/Posterior
+#' @title Plot Beta Prior/Posterior for \eqn{\pi} 
 #'
-#' @description Plots the Probability Density Function for Beta Prior/Posterior
+#' @description Plots the Probability Density Function for Beta Prior/Posterior \eqn{\pi} which represents the probability of success in a Binomial likelihood.
 #'
 #' @param alpha,beta non-negative parameters of the Beta distribution
 #' @param mean,mode provides choices whether to display the mean and the mode of the distribution  
@@ -11,9 +11,7 @@
 #' @import ggplot2
 #'
 #' @examples
-#' \dontrun{
-#' plot_beta(1,12)
-#' }
+#' plot_beta(alpha = 1, beta = 12)
 plot_beta <- function(alpha, beta, mean = FALSE, mode = FALSE){
   
   

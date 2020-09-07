@@ -11,9 +11,7 @@ plot_binomial_likelihood(x, n, mle = FALSE)
 
 \item{n}{number of trials}
 
-\item{mle}{a logical value indicating whether maximum likelihood estimation should be plotted}
-
-\item{pi}{support of pi}
+\item{mle}{a logical value indicating whether maximum likelihood estimate should be plotted}
 }
 \value{
 
@@ -22,7 +20,5 @@ plot_binomial_likelihood(x, n, mle = FALSE)
 Plot Binomial Likelihood
 }
 \examples{
-\dontrun{
 plot_binomial_likelihood(x = 3, n = 10, mle = TRUE)
-}
 }

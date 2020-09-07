@@ -1,18 +1,14 @@
 #' @title Plot Binomial Likelihood 
-#'
 #' @param x number of successes  
 #' @param n number of trials
-#' @param mle a logical value indicating whether maximum likelihood estimation should be plotted
-#' @param pi support of pi
+#' @param mle a logical value indicating whether maximum likelihood estimate should be plotted
 #' @return
 #' @export
 #' 
 #' @import magrittr
 #' @importFrom dplyr filter
 #' @examples
-#' \dontrun{
 #' plot_binomial_likelihood(x = 3, n = 10, mle = TRUE)
-#' }
 
 plot_binomial_likelihood <-function(x, 
                                     n, 

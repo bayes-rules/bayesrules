@@ -1,6 +1,6 @@
 #' Plot Beta-Binomial Models
 #'
-#' @param alpha,beta shape parameters of the prior Beta distribution.
+#' @param alpha,beta non-negative parameters of the prior Beta distribution.
 #' @param x number of successes
 #' @param n number of trials
 #' @param prior a logical value indicating whether the prior distribution should be plotted.
@@ -12,12 +12,8 @@
 #' @import ggplot2
 #' @examples
 #' 
-#' \dontrun{
 #' plot_beta_binomial(alpha = 1, beta = 13, x = 25, n = 50)
-#' }
-#' \dontrun{
 #' plot_beta_binomial(alpha = 1, beta = 13, x = 25, n = 50, posterior = FALSE)
-#' }
 
 plot_beta_binomial <- function (alpha,
                                 beta,
@@ -35,8 +31,8 @@ plot_beta_binomial <- function (alpha,
          y = "density") +
     scale_fill_manual("",
                       values = c(prior = "gold1",
-                                 `(scaled) likelihood` = "cyan2",
-                                 posterior = "cyan4"),
+                                 `(scaled) likelihood` = "#56B4E9",
+                                 posterior = "#D55E00"),
                       breaks = c("prior",
                                  "(scaled) likelihood",
                                  "posterior"))

@@ -15,7 +15,7 @@ plot_beta_binomial(
 )
 }
 \arguments{
-\item{alpha, beta}{shape parameters of the prior Beta distribution.}
+\item{alpha, beta}{non-negative parameters of the prior Beta distribution.}
 
 \item{x}{number of successes}
 
@@ -35,10 +35,6 @@ Plot Beta-Binomial Models
 }
 \examples{
 
-\dontrun{
 plot_beta_binomial(alpha = 1, beta = 13, x = 25, n = 50)
-}
-\dontrun{
 plot_beta_binomial(alpha = 1, beta = 13, x = 25, n = 50, posterior = FALSE)
-}
 }
