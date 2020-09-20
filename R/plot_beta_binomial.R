@@ -31,8 +31,8 @@ plot_beta_binomial <- function (alpha,
          y = "density") +
     scale_fill_manual("",
                       values = c(prior = "gold1",
-                                 `(scaled) likelihood` = "#56B4E9",
-                                 posterior = "#D55E00"),
+                                 `(scaled) likelihood` = "cyan2",
+                                 posterior = "cyan4"),
                       breaks = c("prior",
                                  "(scaled) likelihood",
                                  "posterior"))
