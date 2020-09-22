@@ -1,11 +1,11 @@
 #' Plot Beta-Binomial Models
 #'
-#' @param alpha,beta non-negative parameters of the prior Beta distribution.
+#' @param alpha,beta non-negative parameters of the prior Beta model.
 #' @param x number of successes
 #' @param n number of trials
-#' @param prior a logical value indicating whether the prior distribution should be plotted.
+#' @param prior a logical value indicating whether the prior model should be plotted.
 #' @param likelihood a logical value indicating whether the scaled likelihood should be plotted.
-#' @param posterior a logical value indicating whether posterior distribution should be plotted.
+#' @param posterior a logical value indicating whether posterior model should be plotted.
 #'
 #' @return a ggplot
 #' @export

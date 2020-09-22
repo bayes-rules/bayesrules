@@ -7,13 +7,13 @@
 summarize_beta(alpha, beta)
 }
 \arguments{
-\item{alpha, beta}{non-negative parameters of the Beta distribution}
+\item{alpha, beta}{non-negative parameters of the Beta model}
 }
 \value{
 a summary table
 }
 \description{
-Summarizes the expected value, variance, and mode of \eqn{\pi} following a Beta distribution
+Summarizes the expected value, variance, and mode of \eqn{\pi} of a Beta model
 }
 \examples{
 summarize_beta(alpha = 1, beta = 15)

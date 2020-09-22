@@ -15,17 +15,17 @@ plot_beta_binomial(
 )
 }
 \arguments{
-\item{alpha, beta}{non-negative parameters of the prior Beta distribution.}
+\item{alpha, beta}{non-negative parameters of the prior Beta model.}
 
 \item{x}{number of successes}
 
 \item{n}{number of trials}
 
-\item{prior}{a logical value indicating whether the prior distribution should be plotted.}
+\item{prior}{a logical value indicating whether the prior model should be plotted.}
 
 \item{likelihood}{a logical value indicating whether the scaled likelihood should be plotted.}
 
-\item{posterior}{a logical value indicating whether posterior distribution should be plotted.}
+\item{posterior}{a logical value indicating whether posterior model should be plotted.}
 }
 \value{
 a ggplot

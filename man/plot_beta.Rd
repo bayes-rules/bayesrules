@@ -7,12 +7,12 @@
 plot_beta(alpha, beta, mean = FALSE, mode = FALSE)
 }
 \arguments{
-\item{alpha, beta}{non-negative parameters of the Beta distribution}
+\item{alpha, beta}{non-negative parameters of the Beta model}
 
-\item{mean, mode}{provides choices whether to display the mean and the mode of the distribution}
+\item{mean, mode}{provides choices whether to display the mean and the mode of the model}
 }
 \value{
-A density plot for the Beta distribution.
+A density plot for the Beta model.
 }
 \description{
 Plots the Probability Density Function for Beta Prior/Posterior \eqn{\pi} which represents the probability of success in a Binomial likelihood.

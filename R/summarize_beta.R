@@ -1,8 +1,8 @@
 #' @title Summarize Beta Trends for \eqn{\pi} 
 #' 
-#' @description Summarizes the expected value, variance, and mode of \eqn{\pi} following a Beta distribution 
+#' @description Summarizes the expected value, variance, and mode of \eqn{\pi} of a Beta model 
 #'
-#' @param alpha,beta non-negative parameters of the Beta distribution
+#' @param alpha,beta non-negative parameters of the Beta model
 #'
 #' @return a summary table
 #' @export

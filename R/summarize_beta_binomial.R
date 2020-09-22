@@ -1,8 +1,8 @@
 #' @title Summarize Beta Binomial
 #' 
-#' @description Summarizes the mean, and mode of the prior and posterior Beta distributions of \eqn{\pi} which represents the probability of success in a Binomial likelihood.
+#' @description Summarizes the mean, mode, and variance of the prior and posterior Beta models of \eqn{\pi} which represents the probability of success in a Binomial likelihood.
 #' 
-#' @param alpha,beta non-negative parameters of the prior Beta distribution.
+#' @param alpha,beta non-negative parameters of the prior Beta model.
 #' @param x number of successes
 #' @param n number of trials
 #'

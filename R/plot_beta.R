@@ -3,10 +3,10 @@
 #'
 #' @description Plots the Probability Density Function for Beta Prior/Posterior \eqn{\pi} which represents the probability of success in a Binomial likelihood.
 #'
-#' @param alpha,beta non-negative parameters of the Beta distribution
-#' @param mean,mode provides choices whether to display the mean and the mode of the distribution  
+#' @param alpha,beta non-negative parameters of the Beta model
+#' @param mean,mode provides choices whether to display the mean and the mode of the model  
 #'
-#' @return A density plot for the Beta distribution.
+#' @return A density plot for the Beta model.
 #' @export
 #' @import ggplot2
 #'
