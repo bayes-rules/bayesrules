@@ -31,8 +31,6 @@ plot_normal_normal <- function (mean,
             specify sigma for the likelihood, data xbar and n")
   
   
- 
-    plot_normal_normal <- function(mean, sd, sigma, x_bar, n){
       post_mean <- (((sigma^2)*mean) + ((sd^2)*n*x_bar))/(n*(sd^2)+(sigma^2))
       post_var <- ((sigma^2)*(sd^2))/(n*(sd^2)+(sigma^2))
       
@@ -55,7 +53,7 @@ plot_normal_normal <- function (mean,
         g <- g +
           stat_function(fun = dnorm,
                         args = list(mean = mean,
-                                    sd = sd)) 
+                                    sd = sd)) +
           stat_function(fun = dnorm,
                         args = list(mean = mean,
                                     sd = sd),
@@ -86,14 +84,13 @@ plot_normal_normal <- function (mean,
                         geom = "area", alpha = 0.5,
                         aes(fill = "posterior"))
       }
-      g
+     
       
-      
+     g 
     }   
     
     
     
-  }
 
   
   
