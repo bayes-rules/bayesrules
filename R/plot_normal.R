@@ -17,6 +17,6 @@ plot_normal <- function(mean, sd){
                   n = 101,
                   args = list(mean = mean,
                               sd = sd)) +
-    labs(x = expression(theta),
-         y = expression(paste("f(",theta,")")))
+    labs(x = expression(mu),
+         y = expression(paste("f(",mu,")")))
 }
