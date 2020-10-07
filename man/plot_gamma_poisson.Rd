@@ -36,7 +36,5 @@ a ggplot2
 Title
 }
 \examples{
-\dontrun{
-plot_gamma_poisson(100,20, sum_x = 39, n =6)
-}
+plot_gamma_poisson(shape = 100, rate = 20, sum_x = 39, n = 6)
 }

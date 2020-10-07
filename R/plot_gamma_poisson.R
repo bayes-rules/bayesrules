@@ -14,9 +14,8 @@
 #' @import ggplot2
 #'
 #' @examples
-#' \dontrun{
-#' plot_gamma_poisson(100,20, sum_x = 39, n =6)
-#' }
+#' plot_gamma_poisson(shape = 100, rate = 20, sum_x = 39, n = 6)
+
 plot_gamma_poisson <- function (shape, rate,
                                 sum_x = NULL,
                                 n = NULL,
@@ -43,9 +42,9 @@ plot_gamma_poisson <- function (shape, rate,
     labs(x = expression(lambda),
          y = "density") +
     scale_fill_manual("",
-                      values = c(prior = "gold1",
-                                 `(scaled) likelihood` = "cyan2",
-                                 posterior = "cyan4"),
+                      values = c(prior = "#f0e442",
+                                 `(scaled) likelihood` = "#0071b2",
+                                 posterior = "#009e74"),
                       breaks = c("prior",
                                  "(scaled) likelihood",
                                  "posterior"))
