@@ -9,10 +9,9 @@
 #' @import ggplot2
 #'
 #' @examples
-#' 
+#' plot_poisson_likelihood(x = c(4, 2, 7), lambda_upper_bound = 10)
 plot_poisson_likelihood <- 
-  function(x = c(4,2,7), 
-           lambda_upper_bound = 10){
+  function(x, lambda_upper_bound = 10){
     
     lambda = seq(0, lambda_upper_bound, by = 0.1)
     

@@ -4,7 +4,7 @@
 \alias{plot_poisson_likelihood}
 \title{Plot Poisson Likelihood}
 \usage{
-plot_poisson_likelihood(x = c(4, 2, 7), lambda_upper_bound = 10)
+plot_poisson_likelihood(x, lambda_upper_bound = 10)
 }
 \arguments{
 \item{x}{vector of observed data}
@@ -18,5 +18,5 @@ a ggplot of Poisson likelihood
 Plot Poisson Likelihood
 }
 \examples{
-
+plot_poisson_likelihood(x = c(4, 2, 7), lambda_upper_bound = 10)
 }
