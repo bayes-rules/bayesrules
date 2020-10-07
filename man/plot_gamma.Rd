@@ -7,16 +7,16 @@
 plot_gamma(shape, rate, mean = FALSE, mode = FALSE)
 }
 \arguments{
-\item{shape}{A non-negative shape parameter of the Gamma distribution.}
+\item{shape}{A non-negative shape parameter of the Gamma model.}
 
-\item{rate}{A non-negative rate parameter of the Gamma distribution.}
+\item{rate}{A non-negative rate parameter of the Gamma model.}
 
-\item{mean, mode}{take logical values indicating whether mean and the mode of the distribution should be displayed.}
+\item{mean, mode}{take logical values indicating whether mean and the mode of the model should be displayed.}
 
-\item{lambda}{A range of non-negative values for the Gamma distribution.}
+\item{lambda}{A range of non-negative values for the Gamma model.}
 }
 \value{
-A density plot for the Gamma distribution.
+A density plot for the Gamma model.
 }
 \description{
 Plot Gamma Prior/Posterior

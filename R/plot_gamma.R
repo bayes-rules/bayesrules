@@ -1,11 +1,11 @@
 #' Plot Gamma Prior/Posterior
 #'
-#' @param shape A non-negative shape parameter of the Gamma distribution.
-#' @param rate A non-negative rate parameter of the Gamma distribution.
-#' @param lambda A range of non-negative values for the Gamma distribution.
-#' @param mean,mode take logical values indicating whether mean and the mode of the distribution should be displayed. 
+#' @param shape A non-negative shape parameter of the Gamma model.
+#' @param rate A non-negative rate parameter of the Gamma model.
+#' @param lambda A range of non-negative values for the Gamma model.
+#' @param mean,mode take logical values indicating whether mean and the mode of the model should be displayed. 
 #'
-#' @return A density plot for the Gamma distribution.
+#' @return A density plot for the Gamma model.
 #' @export
 #'
 #' @import ggplot2
