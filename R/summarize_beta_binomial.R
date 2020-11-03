@@ -3,7 +3,7 @@
 #' @description Summarizes the mean, mode, and variance of the prior and posterior Beta models of \eqn{\pi} which represents the probability of success in a Binomial likelihood.
 #' 
 #' @param alpha,beta non-negative parameters of the prior Beta model.
-#' @param x number of successes
+#' @param y number of successes
 #' @param n number of trials
 #'
 #' @return a summary table
@@ -11,15 +11,15 @@
 #'
 #' @examples 
 #' 
-#' summarize_beta_binomial(1, 15, x = 25, n = 50)
+#' summarize_beta_binomial(1, 15, y = 25, n = 50)
 summarize_beta_binomial <- function (alpha, 
                                      beta, 
-                                     x = NULL, 
+                                     y = NULL, 
                                      n = NULL)
 {
-  if (is.null(x) | is.null(n))
+  if (is.null(y) | is.null(n))
     warning("To summarize the posterior, 
-            specify data x and n")
+            specify data y and n")
   beta_mean <- function(a, b) {
     a/(a + b)
   }
@@ -32,7 +32,7 @@ summarize_beta_binomial <- function (alpha,
   prior_mean <- beta_mean(alpha, beta)
   prior_mode <- beta_mode(alpha, beta)
   prior_var <- beta_var(alpha, beta)
-  if (is.null(x) & is.null(n)) {
+  if (is.null(y) & is.null(n)) {
     return(data.frame(model = c("prior"), 
                       alpha = alpha,
                       beta = beta, 
@@ -41,8 +41,8 @@ summarize_beta_binomial <- function (alpha,
                       var = prior_var))
   }
   else {
-    post_alpha <- x + alpha
-    post_beta <- n - x + beta
+    post_alpha <- y + alpha
+    post_beta <- n - y + beta
     post_mean <- beta_mean(post_alpha, post_beta)
     post_mode <- beta_mode(post_alpha, post_beta)
     post_var <- beta_var(post_alpha, post_beta)
