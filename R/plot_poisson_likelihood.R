@@ -1,6 +1,6 @@
 #' @title Plot Poisson Likelihood
 #'
-#' @param x vector of observed data
+#' @param y vector of observed data
 #' @param lambda_upper_bound upper bound for lambda
 #'
 #' @return a ggplot of Poisson likelihood
@@ -9,21 +9,21 @@
 #' @import ggplot2
 #'
 #' @examples
-#' plot_poisson_likelihood(x = c(4, 2, 7), lambda_upper_bound = 10)
+#' plot_poisson_likelihood(y = c(4, 2, 7), lambda_upper_bound = 10)
 plot_poisson_likelihood <- 
-  function(x, lambda_upper_bound = 10){
+  function(y, lambda_upper_bound = 10){
     
     lambda = seq(0, lambda_upper_bound, by = 0.1)
     
-    y = exp(-1*length(x)*lambda)*lambda^(sum(x))/prod(factorial(x))
+    ht = exp(-1*length(y)*lambda)*lambda^(sum(y))/prod(factorial(y))
     
     data <- data.frame(lambda = lambda,
                        f_lambda = 
-                         rep(y, length(lambda)))
+                         rep(ht, length(lambda)))
     ggplot(data, aes(x = lambda, 
                      y = f_lambda)) +
       geom_line() +
       labs(x = expression(lambda),
-           y = expression(paste("L(",lambda,"|(X=", x, "))")))
+           y = expression(paste("L(",lambda,"|(Y=", y, "))")))
     
   }
