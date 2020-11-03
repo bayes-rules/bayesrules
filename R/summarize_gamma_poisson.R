@@ -2,7 +2,7 @@
 #'
 #' @param shape A non-negative shape parameter of the Gamma distribution.
 #' @param rate A non-negative rate parameter of the Gamma distribution.
-#' @param sum_x sum of observed values for the Poisson likelihood.
+#' @param sum_y sum of observed values for the Poisson likelihood.
 #' @param n number of observations for the Poisson likelihood.
 #'
 #' @return
@@ -14,13 +14,13 @@
 #' }
 summarize_gamma_poisson <- function (shape,
                                      rate,
-                                     sum_x = NULL,
+                                     sum_y = NULL,
                                      n = NULL){
 
-  if (is.null(sum_x) | is.null(n))
+  if (is.null(sum_y) | is.null(n))
     warning("To summarize the posterior,
-            specify data sum_x and n")
-  if (is.null(sum_x) & is.null(n)) {
+            specify data sum_y and n")
+  if (is.null(sum_y) & is.null(n)) {
     prior_mean <- shape/rate
     if (shape >= 1) {
       prior_mode <- (shape - 1)/rate
@@ -45,15 +45,15 @@ summarize_gamma_poisson <- function (shape,
       prior_mode <- NULL
     }
     prior_var <- shape/rate^2
-    post_mean <- (shape + sum_x)/(rate + n)
-    if ((shape + sum_x) >= 1) {
-      post_mode <- (shape + sum_x - 1)/(rate + n)
+    post_mean <- (shape + sum_y)/(rate + n)
+    if ((shape + sum_y) >= 1) {
+      post_mode <- (shape + sum_y - 1)/(rate + n)
     }
     else {
       post_mode <- NA
     }
-    post_var <- (shape + sum_x)/((rate + n)^2)
-    post_s <- shape + sum_x
+    post_var <- (shape + sum_y)/((rate + n)^2)
+    post_s <- shape + sum_y
     post_r <- rate + n
     return(data.frame(model = c("prior",
                                 "posterior"),
