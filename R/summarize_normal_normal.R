@@ -3,7 +3,7 @@
 #' @param mean prior mean
 #' @param sd prior standard deviation
 #' @param sigma likelihood standard deviation
-#' @param x_bar sample mean of the data
+#' @param y_bar sample mean of the data
 #' @param n sample size of the data
 #'
 #' @return
@@ -13,17 +13,17 @@
 summarize_normal_normal <- function (mean, 
                                      sd, 
                                      sigma = NULL,
-                                     x_bar = NULL, 
+                                     y_bar = NULL, 
                                      n = NULL)
 {
-  if (is.null(x_bar) | is.null(n)|is.null(sigma))
+  if (is.null(y_bar) | is.null(n)|is.null(sigma))
     warning("To summarize the posterior, 
-            specify sigma for the likelihood, data xbar and n")
+            specify sigma for the likelihood, data ybar and n")
   
   prior_mean <- mean
   prior_mode <- mean
   prior_var <- sd^2
-  if (is.null(x_bar) & is.null(n) & is.null(sigma)) {
+  if (is.null(y_bar) & is.null(n) & is.null(sigma)) {
     return(data.frame(model = c("prior"), 
                       alpha = alpha,
                       beta = beta, 
@@ -32,7 +32,7 @@ summarize_normal_normal <- function (mean,
                       var = prior_var))
   }
   else {
-    post_mean <- (((sigma^2)*mean) + ((sd^2)*n*x_bar))/(n*(sd^2)+(sigma^2))
+    post_mean <- (((sigma^2)*mean) + ((sd^2)*n*y_bar))/(n*(sd^2)+(sigma^2))
     post_mode <- post_mean
     post_var <- ((sigma^2)*(sd^2))/(n*(sd^2)+(sigma^2))
     return(data.frame(model = c("prior", "posterior"), 
