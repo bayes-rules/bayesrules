@@ -70,7 +70,7 @@ plot_beta_binomial <- function (alpha,
                     alpha = 0.5,
                     aes(fill = "(scaled) likelihood"))
   }
-  if (!is.null(x) & !is.null(n) & posterior == TRUE) {
+  if (!is.null(y) & !is.null(n) & posterior == TRUE) {
     g <- g +
       stat_function(fun = dbeta,
                     args = list(shape1 = alpha_post,
