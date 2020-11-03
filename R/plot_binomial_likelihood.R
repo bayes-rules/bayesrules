@@ -1,5 +1,5 @@
 #' @title Plot Binomial Likelihood 
-#' @param x number of successes  
+#' @param y number of successes  
 #' @param n number of trials
 #' @param mle a logical value indicating whether maximum likelihood estimate should be plotted
 #' @return
@@ -8,24 +8,24 @@
 #' @import magrittr
 #' @importFrom dplyr filter
 #' @examples
-#' plot_binomial_likelihood(x = 3, n = 10, mle = TRUE)
+#' plot_binomial_likelihood(y = 3, n = 10, mle = TRUE)
 
-plot_binomial_likelihood <-function(x, 
+plot_binomial_likelihood <-function(y, 
                                     n, 
                                     mle = FALSE){
   
   g <- ggplot(data = data.frame(x = c(0, 1)), aes(x)) +
-    stat_function(fun = dbinom, args = list(x = x, size = n)) +
+    stat_function(fun = dbinom, args = list(x = y, size = n)) +
     labs(x = expression(pi),
-         y = expression(paste("L(",pi,"|(X=", x, "))")))
+         y = expression(paste("L(",pi,"|(Y=", y, "))")))
   
   
   
   if (mle == TRUE){
     
-    max <- x/n
+    max <- y/n
     
-    success <- x # the line segment does not work since x is an argument in ggplot
+    success <- y # the line segment does not work since y is an argument in ggplot
     
     g <- g +
       
