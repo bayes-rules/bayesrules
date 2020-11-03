@@ -1,7 +1,7 @@
 #' Plot Beta-Binomial Models
 #'
 #' @param alpha,beta non-negative parameters of the prior Beta model.
-#' @param x number of successes
+#' @param y number of successes
 #' @param n number of trials
 #' @param prior a logical value indicating whether the prior model should be plotted.
 #' @param likelihood a logical value indicating whether the scaled likelihood should be plotted.
@@ -12,19 +12,19 @@
 #' @import ggplot2
 #' @examples
 #' 
-#' plot_beta_binomial(alpha = 1, beta = 13, x = 25, n = 50)
-#' plot_beta_binomial(alpha = 1, beta = 13, x = 25, n = 50, posterior = FALSE)
+#' plot_beta_binomial(alpha = 1, beta = 13, y = 25, n = 50)
+#' plot_beta_binomial(alpha = 1, beta = 13, y = 25, n = 50, posterior = FALSE)
 
 plot_beta_binomial <- function (alpha,
                                 beta,
-                                x = NULL,
+                                y = NULL,
                                 n = NULL,
                                 prior = TRUE,
                                 likelihood = TRUE,
                                 posterior = TRUE){
-  if (is.null(x) | is.null(n))
+  if (is.null(y) | is.null(n))
     warning("To visualize the posterior,
-            specify data x and n")
+            specify data y and n")
 
   g <- ggplot(data = data.frame(x = c(0, 1)), aes(x)) +
     labs(x = expression(pi),
@@ -50,19 +50,19 @@ plot_beta_binomial <- function (alpha,
                     aes(fill = "prior"))
     }
 
-  if (!is.null(x) & !is.null(n)) {
-    alpha_post <- alpha + x
-    beta_post <- beta + n - x
-    x_data <- x
+  if (!is.null(y) & !is.null(n)) {
+    alpha_post <- alpha + y
+    beta_post <- beta + n - y
+    y_data <- y
     like_scaled <- function(x) {
       like_fun <- function(x) {
-        dbinom(x = x_data, size = n, prob = x)
+        dbinom(x = y_data, size = n, prob = x)
       }
       scale_c <- integrate(like_fun, lower = 0, upper = 1)[[1]]
       like_fun(x)/scale_c
     }
   }
-  if (!is.null(x) & !is.null(n) & (likelihood != FALSE)) {
+  if (!is.null(y) & !is.null(n) & (likelihood != FALSE)) {
     g <- g +
       stat_function(fun = like_scaled) +
       stat_function(fun = like_scaled,
