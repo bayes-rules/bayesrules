@@ -7,7 +7,7 @@
 plot_beta_binomial(
   alpha,
   beta,
-  x = NULL,
+  y = NULL,
   n = NULL,
   prior = TRUE,
   likelihood = TRUE,
@@ -17,7 +17,7 @@ plot_beta_binomial(
 \arguments{
 \item{alpha, beta}{non-negative parameters of the prior Beta model.}
 
-\item{x}{number of successes}
+\item{y}{number of successes}
 
 \item{n}{number of trials}
 
@@ -35,6 +35,6 @@ Plot Beta-Binomial Models
 }
 \examples{
 
-plot_beta_binomial(alpha = 1, beta = 13, x = 25, n = 50)
-plot_beta_binomial(alpha = 1, beta = 13, x = 25, n = 50, posterior = FALSE)
+plot_beta_binomial(alpha = 1, beta = 13, y = 25, n = 50)
+plot_beta_binomial(alpha = 1, beta = 13, y = 25, n = 50, posterior = FALSE)
 }

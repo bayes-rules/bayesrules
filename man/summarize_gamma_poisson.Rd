@@ -4,14 +4,14 @@
 \alias{summarize_gamma_poisson}
 \title{Summarize the Gamma-Poisson Model}
 \usage{
-summarize_gamma_poisson(shape, rate, sum_x = NULL, n = NULL)
+summarize_gamma_poisson(shape, rate, sum_y = NULL, n = NULL)
 }
 \arguments{
 \item{shape}{A non-negative shape parameter of the Gamma distribution.}
 
 \item{rate}{A non-negative rate parameter of the Gamma distribution.}
 
-\item{sum_x}{sum of observed values for the Poisson likelihood.}
+\item{sum_y}{sum of observed values for the Poisson likelihood.}
 
 \item{n}{number of observations for the Poisson likelihood.}
 }

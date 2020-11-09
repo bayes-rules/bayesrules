@@ -4,12 +4,12 @@
 \alias{summarize_beta_binomial}
 \title{Summarize Beta Binomial}
 \usage{
-summarize_beta_binomial(alpha, beta, x = NULL, n = NULL)
+summarize_beta_binomial(alpha, beta, y = NULL, n = NULL)
 }
 \arguments{
 \item{alpha, beta}{non-negative parameters of the prior Beta model.}
 
-\item{x}{number of successes}
+\item{y}{number of successes}
 
 \item{n}{number of trials}
 }
@@ -21,5 +21,5 @@ Summarizes the mean, mode, and variance of the prior and posterior Beta models o
 }
 \examples{
 
-summarize_beta_binomial(1, 15, x = 25, n = 50)
+summarize_beta_binomial(1, 15, y = 25, n = 50)
 }

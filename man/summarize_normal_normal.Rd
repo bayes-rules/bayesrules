@@ -4,7 +4,7 @@
 \alias{summarize_normal_normal}
 \title{Summarize Normal-Normal}
 \usage{
-summarize_normal_normal(mean, sd, sigma = NULL, x_bar = NULL, n = NULL)
+summarize_normal_normal(mean, sd, sigma = NULL, y_bar = NULL, n = NULL)
 }
 \arguments{
 \item{mean}{prior mean}
@@ -13,7 +13,7 @@ summarize_normal_normal(mean, sd, sigma = NULL, x_bar = NULL, n = NULL)
 
 \item{sigma}{likelihood standard deviation}
 
-\item{x_bar}{sample mean of the data}
+\item{y_bar}{sample mean of the data}
 
 \item{n}{sample size of the data}
 }

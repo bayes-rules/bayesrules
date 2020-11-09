@@ -49,5 +49,6 @@ fake_news
 A dataset containing data behind the study
 "FakeNewsNet: A Data Repository with News Content, Social Context and Spatialtemporal Information for Studying Fake News on Social Media"
 \url{https://arxiv.org/abs/1809.01286}.
+The news articles in this dataset were posted to Facebook in September 2016, in the run-up to the U.S. presidential election.
 }
 \keyword{datasets}

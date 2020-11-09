@@ -7,7 +7,7 @@
 plot_gamma_poisson(
   shape,
   rate,
-  sum_x = NULL,
+  sum_y = NULL,
   n = NULL,
   prior = TRUE,
   likelihood = TRUE,
@@ -19,7 +19,7 @@ plot_gamma_poisson(
 
 \item{rate}{A non-negative rate parameter of the Gamma distribution.}
 
-\item{sum_x}{sum of observed values for the Poisson likelihood.}
+\item{sum_y}{sum of observed values for the Poisson likelihood.}
 
 \item{n}{number of observations for the Poisson likelihood.}
 
@@ -36,5 +36,5 @@ a ggplot2
 Title
 }
 \examples{
-plot_gamma_poisson(shape = 100, rate = 20, sum_x = 39, n = 6)
+plot_gamma_poisson(shape = 100, rate = 20, sum_y = 39, n = 6)
 }

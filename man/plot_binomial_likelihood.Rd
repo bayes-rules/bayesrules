@@ -4,10 +4,10 @@
 \alias{plot_binomial_likelihood}
 \title{Plot Binomial Likelihood}
 \usage{
-plot_binomial_likelihood(x, n, mle = FALSE)
+plot_binomial_likelihood(y, n, mle = FALSE)
 }
 \arguments{
-\item{x}{number of successes}
+\item{y}{number of successes}
 
 \item{n}{number of trials}
 
@@ -20,5 +20,5 @@ plot_binomial_likelihood(x, n, mle = FALSE)
 Plot Binomial Likelihood
 }
 \examples{
-plot_binomial_likelihood(x = 3, n = 10, mle = TRUE)
+plot_binomial_likelihood(y = 3, n = 10, mle = TRUE)
 }

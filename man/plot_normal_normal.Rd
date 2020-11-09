@@ -8,7 +8,7 @@ plot_normal_normal(
   mean,
   sd,
   sigma = NULL,
-  x_bar = NULL,
+  y_bar = NULL,
   n = NULL,
   prior = TRUE,
   likelihood = TRUE,
@@ -22,7 +22,7 @@ plot_normal_normal(
 
 \item{sigma}{likelihood standard deviation}
 
-\item{x_bar}{sample mean of the data}
+\item{y_bar}{sample mean of the data}
 
 \item{n}{sample size of the data}
 
@@ -40,6 +40,6 @@ Plot Normal-Normal Models
 }
 \examples{
 
-plot_normal_normal(mean = 0, sd = 3, sigma= 4, x_bar = 5, n = 3)
-plot_beta_binomial(mean = -1, sd = 5, sigma= 4, x_bar = 5, n = 3, posterior = FALSE)
+plot_normal_normal(mean = 0, sd = 3, sigma= 4, y_bar = 5, n = 3)
+plot_beta_binomial(mean = -1, sd = 5, sigma= 4, y_bar = 5, n = 3, posterior = FALSE)
 }
