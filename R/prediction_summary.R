@@ -5,8 +5,9 @@ prediction_summary_data <- function(y, yrep, prob_inner = 0.5, prob_outer = 0.95
   l_inner <- function(x){quantile(x, (1-prob_inner) / 2)}
   u_inner <- function(x){quantile(x, 1 - (1-prob_inner) / 2)}
   u_outer <- function(x){quantile(x, 1 - (1-prob_outer) / 2)}
+  our_mad <- function(x){mad(x, constant = 1)}
   df <- data.frame(yrep) %>% 
-    summarize_all(list(mean, sd, median, mad, l_outer, l_inner, u_inner, u_outer)) %>%
+    summarize_all(list(mean, sd, median, our_mad, l_outer, l_inner, u_inner, u_outer)) %>%
     unlist() %>% 
     matrix(., length(y), 8) %>% 
     data.frame()
