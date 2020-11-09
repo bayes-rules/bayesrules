@@ -21,3 +21,20 @@ to install the devtools package if you do not have it installed already.
 #install.packages("devtools") 
 devtools::install_github("mdogucu/bayesrules")
 ```
+
+## Adding data files
+
+- as much as it seems like you should, don't touch data folder!
+- in data raw folder, create .R cleaning script. end w: usethis::use_data(___, overwrite = TRUE)
+- in R folder, starting from another data template, document the data
+
+
+## Documentation
+
+To write documentation for functions & data, always end w this before pushing:
+
+``` r
+library(devtools)
+document()
+```
+
