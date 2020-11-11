@@ -1,16 +1,18 @@
-#' Cross-Validated Posterior Predictive Summaries
+#' Cross-Validated Posterior Classification Summaries
 #'
+#' @param model an rstanreg model object with binary y
 #' @param data data frame including the variables in the model
-#' @param model an rstanreg model object with quantitative y
 #' @param k the number of folds to use for cross validation
-#' @param prob_inner posterior predictive interval probability
-#' @param prob_outer posterior predictive interval probability
+#' @param cutoff probability cutoff to classify a new case as positive
 #'
 #' @return
 #' @export
 #'
 #' @examples
-prediction_summary_cv <- function(data, model, k = 10, prob_inner = 0.5, prob_outer = 0.95){
+
+classification_summary_cv <- function(model, data, k = 10, cutoff = 0.5){
+          if(!("stanreg" %in% class(model))){ stop("the model must be a stanreg object.")}
+          
           # Split data into k possibly unequal folds
           # https://gist.github.com/dsparks/3695362
           random_draw <- rnorm(nrow(data))
@@ -19,7 +21,7 @@ prediction_summary_cv <- function(data, model, k = 10, prob_inner = 0.5, prob_ou
           levels(folds) <- 1:k
           data <- data %>% 
                     mutate(fold = sample(folds, size = length(folds), replace = FALSE))
-          y <- model$terms[[2]]
+          data[,model$terms[[2]]] <- as.numeric(as.factor(unlist(data[,model$terms[[2]]]))) - 1
           
           # Test the model on each one of the k folds
           folds <- data.frame()
@@ -31,11 +33,9 @@ prediction_summary_cv <- function(data, model, k = 10, prob_inner = 0.5, prob_ou
                               filter(fold == i) %>% 
                               dplyr::select(-fold)
                     model_train <- update(model, data = data_train, refresh = FALSE)
-                    predictions_test <- posterior_predict(model_train, newdata = data_test)
-                    folds <- rbind(folds, prediction_summary(y = c(as.matrix((data_test %>% select(y))[,1])), yrep = predictions_test))
+                    folds <- rbind(folds, classification_summary(model = model_train, data = data_test, cutoff = cutoff)$accuracy_rates[,1])
           }
-          
-          # Calculate the cross validated error
+          names(folds) <- c("sensitivity", "specificity", "overall_accuracy")
           cv <- folds %>% 
                     summarize_all(mean)
           folds <- data.frame(fold = 1:k, folds)

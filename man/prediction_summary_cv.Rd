@@ -9,7 +9,7 @@ prediction_summary_cv(data, model, k = 10, prob_inner = 0.5, prob_outer = 0.95)
 \arguments{
 \item{data}{data frame including the variables in the model}
 
-\item{model}{a rstanreg model object with quantitative y}
+\item{model}{an rstanreg model object with quantitative y}
 
 \item{k}{the number of folds to use for cross validation}
 
