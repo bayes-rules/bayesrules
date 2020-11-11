@@ -23,10 +23,7 @@ A data frame with 500 daily observations and 13 variables:
   }
 }
 \source{
-Fanaee-T, Hadi and Gama, Joao, 
-"Event labeling combining ensemble detectors and 
-background knowledge," Progress in Artificial Intelligence, (1--15), 2013. 
-\url{https://archive.ics.uci.edu/ml/datasets/Bike+Sharing+Dataset}
+Fanaee-T, Hadi and Gama, Joao (2013). Event labeling combining ensemble detectors and background knowledge. Progress in Artificial Intelligence. \url{https://archive.ics.uci.edu/ml/datasets/Bike+Sharing+Dataset}
 }
 \usage{
 bikes

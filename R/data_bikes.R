@@ -18,9 +18,5 @@
 #'   \item{weather_cat}{weather category (categ1 = pleasant, categ2 = moderate, categ3 = severe)}
 #'   \item{rides}{number of bikeshare rides}
 #'   }
-#' @source Fanaee-T, Hadi and Gama, Joao, 
-#' "Event labeling combining ensemble detectors and 
-#' background knowledge," Progress in Artificial Intelligence, (1--15), 2013. 
-#' \url{https://archive.ics.uci.edu/ml/datasets/Bike+Sharing+Dataset}
-#' 
+#' @source Fanaee-T, Hadi and Gama, Joao (2013). Event labeling combining ensemble detectors and background knowledge. Progress in Artificial Intelligence. \url{https://archive.ics.uci.edu/ml/datasets/Bike+Sharing+Dataset}
 "bikes"
