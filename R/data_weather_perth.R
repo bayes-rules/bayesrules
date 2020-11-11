@@ -1,0 +1,30 @@
+#' Weather Data for Perth, Australia
+#' 
+#' A sub-sample of daily weather information on Perth, Australia from the weatherAUS data in the rattle package.
+#' 
+#' @format A data frame with 1000 daily observations and 21 variables:
+#' \describe{
+#'   \item{mintemp}{minimum temperature (degrees Celsius)}
+#'   \item{maxtemp}{maximum temperature (degrees Celsius)}
+#'   \item{rainfall}{rainfall (mm)}
+#'   \item{windgustdir}{direction of strongest wind gust}
+#'   \item{windgustspeed}{speed of strongest wind gust (km/h)}
+#'   \item{winddir9am}{direction of wind gust at 9am}
+#'   \item{winddir3pm}{direction of wind gust at 3pm}
+#'   \item{windspeed9am}{wind speed at 9am (km/h)}
+#'   \item{windspeed3pm}{wind speed at 3pm (km/h)}
+#'   \item{humidity9am}{humidity level at 9am (percent)}
+#'   \item{humidity3pm}{humidity level at 3pm (percent)}
+#'   \item{pressure9am}{atmospheric pressure at 9am (hpa)}
+#'   \item{pressure3pm}{atmospheric pressure at 3pm (hpa)}
+#'   \item{temp9am}{temperature at 9am (degrees Celsius)}
+#'   \item{temp3pm}{temperature at 3pm (degrees Celsius)}
+#'   \item{raintoday}{whether or not it rained today (Yes or No)}
+#'   \item{risk_mm}{the amount of rain today (mm)}
+#'   \item{raintomorrow}{whether or not it rained the next day (Yes or No)}
+#'   \item{year}{the year of the date}
+#'   \item{month}{the month of the date}
+#'   \item{day_of_year}{the day of the year}
+#'   }
+#' @source Data in the original weatherAUS data set were obtained from \url{https://www.bom.gov.au/climate/data}. Copyright Commonwealth of Australia 2010, Bureau of Meteorology.
+"weather"
