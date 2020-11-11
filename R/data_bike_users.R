@@ -1,0 +1,23 @@
+#' Capital Bikeshare Bike Ridership (Registered & Casual Riders)
+#' 
+#' Data on ridership among registered members and casual users of the Capital Bikeshare service in Washington, D.C..
+#' 
+#' @format A data frame with 534 daily observations, 267 each for registered riders and casual riders, and 13 variables:
+#' \describe{
+#'   \item{date}{date of observation}
+#'   \item{season}{fall, spring, summer, or winter}
+#'   \item{year}{the year of the date}
+#'   \item{month}{the month of the date}
+#'   \item{day_of_week}{the day of the week}
+#'   \item{weekend}{whether or not the date falls on a weekend (TRUE or FALSE)}
+#'   \item{holiday}{whether or not the date falls on a holiday (yes or no)}
+#'   \item{temp_actual}{raw temperature (degrees Fahrenheit)}
+#'   \item{temp_feel}{what the temperature feels like (degrees Fahrenheit)}
+#'   \item{humidity}{humidity level (percentage)}
+#'   \item{windspeed}{wind speed (miles per hour)}
+#'   \item{weather_cat}{weather category (categ1 = pleasant, categ2 = moderate, categ3 = severe)}
+#'   \item{user}{rider type (casual or registered)}
+#'   \item{rides}{number of bikeshare rides}
+#'   }
+#' @source Fanaee-T, Hadi and Gama, Joao (2013). Event labeling combining ensemble detectors and background knowledge. Progress in Artificial Intelligence. \url{https://archive.ics.uci.edu/ml/datasets/Bike+Sharing+Dataset}
+"bike_users"
