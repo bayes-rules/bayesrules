@@ -41,3 +41,5 @@ classification_summary_cv <- function(model, data, k = 10, cutoff = 0.5){
           folds <- data.frame(fold = 1:k, folds)
           return(list(folds = folds, cv = cv))
 }
+
+

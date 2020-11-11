@@ -46,3 +46,5 @@ classification_summary <- function(model, data, cutoff = 0.5){
           
           return(list(confusion_matrix = confusion_matrix, accuracy_rates = accuracy_rates))
 }
+
+

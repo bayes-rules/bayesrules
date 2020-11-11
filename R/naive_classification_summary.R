@@ -32,3 +32,5 @@ naive_classification_summary <- function(model, data, y){
           
           return(list(confusion_matrix = confusion_matrix, overall_accuracy = overall_accuracy))
 }
+
+

@@ -53,3 +53,5 @@ naive_classification_summary_cv <- function(model, data, y, k = 10){
           names(cv)[1] <- y
           return(list(folds = folds, cv = cv))
 }
+
+
