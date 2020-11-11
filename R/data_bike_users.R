@@ -1,4 +1,4 @@
-#' Capital Bikeshare Bike Ridership (Registered & Casual Riders)
+#' Capital Bikeshare Bike Ridership (Registered and Casual Riders)
 #' 
 #' Data on ridership among registered members and casual users of the Capital Bikeshare service in Washington, D.C..
 #' 

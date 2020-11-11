@@ -3,7 +3,7 @@
 \docType{data}
 \name{bike_users}
 \alias{bike_users}
-\title{Capital Bikeshare Bike Ridership (Registered & Casual Riders)}
+\title{Capital Bikeshare Bike Ridership (Registered and Casual Riders)}
 \format{
 A data frame with 534 daily observations, 267 each for registered riders and casual riders, and 13 variables:
 \describe{
