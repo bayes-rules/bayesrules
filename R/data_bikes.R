@@ -20,7 +20,7 @@
 #'   }
 #' @source Fanaee-T, Hadi and Gama, Joao, 
 #' "Event labeling combining ensemble detectors and 
-#' background knowledge," Progress in Artificial Intelligence, (1--15), 2013
-#' @source https://archive.ics.uci.edu/ml/datasets/Bike+Sharing+Dataset
+#' background knowledge," Progress in Artificial Intelligence, (1--15), 2013. 
+#' \url{https://archive.ics.uci.edu/ml/datasets/Bike+Sharing+Dataset}
 #' 
 "bikes"
