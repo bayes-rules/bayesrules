@@ -7,6 +7,8 @@
 #'
 #' @return
 #' @export
+#' @import janitor
+#' @import dplyr
 #'
 #' @examples
 
