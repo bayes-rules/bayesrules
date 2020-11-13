@@ -8,5 +8,7 @@ bike_users <- bikes %>%
           mutate(user = factor(user, labels = c("casual","registered","total"))) %>% 
           filter(user != "total", year == 2011) %>% 
           mutate(user = droplevels(user)) %>% 
-          filter(temp_feel < 87, temp_feel > 45) 
+          filter(temp_feel < 87, temp_feel > 45) %>% 
+          mutate(date = as.Date(date, format = "%m/%d/%y")) %>% 
+          arrange(date)
 usethis::use_data(bike_users, overwrite = TRUE)

@@ -5,6 +5,7 @@ bikes <- read.csv("https://www.macalester.edu/~ajohns24/data/bike_share.csv")
 set.seed(84735)
 bikes <- bikes %>% 
           mutate(rides = riders_registered) %>% 
+          mutate(date = as.Date(date, format = "%m/%d/%y")) %>% 
           select(-riders_casual, -riders_total, -riders_registered) %>% 
           filter(temp_feel < 87, temp_feel > 45) %>% 
           mutate(humidity = 100*humidity) %>% 
