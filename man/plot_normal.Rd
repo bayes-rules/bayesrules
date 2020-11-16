@@ -2,18 +2,19 @@
 % Please edit documentation in R/plot_normal.R
 \name{plot_normal}
 \alias{plot_normal}
-\title{Plot Normal Prior/Posterior}
+\title{Plot a Normal Model for \eqn{\mu}}
 \usage{
 plot_normal(mean, sd)
 }
 \arguments{
-\item{mean}{mean}
+\item{mean}{mean parameter of the Normal model}
 
-\item{sd}{standard deviation}
+\item{sd}{standard deviation parameter of the Normal model}
 }
 \value{
 
 }
 \description{
-Plot Normal Prior/Posterior
+Plots the probability density function (pdf) for a
+Normal(mean, sd^2) model of variable \eqn{\mu}.
 }

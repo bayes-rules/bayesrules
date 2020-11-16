@@ -2,20 +2,21 @@
 % Please edit documentation in R/plot_poisson_likelihood.R
 \name{plot_poisson_likelihood}
 \alias{plot_poisson_likelihood}
-\title{Plot Poisson Likelihood}
+\title{Plot a Poisson Likelihood Function}
 \usage{
 plot_poisson_likelihood(y, lambda_upper_bound = 10)
 }
 \arguments{
-\item{y}{vector of observed data}
+\item{y}{vector of observed Poisson counts}
 
-\item{lambda_upper_bound}{upper bound for lambda}
+\item{lambda_upper_bound}{upper bound for lambda values to display on x-axis}
 }
 \value{
 a ggplot of Poisson likelihood
 }
 \description{
-Plot Poisson Likelihood
+Plots the Poisson likelihood function for variable \eqn{\lambda}
+given a vector of Poisson counts y.
 }
 \examples{
 plot_poisson_likelihood(y = c(4, 2, 7), lambda_upper_bound = 10)

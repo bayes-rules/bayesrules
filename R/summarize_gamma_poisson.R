@@ -1,17 +1,23 @@
 #' Summarize the Gamma-Poisson Model
 #'
-#' @param shape A non-negative shape parameter of the Gamma distribution.
-#' @param rate A non-negative rate parameter of the Gamma distribution.
-#' @param sum_y sum of observed values for the Poisson likelihood.
-#' @param n number of observations for the Poisson likelihood.
+#' Consider a Gamma-Poisson Bayesian model for rate parameter \eqn{\lambda} with 
+#' a Gamma(shape, rate) prior on \eqn{\lambda} and a Poisson likelihood for the data. 
+#' Given information on the prior (shape and rate) 
+#' and data (the sample size n and sum_y),
+#' this function summarizes the mean, mode, and variance of the 
+#' prior and posterior Gamma models of \eqn{\lambda}.
+#' 
+#' @param shape non-negative shape parameter of the Gamma prior
+#' @param rate non-negative rate parameter of the Gamma prior
+#' @param sum_y sum of observed data values for the Poisson likelihood
+#' @param n number of observations for the Poisson likelihood
 #'
 #' @return
 #' @export
 #'
 #' @examples
-#' #' \dontrun{
 #' summarize_gamma_poisson(3, 4, 7, 12)
-#' }
+#' 
 summarize_gamma_poisson <- function (shape,
                                      rate,
                                      sum_y = NULL,

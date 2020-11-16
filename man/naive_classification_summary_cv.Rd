@@ -2,7 +2,7 @@
 % Please edit documentation in R/naive_classification_summary_cv.R
 \name{naive_classification_summary_cv}
 \alias{naive_classification_summary_cv}
-\title{Posterior Classification Summaries}
+\title{Cross-Validated Posterior Classification Summaries for a Naive Bayes model}
 \usage{
 naive_classification_summary_cv(model, data, y, k = 10)
 }
@@ -19,5 +19,8 @@ naive_classification_summary_cv(model, data, y, k = 10)
 
 }
 \description{
-Posterior Classification Summaries
+Given a set of observed data including a categorical response variable y 
+and a naiveBayes model of y, 
+this function returns a cross validated confusion matrix by which to assess 
+the model's posterior classification quality.
 }

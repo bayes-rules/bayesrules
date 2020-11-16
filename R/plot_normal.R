@@ -1,7 +1,10 @@
-#' Plot Normal Prior/Posterior
+#' @title Plot a Normal Model for \eqn{\mu} 
 #'
-#' @param mean mean
-#' @param sd  standard deviation 
+#' @description Plots the probability density function (pdf) for a
+#' Normal(mean, sd^2) model of variable \eqn{\mu}.
+#' 
+#' @param mean mean parameter of the Normal model
+#' @param sd  standard deviation parameter of the Normal model
 #'
 #' @return
 #' @export

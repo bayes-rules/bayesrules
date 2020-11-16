@@ -2,7 +2,7 @@
 % Please edit documentation in R/plot_normal_normal.R
 \name{plot_normal_normal}
 \alias{plot_normal_normal}
-\title{Plot Normal-Normal Models}
+\title{Plot a Normal-Normal Bayesian model}
 \usage{
 plot_normal_normal(
   mean,
@@ -16,27 +16,32 @@ plot_normal_normal(
 )
 }
 \arguments{
-\item{mean}{prior mean}
+\item{mean}{mean of the Normal prior}
 
-\item{sd}{prior standard deviation}
+\item{sd}{standard deviation of the Normal prior}
 
-\item{sigma}{likelihood standard deviation}
+\item{sigma}{standard deviation of the data, or likelihood standard deviation}
 
 \item{y_bar}{sample mean of the data}
 
 \item{n}{sample size of the data}
 
-\item{prior}{a logical value indicating whether the prior model should be plotted.}
+\item{prior}{a logical value indicating whether the prior model should be plotted}
 
-\item{likelihood}{a logical value indicating whether the scaled likelihood should be plotted.}
+\item{likelihood}{a logical value indicating whether the scaled likelihood should be plotted}
 
-\item{posterior}{a logical value indicating whether posterior model should be plotted.}
+\item{posterior}{a logical value indicating whether posterior model should be plotted}
 }
 \value{
 a ggplot
 }
 \description{
-Plot Normal-Normal Models
+Consider a Normal-Normal Bayesian model for mean parameter \eqn{\mu} with 
+a N(mean, sd^2) prior on \eqn{\mu} and a Normal likelihood for the data. 
+Given information on the prior (mean and sd) 
+and data (the sample size n, mean y_bar, and standard deviation sigma),
+this function produces a plot of any combination of the corresponding prior pdf, 
+scaled likelihood function, and posterior pdf.  All three are included by default.
 }
 \examples{
 

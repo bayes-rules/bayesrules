@@ -1,10 +1,10 @@
-
-#' @title Plot Beta Prior/Posterior for \eqn{\pi} 
+#' @title Plot a Beta Model for \eqn{\pi} 
 #'
-#' @description Plots the Probability Density Function for Beta Prior/Posterior \eqn{\pi} which represents the probability of success in a Binomial likelihood.
+#' @description Plots the probability density function (pdf) for
+#' a Beta(alpha, beta) model of variable \eqn{\pi}.
 #'
 #' @param alpha,beta non-negative parameters of the Beta model
-#' @param mean,mode provides choices whether to display the mean and the mode of the model  
+#' @param mean,mode a logical value indicating whether to display the model mean and mode
 #'
 #' @return A density plot for the Beta model.
 #' @export

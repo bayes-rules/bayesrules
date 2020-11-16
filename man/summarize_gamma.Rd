@@ -2,20 +2,21 @@
 % Please edit documentation in R/summarize_gamma.R
 \name{summarize_gamma}
 \alias{summarize_gamma}
-\title{Summarize Gamma Trends}
+\title{Summarize a Gamma Model for \eqn{\lambda}}
 \usage{
 summarize_gamma(shape, rate)
 }
 \arguments{
-\item{shape}{A non-negative shape parameter of the Gamma distribution.}
+\item{shape}{non-negative shape parameter of the Gamma model}
 
-\item{rate}{A non-negative rate parameter of the Gamma distribution.}
+\item{rate}{non-negative rate parameter of the Gamma model}
 }
 \value{
 a summary table
 }
 \description{
-Summarizes the expected value, variance, and mode of the Gamma distribution
+Summarizes the expected value, variance, and mode of 
+a Gamma(shape, rate) model for variable \eqn{\lambda}.
 }
 \examples{
 \dontrun{

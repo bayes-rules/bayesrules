@@ -1,7 +1,12 @@
 #' Cross-Validated Posterior Classification Summaries
 #'
+#' Given a set of observed data including a binary response variable y 
+#' and an rstanreg model of y, 
+#' this function returns cross validated estimates of the model's posterior classification quality:
+#' sensitivity, specificity, and overall accuracy.
+#' 
 #' @param model an rstanreg model object with binary y
-#' @param data data frame including the variables in the model
+#' @param data data frame including the variables in the model, both response y and predictors x
 #' @param k the number of folds to use for cross validation
 #' @param cutoff probability cutoff to classify a new case as positive
 #'

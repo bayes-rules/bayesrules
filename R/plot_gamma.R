@@ -1,9 +1,12 @@
-#' Plot Gamma Prior/Posterior
+#' @title Plot a Gamma Model for \eqn{\lambda} 
 #'
-#' @param shape A non-negative shape parameter of the Gamma model.
-#' @param rate A non-negative rate parameter of the Gamma model.
-#' @param lambda A range of non-negative values for the Gamma model.
-#' @param mean,mode take logical values indicating whether mean and the mode of the model should be displayed. 
+#' @description Plots the probability density function (pdf) for
+#' a Gamma(shape, rate) model of variable \eqn{\lambda}.
+#' 
+#' @param shape non-negative shape parameter of the Gamma model
+#' @param rate non-negative rate parameter of the Gamma model
+#' @param lambda range of non-negative values to plot for the Gamma model
+#' @param mean,mode a logical value indicating whether to display the model mean and mode
 #'
 #' @return A density plot for the Gamma model.
 #' @export

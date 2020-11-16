@@ -1,7 +1,11 @@
-#' @title Plot Binomial Likelihood 
+#' @title Plot a Binomial Likelihood Function
+#' 
+#' @description Plots the Binomial likelihood function for variable \eqn{\pi}
+#' given y observed successes in a series of n Binomial trials.
+#' 
 #' @param y number of successes  
 #' @param n number of trials
-#' @param mle a logical value indicating whether maximum likelihood estimate should be plotted
+#' @param mle a logical value indicating whether maximum likelihood estimate of \eqn{\pi}, y/n, should be plotted
 #' @return
 #' @export
 #' 

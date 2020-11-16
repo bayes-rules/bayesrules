@@ -1,5 +1,10 @@
-#' Posterior Classification Summaries
+#' Cross-Validated Posterior Classification Summaries for a Naive Bayes model
 #'
+#' Given a set of observed data including a categorical response variable y 
+#' and a naiveBayes model of y, 
+#' this function returns a cross validated confusion matrix by which to assess 
+#' the model's posterior classification quality.
+#' 
 #' @param model a naiveBayes model object with categorical y
 #' @param data data frame including the variables in the model
 #' @param y a character string indicating the y variable in data

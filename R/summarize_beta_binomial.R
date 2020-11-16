@@ -1,8 +1,12 @@
-#' @title Summarize Beta Binomial
+#' @title Summarize a Beta-Binomial Bayesian model
 #' 
-#' @description Summarizes the mean, mode, and variance of the prior and posterior Beta models of \eqn{\pi} which represents the probability of success in a Binomial likelihood.
+#' @description Consider a Beta-Binomial Bayesian model for parameter \eqn{\pi} with 
+#' a Beta(alpha, beta) prior on \eqn{\pi} and Binomial likelihood with n trials
+#' and y successes. Given information on the prior (alpha and data) and data (y and n),
+#' this function summarizes the mean, mode, and variance of the 
+#' prior and posterior Beta models of \eqn{\pi}.
 #' 
-#' @param alpha,beta non-negative parameters of the prior Beta model.
+#' @param alpha,beta non-negative parameters of the prior Beta model
 #' @param y number of successes
 #' @param n number of trials
 #'

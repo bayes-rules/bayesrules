@@ -2,20 +2,22 @@
 % Please edit documentation in R/plot_beta_ci.R
 \name{plot_beta_ci}
 \alias{plot_beta_ci}
-\title{Plot Beta Distribution with Credible Interval}
+\title{Plot a Beta Model with Credible Interval}
 \usage{
 plot_beta_ci(alpha, beta, ci_level = 0.95)
 }
 \arguments{
-\item{alpha, beta}{non-negative parameters of the Beta distribution}
+\item{alpha, beta}{non-negative parameters of the Beta model}
 
 \item{ci_level}{credible interval level}
 }
 \value{
-A density plot for the Beta distribution.
+A density plot for the Beta model
 }
 \description{
-Plots the Probability Density Function for Beta Distribution with Credible Interval
+Plots the probability density function (pdf) for a
+Beta(alpha, beta) model of variable \eqn{\pi} with markings indicating
+a credible interval for \eqn{\pi}.
 }
 \examples{
 \dontrun{

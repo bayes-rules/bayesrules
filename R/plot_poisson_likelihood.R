@@ -1,7 +1,10 @@
-#' @title Plot Poisson Likelihood
+#' @title Plot a Poisson Likelihood Function
 #'
-#' @param y vector of observed data
-#' @param lambda_upper_bound upper bound for lambda
+#' @description Plots the Poisson likelihood function for variable \eqn{\lambda}
+#' given a vector of Poisson counts y.
+#' 
+#' @param y vector of observed Poisson counts
+#' @param lambda_upper_bound upper bound for lambda values to display on x-axis
 #'
 #' @return a ggplot of Poisson likelihood
 #' @export

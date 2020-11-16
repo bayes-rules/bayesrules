@@ -2,24 +2,25 @@
 % Please edit documentation in R/plot_gamma.R
 \name{plot_gamma}
 \alias{plot_gamma}
-\title{Plot Gamma Prior/Posterior}
+\title{Plot a Gamma Model for \eqn{\lambda}}
 \usage{
 plot_gamma(shape, rate, mean = FALSE, mode = FALSE)
 }
 \arguments{
-\item{shape}{A non-negative shape parameter of the Gamma model.}
+\item{shape}{non-negative shape parameter of the Gamma model}
 
-\item{rate}{A non-negative rate parameter of the Gamma model.}
+\item{rate}{non-negative rate parameter of the Gamma model}
 
-\item{mean, mode}{take logical values indicating whether mean and the mode of the model should be displayed.}
+\item{mean, mode}{a logical value indicating whether to display the model mean and mode}
 
-\item{lambda}{A range of non-negative values for the Gamma model.}
+\item{lambda}{range of non-negative values to plot for the Gamma model}
 }
 \value{
 A density plot for the Gamma model.
 }
 \description{
-Plot Gamma Prior/Posterior
+Plots the probability density function (pdf) for
+a Gamma(shape, rate) model of variable \eqn{\lambda}.
 }
 \examples{
 \dontrun{

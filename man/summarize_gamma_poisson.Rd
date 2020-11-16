@@ -7,22 +7,26 @@
 summarize_gamma_poisson(shape, rate, sum_y = NULL, n = NULL)
 }
 \arguments{
-\item{shape}{A non-negative shape parameter of the Gamma distribution.}
+\item{shape}{non-negative shape parameter of the Gamma prior}
 
-\item{rate}{A non-negative rate parameter of the Gamma distribution.}
+\item{rate}{non-negative rate parameter of the Gamma prior}
 
-\item{sum_y}{sum of observed values for the Poisson likelihood.}
+\item{sum_y}{sum of observed data values for the Poisson likelihood}
 
-\item{n}{number of observations for the Poisson likelihood.}
+\item{n}{number of observations for the Poisson likelihood}
 }
 \value{
 
 }
 \description{
-Summarize the Gamma-Poisson Model
+Consider a Gamma-Poisson Bayesian model for rate parameter \eqn{\lambda} with 
+a Gamma(shape, rate) prior on \eqn{\lambda} and a Poisson likelihood for the data. 
+Given information on the prior (shape and rate) 
+and data (the sample size n and sum_y),
+this function summarizes the mean, mode, and variance of the 
+prior and posterior Gamma models of \eqn{\lambda}.
 }
 \examples{
-#' \dontrun{
 summarize_gamma_poisson(3, 4, 7, 12)
-}
+
 }

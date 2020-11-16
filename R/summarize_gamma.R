@@ -1,9 +1,10 @@
-#' @title Summarize Gamma Trends
+#' @title Summarize a Gamma Model for \eqn{\lambda}
 #' 
-#' @description Summarizes the expected value, variance, and mode of the Gamma distribution 
+#' @description Summarizes the expected value, variance, and mode of 
+#' a Gamma(shape, rate) model for variable \eqn{\lambda}.
 #'
-#' @param shape A non-negative shape parameter of the Gamma distribution.
-#' @param rate A non-negative rate parameter of the Gamma distribution.
+#' @param shape non-negative shape parameter of the Gamma model
+#' @param rate non-negative rate parameter of the Gamma model
 #'
 #' @return a summary table
 #' @export
