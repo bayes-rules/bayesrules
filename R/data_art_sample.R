@@ -1,7 +1,6 @@
 #' Art Sample
 #'
 #' Diversity of artists in major U.S. museums
-#' "The Dollar-And-Cents Case Against Hollywood's Exclusion of Women"
 #' \url{https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0212852}.
 #'
 #' @format A data frame with 100 rows and 6 variables:

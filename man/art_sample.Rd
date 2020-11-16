@@ -23,7 +23,6 @@ art_sample
 }
 \description{
 Diversity of artists in major U.S. museums
-"The Dollar-And-Cents Case Against Hollywood's Exclusion of Women"
 \url{https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0212852}.
 }
 \keyword{datasets}
