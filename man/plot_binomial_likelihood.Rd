@@ -2,7 +2,7 @@
 % Please edit documentation in R/plot_binomial_likelihood.R
 \name{plot_binomial_likelihood}
 \alias{plot_binomial_likelihood}
-\title{Plot Binomial Likelihood}
+\title{Plot a Binomial Likelihood Function}
 \usage{
 plot_binomial_likelihood(y, n, mle = FALSE)
 }
@@ -11,13 +11,14 @@ plot_binomial_likelihood(y, n, mle = FALSE)
 
 \item{n}{number of trials}
 
-\item{mle}{a logical value indicating whether maximum likelihood estimate should be plotted}
+\item{mle}{a logical value indicating whether maximum likelihood estimate of \eqn{\pi}, y/n, should be plotted}
 }
 \value{
 
 }
 \description{
-Plot Binomial Likelihood
+Plots the Binomial likelihood function for variable \eqn{\pi}
+given y observed successes in a series of n Binomial trials.
 }
 \examples{
 plot_binomial_likelihood(y = 3, n = 10, mle = TRUE)

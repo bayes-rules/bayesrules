@@ -9,13 +9,17 @@ classification_summary(model, data, cutoff = 0.5)
 \arguments{
 \item{model}{an rstanreg model object with binary y}
 
-\item{data}{data frame including the variables in the model}
+\item{data}{data frame including the variables in the model, both response y and predictors x}
 
-\item{cutoff}{probability cutoff to classify a new case as positive}
+\item{cutoff}{probability cutoff to classify a new case as positive (0.5 is the default)}
 }
 \value{
 
 }
 \description{
-Posterior Classification Summaries
+Given a set of observed data including a binary response variable y 
+and an rstanreg model of y, 
+this function returns summaries of the model's posterior classification quality.
+These summaries include a confusion matrix as well as estimates of the model's
+sensitivity, specificity, and overall accuracy.
 }

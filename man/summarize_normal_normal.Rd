@@ -2,16 +2,16 @@
 % Please edit documentation in R/summarize_normal_normal.R
 \name{summarize_normal_normal}
 \alias{summarize_normal_normal}
-\title{Summarize Normal-Normal}
+\title{Summarize a Normal-Normal Bayesian model}
 \usage{
 summarize_normal_normal(mean, sd, sigma = NULL, y_bar = NULL, n = NULL)
 }
 \arguments{
-\item{mean}{prior mean}
+\item{mean}{mean of the Normal prior}
 
-\item{sd}{prior standard deviation}
+\item{sd}{standard deviation of the Normal prior}
 
-\item{sigma}{likelihood standard deviation}
+\item{sigma}{standard deviation of the data, or likelihood standard deviation}
 
 \item{y_bar}{sample mean of the data}
 
@@ -21,5 +21,10 @@ summarize_normal_normal(mean, sd, sigma = NULL, y_bar = NULL, n = NULL)
 
 }
 \description{
-Summarize Normal-Normal
+Consider a Normal-Normal Bayesian model for mean parameter \eqn{\mu} with 
+a N(mean, sd^2) prior on \eqn{\mu} and a Normal likelihood for the data. 
+Given information on the prior (mean and sd) 
+and data (the sample size n, mean y_bar, and standard deviation sigma),
+this function summarizes the mean, mode, and variance of the 
+prior and posterior Normal models of \eqn{\mu}.
 }

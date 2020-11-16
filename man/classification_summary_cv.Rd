@@ -9,7 +9,7 @@ classification_summary_cv(model, data, k = 10, cutoff = 0.5)
 \arguments{
 \item{model}{an rstanreg model object with binary y}
 
-\item{data}{data frame including the variables in the model}
+\item{data}{data frame including the variables in the model, both response y and predictors x}
 
 \item{k}{the number of folds to use for cross validation}
 
@@ -19,5 +19,8 @@ classification_summary_cv(model, data, k = 10, cutoff = 0.5)
 
 }
 \description{
-Cross-Validated Posterior Classification Summaries
+Given a set of observed data including a binary response variable y 
+and an rstanreg model of y, 
+this function returns cross validated estimates of the model's posterior classification quality:
+sensitivity, specificity, and overall accuracy.
 }

@@ -1,13 +1,20 @@
-#' Plot Normal-Normal Models
+#' Plot a Normal-Normal Bayesian model
+#' 
+#' Consider a Normal-Normal Bayesian model for mean parameter \eqn{\mu} with 
+#' a N(mean, sd^2) prior on \eqn{\mu} and a Normal likelihood for the data. 
+#' Given information on the prior (mean and sd) 
+#' and data (the sample size n, mean y_bar, and standard deviation sigma),
+#' this function produces a plot of any combination of the corresponding prior pdf, 
+#' scaled likelihood function, and posterior pdf.  All three are included by default.
 #'
-#' @param mean prior mean
-#' @param sd prior standard deviation
-#' @param sigma likelihood standard deviation
+#' @param mean mean of the Normal prior
+#' @param sd standard deviation of the Normal prior
+#' @param sigma standard deviation of the data, or likelihood standard deviation
 #' @param y_bar sample mean of the data
 #' @param n sample size of the data
-#' @param prior a logical value indicating whether the prior model should be plotted.
-#' @param likelihood a logical value indicating whether the scaled likelihood should be plotted.
-#' @param posterior a logical value indicating whether posterior model should be plotted.
+#' @param prior a logical value indicating whether the prior model should be plotted
+#' @param likelihood a logical value indicating whether the scaled likelihood should be plotted
+#' @param posterior a logical value indicating whether posterior model should be plotted
 #'
 #' @return a ggplot
 #' @export
@@ -87,11 +94,4 @@ plot_normal_normal <- function (mean,
      
       
      g 
-    }   
-    
-    
-    
-
-  
-  
-
+}

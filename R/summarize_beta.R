@@ -1,6 +1,7 @@
-#' @title Summarize Beta Trends for \eqn{\pi} 
+#' @title Summarize a Beta Model for \eqn{\pi} 
 #' 
-#' @description Summarizes the expected value, variance, and mode of \eqn{\pi} of a Beta model 
+#' @description Summarizes the expected value, variance, and mode of 
+#' a Beta(alpha, beta) model for variable \eqn{\pi}.
 #'
 #' @param alpha,beta non-negative parameters of the Beta model
 #'

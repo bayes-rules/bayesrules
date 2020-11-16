@@ -2,20 +2,21 @@
 % Please edit documentation in R/plot_beta.R
 \name{plot_beta}
 \alias{plot_beta}
-\title{Plot Beta Prior/Posterior for \eqn{\pi}}
+\title{Plot a Beta Model for \eqn{\pi}}
 \usage{
 plot_beta(alpha, beta, mean = FALSE, mode = FALSE)
 }
 \arguments{
 \item{alpha, beta}{non-negative parameters of the Beta model}
 
-\item{mean, mode}{provides choices whether to display the mean and the mode of the model}
+\item{mean, mode}{a logical value indicating whether to display the model mean and mode}
 }
 \value{
 A density plot for the Beta model.
 }
 \description{
-Plots the Probability Density Function for Beta Prior/Posterior \eqn{\pi} which represents the probability of success in a Binomial likelihood.
+Plots the probability density function (pdf) for
+a Beta(alpha, beta) model of variable \eqn{\pi}.
 }
 \examples{
 plot_beta(alpha = 1, beta = 12)

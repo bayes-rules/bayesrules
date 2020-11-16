@@ -1,5 +1,11 @@
-#' Posterior Classification Summaries
+#' Posterior Classification Summaries for a Naive Bayes model
 #'
+#' Given a set of observed data including a categorical response variable y 
+#' and a naiveBayes model of y, 
+#' this function returns summaries of the model's posterior classification quality.
+#' These summaries include a confusion matrix as well as an estimate of the model's
+#' overall accuracy.
+#' 
 #' @param model a naiveBayes model object with categorical y
 #' @param data data frame including the variables in the model
 #' @param y a character string indicating the y variable in data

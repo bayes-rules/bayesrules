@@ -1,10 +1,17 @@
 #' Cross-Validated Posterior Predictive Summaries
+#' 
+#' Given a set of observed data including a quantitative response variable y 
+#' and an rstanreg model of y, 
+#' this function returns 4 cross-validated measures of the model's posterior prediction quality: 
+#' median absolute prediction error (the typical difference between the observed y values and their posterior predictive medians),
+#' scaled mae (the typical number of absolute deviations between the observed y values and their posterior predictive medians),
+#' the proportion of observed y values that fall within their posterior prediction intervals, the probability levels of which are set by the user.
 #'
-#' @param data data frame including the variables in the model
+#' @param data data frame including the variables in the model, both response y and predictors x
 #' @param model an rstanreg model object with quantitative y
 #' @param k the number of folds to use for cross validation
-#' @param prob_inner posterior predictive interval probability
-#' @param prob_outer posterior predictive interval probability
+#' @param prob_inner posterior predictive interval probability (a value between 0 and 1)
+#' @param prob_outer posterior predictive interval probability (a value between 0 and 1)
 #'
 #' @return
 #' @export

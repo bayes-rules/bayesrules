@@ -2,7 +2,7 @@
 % Please edit documentation in R/summarize_beta.R
 \name{summarize_beta}
 \alias{summarize_beta}
-\title{Summarize Beta Trends for \eqn{\pi}}
+\title{Summarize a Beta Model for \eqn{\pi}}
 \usage{
 summarize_beta(alpha, beta)
 }
@@ -13,7 +13,8 @@ summarize_beta(alpha, beta)
 a summary table
 }
 \description{
-Summarizes the expected value, variance, and mode of \eqn{\pi} of a Beta model
+Summarizes the expected value, variance, and mode of 
+a Beta(alpha, beta) model for variable \eqn{\pi}.
 }
 \examples{
 summarize_beta(alpha = 1, beta = 15)

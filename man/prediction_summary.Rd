@@ -7,17 +7,22 @@
 prediction_summary(y, yrep, prob_inner = 0.5, prob_outer = 0.95)
 }
 \arguments{
-\item{y}{response variable}
+\item{y}{vector of data on a quantitative response variable}
 
-\item{yrep}{predicted reps}
+\item{yrep}{a ppd object / matrix, each column containing a set of posterior predictions for the corresponding case in y}
 
-\item{prob_inner}{posterior predictive interval probability}
+\item{prob_inner}{posterior predictive interval probability (a value between 0 and 1)}
 
-\item{prob_outer}{posterior predictive interval probability}
+\item{prob_outer}{posterior predictive interval probability (a value between 0 and 1)}
 }
 \value{
 
 }
 \description{
-Posterior Predictive Summaries
+Given a vector of observed data on quantitative variable y 
+and a set of posterior predictions for each y, 
+this function returns 4 measures of the posterior prediction quality: 
+median absolute prediction error (the typical difference between the observed y values and their posterior predictive medians),
+scaled mae (the typical number of absolute deviations between the observed y values and their posterior predictive medians),
+the proportion of observed y values that fall within their posterior prediction intervals, the probability levels of which are set by the user.
 }

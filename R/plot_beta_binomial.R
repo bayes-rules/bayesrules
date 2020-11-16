@@ -1,11 +1,17 @@
-#' Plot Beta-Binomial Models
+#' Plot a Beta-Binomial Bayesian Model
 #'
-#' @param alpha,beta non-negative parameters of the prior Beta model.
-#' @param y number of successes
-#' @param n number of trials
-#' @param prior a logical value indicating whether the prior model should be plotted.
-#' @param likelihood a logical value indicating whether the scaled likelihood should be plotted.
-#' @param posterior a logical value indicating whether posterior model should be plotted.
+#' Consider a Beta-Binomial Bayesian model for parameter \eqn{\pi} with 
+#' a Beta(alpha, beta) prior on \eqn{\pi} and Binomial likelihood with n trials
+#' and y successes. Given information on the prior (alpha and data) and data (y and n),
+#' this function produces a plot of any combination of the corresponding prior pdf, 
+#' scaled likelihood function, and posterior pdf.  All three are included by default.
+#'
+#' @param alpha,beta non-negative parameters of the prior Beta model
+#' @param y observed number of successes
+#' @param n observed number of trials
+#' @param prior a logical value indicating whether the prior model should be plotted
+#' @param likelihood a logical value indicating whether the scaled likelihood should be plotted
+#' @param posterior a logical value indicating whether posterior model should be plotted
 #'
 #' @return a ggplot
 #' @export

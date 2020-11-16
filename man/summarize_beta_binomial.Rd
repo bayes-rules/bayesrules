@@ -2,12 +2,12 @@
 % Please edit documentation in R/summarize_beta_binomial.R
 \name{summarize_beta_binomial}
 \alias{summarize_beta_binomial}
-\title{Summarize Beta Binomial}
+\title{Summarize a Beta-Binomial Bayesian model}
 \usage{
 summarize_beta_binomial(alpha, beta, y = NULL, n = NULL)
 }
 \arguments{
-\item{alpha, beta}{non-negative parameters of the prior Beta model.}
+\item{alpha, beta}{non-negative parameters of the prior Beta model}
 
 \item{y}{number of successes}
 
@@ -17,7 +17,11 @@ summarize_beta_binomial(alpha, beta, y = NULL, n = NULL)
 a summary table
 }
 \description{
-Summarizes the mean, mode, and variance of the prior and posterior Beta models of \eqn{\pi} which represents the probability of success in a Binomial likelihood.
+Consider a Beta-Binomial Bayesian model for parameter \eqn{\pi} with 
+a Beta(alpha, beta) prior on \eqn{\pi} and Binomial likelihood with n trials
+and y successes. Given information on the prior (alpha and data) and data (y and n),
+this function summarizes the mean, mode, and variance of the 
+prior and posterior Beta models of \eqn{\pi}.
 }
 \examples{
 

@@ -1,12 +1,19 @@
-#' Title
+#' Plot a Gamma-Poisson Bayesian Model
 #'
-#' @param shape A non-negative shape parameter of the Gamma distribution.
-#' @param rate A non-negative rate parameter of the Gamma distribution.
-#' @param sum_y sum of observed values for the Poisson likelihood.
-#' @param n number of observations for the Poisson likelihood.
-#' @param prior a logical value indicating whether the prior distribution should be plotted.
+#' Consider a Gamma-Poisson Bayesian model for rate parameter \eqn{\lambda} with 
+#' a Gamma(shape, rate) prior on \eqn{\lambda} and a Poisson likelihood for the data. 
+#' Given information on the prior (shape and rate) 
+#' and data (the sample size n and sum_y),
+#' this function produces a plot of any combination of the corresponding prior pdf, 
+#' scaled likelihood function, and posterior pdf.  All three are included by default.
+#' 
+#' @param shape non-negative shape parameter of the Gamma prior
+#' @param rate non-negative rate parameter of the Gamma prior
+#' @param sum_y sum of observed data values for the Poisson likelihood
+#' @param n number of observations for the Poisson likelihood
+#' @param prior a logical value indicating whether the prior model should be plotted.
 #' @param likelihood a logical value indicating whether the scaled likelihood should be plotted.
-#' @param posterior a logical value indicating whether posterior distribution should be plotted.
+#' @param posterior a logical value indicating whether posterior model should be plotted.
 #'
 #' @return a ggplot2
 #' @export

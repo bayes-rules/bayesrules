@@ -2,7 +2,7 @@
 % Please edit documentation in R/naive_classification_summary.R
 \name{naive_classification_summary}
 \alias{naive_classification_summary}
-\title{Posterior Classification Summaries}
+\title{Posterior Classification Summaries for a Naive Bayes model}
 \usage{
 naive_classification_summary(model, data, y)
 }
@@ -17,5 +17,9 @@ naive_classification_summary(model, data, y)
 
 }
 \description{
-Posterior Classification Summaries
+Given a set of observed data including a categorical response variable y 
+and a naiveBayes model of y, 
+this function returns summaries of the model's posterior classification quality.
+These summaries include a confusion matrix as well as an estimate of the model's
+overall accuracy.
 }

@@ -2,7 +2,7 @@
 % Please edit documentation in R/plot_gamma_poisson.R
 \name{plot_gamma_poisson}
 \alias{plot_gamma_poisson}
-\title{Title}
+\title{Plot a Gamma-Poisson Bayesian Model}
 \usage{
 plot_gamma_poisson(
   shape,
@@ -15,25 +15,30 @@ plot_gamma_poisson(
 )
 }
 \arguments{
-\item{shape}{A non-negative shape parameter of the Gamma distribution.}
+\item{shape}{non-negative shape parameter of the Gamma prior}
 
-\item{rate}{A non-negative rate parameter of the Gamma distribution.}
+\item{rate}{non-negative rate parameter of the Gamma prior}
 
-\item{sum_y}{sum of observed values for the Poisson likelihood.}
+\item{sum_y}{sum of observed data values for the Poisson likelihood}
 
-\item{n}{number of observations for the Poisson likelihood.}
+\item{n}{number of observations for the Poisson likelihood}
 
-\item{prior}{a logical value indicating whether the prior distribution should be plotted.}
+\item{prior}{a logical value indicating whether the prior model should be plotted.}
 
 \item{likelihood}{a logical value indicating whether the scaled likelihood should be plotted.}
 
-\item{posterior}{a logical value indicating whether posterior distribution should be plotted.}
+\item{posterior}{a logical value indicating whether posterior model should be plotted.}
 }
 \value{
 a ggplot2
 }
 \description{
-Title
+Consider a Gamma-Poisson Bayesian model for rate parameter \eqn{\lambda} with 
+a Gamma(shape, rate) prior on \eqn{\lambda} and a Poisson likelihood for the data. 
+Given information on the prior (shape and rate) 
+and data (the sample size n and sum_y),
+this function produces a plot of any combination of the corresponding prior pdf, 
+scaled likelihood function, and posterior pdf.  All three are included by default.
 }
 \examples{
 plot_gamma_poisson(shape = 100, rate = 20, sum_y = 39, n = 6)

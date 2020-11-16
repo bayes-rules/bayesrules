@@ -2,7 +2,7 @@
 % Please edit documentation in R/sample_mode.R
 \name{sample_mode}
 \alias{sample_mode}
-\title{Find Sample Mode}
+\title{Sample Mode}
 \usage{
 sample_mode(x)
 }
@@ -13,7 +13,7 @@ sample_mode(x)
 sample mode
 }
 \description{
-Find Sample Mode
+Calculate the sample mode of vector x.
 }
 \examples{
 sample_mode(c(3,4,4))

@@ -1,12 +1,13 @@
-
-#' @title Plot Beta Distribution with Credible Interval
+#' @title Plot a Beta Model with Credible Interval
 #'
-#' @description Plots the Probability Density Function for Beta Distribution with Credible Interval
+#' @description Plots the probability density function (pdf) for a
+#' Beta(alpha, beta) model of variable \eqn{\pi} with markings indicating
+#' a credible interval for \eqn{\pi}.
 #'
-#' @param alpha,beta non-negative parameters of the Beta distribution
+#' @param alpha,beta non-negative parameters of the Beta model
 #' @param ci_level credible interval level
 #'
-#' @return A density plot for the Beta distribution.
+#' @return A density plot for the Beta model
 #' @export
 #' @import ggplot2
 #'

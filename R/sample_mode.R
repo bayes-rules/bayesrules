@@ -1,4 +1,6 @@
-#' Find Sample Mode
+#' Sample Mode
+#' 
+#' Calculate the sample mode of vector x.
 #'
 #' @param x vector of sample data 
 #'
