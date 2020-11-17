@@ -10,7 +10,7 @@
 #' @param data data frame including the variables in the model, both response y and predictors x
 #' @param cutoff probability cutoff to classify a new case as positive (0.5 is the default)
 #'
-#' @return
+#' @return a list
 #' @export
 #' @import janitor
 #' @import dplyr

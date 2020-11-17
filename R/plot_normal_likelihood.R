@@ -10,9 +10,11 @@
 #' @export
 #' 
 #' @import ggplot2
-#'
+#' 
+#'\dontrun{
 #' @examples
 #' plot_normal_likelihood(y = rnorm(50, mean = 10, sd = 2))
+#' }
 plot_normal_likelihood <- function(y, sigma = NULL){
   y_bar <- mean(y)
   y_sd  <- sd(y)

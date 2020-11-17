@@ -14,7 +14,7 @@ plot_binomial_likelihood(y, n, mle = FALSE)
 \item{mle}{a logical value indicating whether maximum likelihood estimate of \eqn{\pi}, y/n, should be plotted}
 }
 \value{
-
+a ggplot
 }
 \description{
 Plots the Binomial likelihood function for variable \eqn{\pi}

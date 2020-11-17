@@ -30,7 +30,7 @@ plot_gamma_poisson(
 \item{posterior}{a logical value indicating whether posterior model should be plotted.}
 }
 \value{
-a ggplot2
+a ggplot
 }
 \description{
 Consider a Gamma-Poisson Bayesian model for rate parameter \eqn{\lambda} with 

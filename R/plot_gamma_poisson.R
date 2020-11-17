@@ -15,7 +15,7 @@
 #' @param likelihood a logical value indicating whether the scaled likelihood should be plotted.
 #' @param posterior a logical value indicating whether posterior model should be plotted.
 #'
-#' @return a ggplot2
+#' @return a ggplot
 #' @export
 #'
 #' @import ggplot2

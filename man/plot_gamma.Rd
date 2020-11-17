@@ -12,8 +12,6 @@ plot_gamma(shape, rate, mean = FALSE, mode = FALSE)
 \item{rate}{non-negative rate parameter of the Gamma model}
 
 \item{mean, mode}{a logical value indicating whether to display the model mean and mode}
-
-\item{lambda}{range of non-negative values to plot for the Gamma model}
 }
 \value{
 A density plot for the Gamma model.

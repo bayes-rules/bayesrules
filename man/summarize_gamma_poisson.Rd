@@ -16,7 +16,7 @@ summarize_gamma_poisson(shape, rate, sum_y = NULL, n = NULL)
 \item{n}{number of observations for the Poisson likelihood}
 }
 \value{
-
+data frame
 }
 \description{
 Consider a Gamma-Poisson Bayesian model for rate parameter \eqn{\lambda} with 

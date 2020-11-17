@@ -16,7 +16,7 @@ naive_classification_summary_cv(model, data, y, k = 10)
 \item{k}{the number of folds to use for cross validation}
 }
 \value{
-
+a list
 }
 \description{
 Given a set of observed data including a categorical response variable y 

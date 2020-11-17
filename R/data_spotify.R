@@ -8,7 +8,8 @@
 #'   \item{track_name}{song name}
 #'   \item{track_artist}{song artist}
 #'   \item{track_popularity}{song popularity from 0 (low) to 100 (high)}
-#'   \item{track_album_id}{album on which the song appears}
+#'   \item{track_album_id}{id of the album on which the song appears}
+#'   \item{track_album_name}{name of the album on which the song appears}
 #'   \item{track_album_release_date}{when the album was released}
 #'   \item{playlist_name}{Spotify playlist on which the song appears}
 #'   \item{playlist_id}{unique playlist identifier}

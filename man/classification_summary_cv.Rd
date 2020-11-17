@@ -16,7 +16,7 @@ classification_summary_cv(model, data, k = 10, cutoff = 0.5)
 \item{cutoff}{probability cutoff to classify a new case as positive}
 }
 \value{
-
+a list
 }
 \description{
 Given a set of observed data including a binary response variable y 

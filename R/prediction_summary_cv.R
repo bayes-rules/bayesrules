@@ -13,7 +13,7 @@
 #' @param prob_inner posterior predictive interval probability (a value between 0 and 1)
 #' @param prob_outer posterior predictive interval probability (a value between 0 and 1)
 #'
-#' @return
+#' @return list
 #' @export
 #'
 #' @examples

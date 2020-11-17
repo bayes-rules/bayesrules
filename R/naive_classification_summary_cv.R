@@ -10,7 +10,7 @@
 #' @param y a character string indicating the y variable in data
 #' @param k the number of folds to use for cross validation
 #'
-#' @return
+#' @return a list
 #' @export
 #'
 #' @examples

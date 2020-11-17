@@ -10,9 +10,8 @@
 #' @export
 #'
 #' @examples
-#' \dontrun{
 #' summarize_gamma(1, 15)
-#' }
+#' 
 
 summarize_gamma <- function (shape, rate){
 

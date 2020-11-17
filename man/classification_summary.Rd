@@ -14,7 +14,7 @@ classification_summary(model, data, cutoff = 0.5)
 \item{cutoff}{probability cutoff to classify a new case as positive (0.5 is the default)}
 }
 \value{
-
+a list
 }
 \description{
 Given a set of observed data including a binary response variable y 

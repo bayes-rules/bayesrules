@@ -10,7 +10,7 @@
 #' @param data data frame including the variables in the model
 #' @param y a character string indicating the y variable in data
 #'
-#' @return
+#' @return a list
 #' @export
 #'
 #' @examples

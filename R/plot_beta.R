@@ -9,6 +9,7 @@
 #' @return A density plot for the Beta model.
 #' @export
 #' @import ggplot2
+#' @importFrom stats dbeta
 #'
 #' @examples
 #' plot_beta(alpha = 1, beta = 12)
@@ -17,7 +18,7 @@ plot_beta <- function(alpha, beta, mean = FALSE, mode = FALSE){
   
   p <- ggplot(data = data.frame(x = c(0, 1)),
               aes(x)) +
-    stat_function(fun = dbeta,
+    stat_function(fun = stats::dbeta,
                   n = 101,
                   args = list(shape1 = alpha,
                               shape2=beta)) +
@@ -63,7 +64,7 @@ plot_beta <- function(alpha, beta, mean = FALSE, mode = FALSE){
                        linetype = "mean")) +
       geom_segment(aes(x = mode, y = 0, 
                        xend = mode, 
-                       yend = dbeta(mode, alpha, beta), 
+                       yend = stats::dbeta(mode, alpha, beta), 
                        linetype = "mode"))+
       scale_linetype_manual(values = c(mean = "solid", mode = "dashed")) +
       theme(legend.title = element_blank())

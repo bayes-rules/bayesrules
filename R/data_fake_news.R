@@ -35,8 +35,8 @@
 #'   \item{trust}{Trust sentiment rating}
 #'   \item{negative}{Negative sentiment rating}
 #'   \item{positive}{Positive sentiment rating}
-#'   \item{text_syllabes}{Number of syllables in text}
-#'   \item{text_syllabes_per_word}{Number of syllables per word in text}
+#'   \item{text_syllables}{Number of syllables in text}
+#'   \item{text_syllables_per_word}{Number of syllables per word in text}
 #' }
 #' @source Shu, K., Mahudeswaran, D., Wang, S., Lee, D. and Liu, H. (2018) FakeNewsNet: A Data Repository with News Content, Social Context and Dynamic Information for Studying Fake News on Social Media
 "fake_news"
