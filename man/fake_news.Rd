@@ -35,8 +35,8 @@ A data frame with 150 rows and 6 variables:
   \item{trust}{Trust sentiment rating}
   \item{negative}{Negative sentiment rating}
   \item{positive}{Positive sentiment rating}
-  \item{text_syllabes}{Number of syllables in text}
-  \item{text_syllabes_per_word}{Number of syllables per word in text}
+  \item{text_syllables}{Number of syllables in text}
+  \item{text_syllables_per_word}{Number of syllables per word in text}
 }
 }
 \source{

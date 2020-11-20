@@ -18,7 +18,7 @@ summarize_normal_normal(mean, sd, sigma = NULL, y_bar = NULL, n = NULL)
 \item{n}{sample size of the data}
 }
 \value{
-
+data frame
 }
 \description{
 Consider a Normal-Normal Bayesian model for mean parameter \eqn{\mu} with 

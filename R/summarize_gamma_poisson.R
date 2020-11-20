@@ -12,7 +12,7 @@
 #' @param sum_y sum of observed data values for the Poisson likelihood
 #' @param n number of observations for the Poisson likelihood
 #'
-#' @return
+#' @return data frame
 #' @export
 #'
 #' @examples

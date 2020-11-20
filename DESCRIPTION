@@ -20,6 +20,10 @@ Suggests:
     rmarkdown
 VignetteBuilder: knitr
 Imports: 
-    ggplot2
+    ggplot2,
+    janitor,
+    magrittr,
+    dplyr,
+    stats
 Depends: 
     R (>= 2.10)

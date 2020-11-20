@@ -17,10 +17,10 @@
 #' @export
 #' @import ggplot2
 #' @examples
-#' 
+#' \dontrun{
 #' plot_beta_binomial(alpha = 1, beta = 13, y = 25, n = 50)
 #' plot_beta_binomial(alpha = 1, beta = 13, y = 25, n = 50, posterior = FALSE)
-
+#' }
 plot_beta_binomial <- function (alpha,
                                 beta,
                                 y = NULL,

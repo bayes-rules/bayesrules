@@ -19,7 +19,6 @@ Summarizes the expected value, variance, and mode of
 a Gamma(shape, rate) model for variable \eqn{\lambda}.
 }
 \examples{
-\dontrun{
 summarize_gamma(1, 15)
-}
+
 }

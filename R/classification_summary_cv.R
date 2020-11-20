@@ -10,7 +10,7 @@
 #' @param k the number of folds to use for cross validation
 #' @param cutoff probability cutoff to classify a new case as positive
 #'
-#' @return
+#' @return a list
 #' @export
 #' @import janitor
 #' @import dplyr

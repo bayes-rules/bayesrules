@@ -13,7 +13,7 @@
 #' @param y_bar sample mean of the data
 #' @param n sample size of the data
 #'
-#' @return
+#' @return data frame
 #' @export 
 #'
 #' @examples

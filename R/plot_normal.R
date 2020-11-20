@@ -6,7 +6,7 @@
 #' @param mean mean parameter of the Normal model
 #' @param sd  standard deviation parameter of the Normal model
 #'
-#' @return
+#' @return a gplot
 #' @export
 #' @import ggplot2
 #'

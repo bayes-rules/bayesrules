@@ -18,7 +18,7 @@ prediction_summary_cv(data, model, k = 10, prob_inner = 0.5, prob_outer = 0.95)
 \item{prob_outer}{posterior predictive interval probability (a value between 0 and 1)}
 }
 \value{
-
+list
 }
 \description{
 Given a set of observed data including a quantitative response variable y 

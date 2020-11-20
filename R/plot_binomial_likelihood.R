@@ -6,7 +6,7 @@
 #' @param y number of successes  
 #' @param n number of trials
 #' @param mle a logical value indicating whether maximum likelihood estimate of \eqn{\pi}, y/n, should be plotted
-#' @return
+#' @return a ggplot
 #' @export
 #' 
 #' @import magrittr

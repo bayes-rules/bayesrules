@@ -14,7 +14,7 @@ naive_classification_summary(model, data, y)
 \item{y}{a character string indicating the y variable in data}
 }
 \value{
-
+a list
 }
 \description{
 Given a set of observed data including a categorical response variable y 

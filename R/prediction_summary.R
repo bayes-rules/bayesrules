@@ -31,7 +31,7 @@ prediction_summary_data <- function(y, yrep, prob_inner = 0.5, prob_outer = 0.95
 #' @param prob_inner posterior predictive interval probability (a value between 0 and 1)
 #' @param prob_outer posterior predictive interval probability (a value between 0 and 1)
 #'
-#' @return
+#' @return a tibble
 #' @export
 #'
 #' @examples
