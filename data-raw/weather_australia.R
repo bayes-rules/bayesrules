@@ -15,5 +15,6 @@ weather <- weatherAUS %>%
           mutate(year = year(Date), month = month(Date), day_of_year = yday(Date)) %>% 
           select(-Date, -Cloud9am, -Cloud3pm, -Evaporation, -Sunshine)
 names(weather) <- tolower(names(weather))
+weather_australia <- weather
 
-usethis::use_data(weather, overwrite = TRUE)
+usethis::use_data(weather_australia, overwrite = TRUE)
