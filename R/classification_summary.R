@@ -33,10 +33,8 @@ classification_summary <- function(model, data, cutoff = 0.5){
           else {
                     y <- as.data.frame(data %>% dplyr::select(model$terms[[2]]))[,1]
           }
-          classifications <- data %>% 
-                    mutate(proportion = colMeans(predictions)) %>% 
+          classifications <- data.frame(proportion = colMeans(predictions)) %>% 
                     mutate(classification = as.numeric(proportion >= cutoff)) %>% 
-                    dplyr::select(proportion, classification) %>% 
                     mutate(y = y)
           
           # Confusion matrix
