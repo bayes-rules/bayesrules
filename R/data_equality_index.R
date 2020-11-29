@@ -1,13 +1,13 @@
 #' LGBTQ+ Rights Laws by State
 #' 
-#' Data on the number of LGBTQ+ equality laws and demographics in each U.S. state.
+#' Data on the number of LGBTQ+ equality laws (as of 2019) and demographics in each U.S. state.
 #' 
 #' @format A data frame with 50 observations, one per state, and 6 variables:
 #' \describe{
 #'   \item{state}{state name}
 #'   \item{region}{region in which the state falls}
 #'   \item{gop_2016}{percent of the 2016 presidential election vote earned by the Republican ("GOP") candidate}
-#'   \item{laws}{number of LGBTQ+ rights laws}
+#'   \item{laws}{number of LGBTQ+ rights laws (as of 2019)}
 #'   \item{historical}{political leaning of the state over time (gop = Republican, dem = Democrat, swing = swing state)}
 #'   \item{percent_urban}{percent of state's residents that live in urban areas (by the 2010 census)}
 #'   }
