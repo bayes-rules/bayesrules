@@ -1,10 +1,10 @@
 #' Museum of Modern Art (MoMA) data subset
 #' 
-#' A random sample of 100 media and performance artists represented in the Museum of Modern Art in New York City.
+#' A random sample of 100 artists represented in the Museum of Modern Art in New York City.
 #' The data was made available by MoMA itself and downloaded in December 2020.
 #' It does not include information about artist collectives or companies.
 #' 
-#' @format A data frame with 100 rows and 9 variables. Each row represents an individual media and performance artist in the MoMA collection.
+#' @format A data frame with 100 rows and 9 variables. Each row represents an individual artist in the MoMA collection.
 #' \describe{
 #'   \item{artist}{name}
 #'   \item{county}{country of origin}

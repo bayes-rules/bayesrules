@@ -31,9 +31,9 @@ moma <- left_join(moma_artists, moma_artists_2) %>%
           distinct()
 
 
-set.seed(9)
+set.seed(109)
 moma_small <- moma %>% 
-          filter(!is.na(alive), !is.na(birth), !is.na(count), !is.na(year_acquired_min), department == "media and performance") %>% 
+          filter(!is.na(alive), !is.na(birth), !is.na(count), !is.na(year_acquired_min)) %>% 
           sample_n(., size = 100) %>% 
           select(-department)
 
