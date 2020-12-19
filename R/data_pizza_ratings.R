@@ -15,7 +15,7 @@
 #'   \item{longitude}{restaurant longitude}
 #'   \item{price_level}{0 (cheap) to 3 (expensive)}
 #'   \item{community_avg_rating}{average rating among app users (presumably)}
-#'   \item{community_review_count}{average number of ratings among app users (presumably)}
+#'   \item{community_review_count}{number of ratings among app users (presumably)}
 #'   \item{critic_rating}{critic rating (source unknown)}
 #'   \item{dave_rating}{the rating of "Barstool Dave", a critic for Barstool Sports}
 #' }
