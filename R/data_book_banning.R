@@ -23,7 +23,7 @@
 #'   \item{occult}{whether the book was challenged for occult material}
 #'   \item{language}{whether the book was challenged for innapropriate language}
 #'   \item{lgbtq}{whether the book was challenged for LGBTQ material}
-#'   \item{violence}{whether the book was challenged for violent material}
+#'   \item{violent}{whether the book was challenged for violent material}
 #'   \item{state}{US state in which the challenge was made}
 #'   \item{political_value_index}{Political Value Index of the state (negative = leans Republican, 0 = neutral, positive = leans Democrat)}
 #'   \item{median_income}{median income in the state, relative to the average state median income}
