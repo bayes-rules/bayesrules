@@ -7,7 +7,7 @@
 #' @format A data frame with 1561 rows and 12 variables. Each row represents a single AirBnB listing.
 #' \describe{
 #'   \item{price}{the nightly price of the listing (in USD)}
-#'   \item{overall_satisfaction}{the listing's average rating, on a scale from 1 to 5}
+#'   \item{rating}{the listing's average rating, on a scale from 1 to 5}
 #'   \item{reviews}{number of user reviews the listing has}
 #'   \item{room_type}{the type of listing (eg: Shared room)}
 #'   \item{accommodates}{number of guests the listing accommodates}
