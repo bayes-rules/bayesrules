@@ -9,7 +9,7 @@
 #'   \item{state}{state location of restaurant}
 #'   \item{city}{city location}
 #'   \item{zip}{zip code location}
-#'   \item{zip_population_density}{persons per square mile in zip code}
+#'   \item{zip_population_density}{persons per square mile in zip code (in 1000s)}
 #'   \item{address}{restaurant address}
 #'   \item{latitude}{restaurant latitude}
 #'   \item{longitude}{restaurant longitude}

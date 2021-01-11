@@ -5,7 +5,8 @@ data(zip_code_db)
 zips <- zip_code_db %>% 
           mutate(zip = as.numeric(zipcode)) %>% 
           select(zip, state, population_density) %>% 
-          rename(zip_population_density = population_density)
+          rename(zip_population_density = population_density) %>% 
+          mutate(zip_population_density = zip_population_density / 1000)
 
 pizza_ratings <- readr::read_csv("https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2019/2019-10-01/pizza_barstool.csv") %>% 
           select(-country, -review_stats_dave_count, -contains("review_stats_all"), 
