@@ -13,7 +13,7 @@ pizza_ratings <- readr::read_csv("https://raw.githubusercontent.com/rfordatascie
                  -contains("total"), -contains("provider")) %>% 
           rename(address = address1, community_review_count = review_stats_community_count, community_avg_rating = review_stats_community_average_score,
                  critic_review_count = review_stats_critic_count, critic_rating = review_stats_critic_average_score,
-                 dave_rating = review_stats_dave_average_score) %>% 
+                 app_rating = review_stats_dave_average_score) %>% 
           mutate(community_avg_rating = replace(community_avg_rating, community_review_count == 0, NA),
                  critic_rating = replace(critic_rating, critic_review_count == 0, NA)) %>% 
           select(-critic_review_count) %>% 
