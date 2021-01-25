@@ -26,6 +26,8 @@
 #'   \item{injury_type}{}
 #'   \item{injury_height_metres}{}
 #'   \item{count}{number of climbers in the expedition}
+#'   \item{height_metre}{height of the peak in meters}
+#'   \item{first_ascent_year}{the year of the first recorded summit of the peak (though not necessarily the actual first summit!)}
 #'   }
 #' @source Original source: \url{https://www.himalayandatabase.com/}. Complete dataset distributed by: \url{https://github.com/rfordatascience/tidytuesday/tree/master/data/2020/2020-09-22}.
 "climbers_sub"

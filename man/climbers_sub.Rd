@@ -29,6 +29,8 @@ A data frame with 2076 observations (1 per climber) and 22 variables:
   \item{injury_type}{}
   \item{injury_height_metres}{}
   \item{count}{number of climbers in the expedition}
+  \item{height_metre}{height of the peak in meters}
+  \item{first_ascent_year}{the year of the first recorded summit of the peak (though not necessarily the actual first summit!)}
   }
 }
 \source{

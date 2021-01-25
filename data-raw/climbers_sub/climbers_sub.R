@@ -1,9 +1,7 @@
 # Read tidytuesday data
 members <- readr::read_csv('https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2020/2020-09-22/members.csv')
-
-# Store as climbers
-write.csv(members, here("data-raw", "climbers_sub", "climbers.csv"), row.names = FALSE)
-
+peaks <- readr::read_csv('https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2020/2020-09-22/peaks.csv') %>% 
+  select(peak_id, height_metres, first_ascent_year)
 
 climbers_sub <- members %>% 
           filter(age > 15, age < 78, year >= 1978)
@@ -17,7 +15,9 @@ random_exp <- climbers_sub %>%
 
 climbers_sub <- climbers_sub %>% 
           group_by(expedition_id) %>% 
-          right_join(random_exp)
+          right_join(random_exp) %>% 
+          left_join(peaks)
+
 
 
 # Store as climbers_sub
