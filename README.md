@@ -8,9 +8,7 @@
 <!-- badges: end -->
 
 bayesrules is a package to supplement the Bayes Rules\! book. It
-contains datasets and functions that are used in the book. Currently it
-is under development. Its current purpose is to supplement our
-teaching of Bayesian courses as we continue to write our book.
+contains datasets and functions that are used in the book. 
 
 ## Installation
 
