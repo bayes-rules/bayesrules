@@ -56,8 +56,11 @@ spotify <- spotify_songs %>%
           filter(track_popularity >= minpop) %>% 
           filter(track_artist %in% c(pick,"Beyoncé", "Sean Kingston", "Kendrick Lamar", "The Blaze", "Frank Ocean", "J. Cole", "Michael Kiwanuka")) %>%
           filter(!track_artist %in% c("YUNGBLUD","Bryson Tiller","Lil Tjay")) %>% 
-          arrange(track_artist)
+          arrange(track_artist) %>% 
+          rename(artist = track_artist, title = track_name,
+            popularity = track_popularity, album_id = track_album_id, 
+            album_name = track_album_name, album_release_date = track_album_release_date)
 
-spotify$track_name[spotify$track_name == "All The Lies - Toby Romeo Remix / Radio Edit"] <- "All The Lies"
+spotify$title[spotify$title == "All The Lies - Toby Romeo Remix / Radio Edit"] <- "All The Lies"
 
 usethis::use_data(spotify, overwrite = TRUE)
