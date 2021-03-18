@@ -36,6 +36,8 @@ prediction_summary_data <- function(y, yrep, prob_inner = 0.5, prob_outer = 0.95
 #'
 #' @examples
 prediction_summary <- function(y, yrep, prob_inner = 0.5, prob_outer = 0.95){
+  if(sum(is.na(y)) > 0) stop('NAs are not allowed in y')
+  
   # This function summarizes the predictions across all cases
   pred_data <- prediction_summary_data(y, yrep, prob_inner = prob_inner, prob_outer = prob_outer) %>% 
     mutate(error = y - post_median) %>% 
