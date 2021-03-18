@@ -60,7 +60,8 @@ spotify <- spotify_songs %>%
           mutate(track_artist = as.factor(track_artist)) %>% 
           rename(artist = track_artist, title = track_name,
             popularity = track_popularity, album_id = track_album_id, 
-            album_name = track_album_name, album_release_date = track_album_release_date)
+            album_name = track_album_name, album_release_date = track_album_release_date,
+            genre = playlist_genre, subgenre = playlist_subgenre)
 
 spotify$title[spotify$title == "All The Lies - Toby Romeo Remix / Radio Edit"] <- "All The Lies"
 

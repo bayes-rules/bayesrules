@@ -16,8 +16,8 @@ A data frame with 350 songs (or tracks) and 23 variables:
   \item{album_release_date}{when the album was released}
   \item{playlist_name}{Spotify playlist on which the song appears}
   \item{playlist_id}{unique playlist identifier}
-  \item{playlist_genre}{genre of the playlist}
-  \item{playlist_subgenre}{subgenre of the playlist}
+  \item{genre}{genre of the playlist}
+  \item{subgenre}{subgenre of the playlist}
   \item{danceability}{a score from 0 (not danceable) to 1 (danceable) based on features such as tempo, rhythm, etc.}
   \item{energy}{a score from 0 (low energy) to 1 (high energy) based on features such as loudness, timbre, entropy, etc.}
   \item{key}{song key}
