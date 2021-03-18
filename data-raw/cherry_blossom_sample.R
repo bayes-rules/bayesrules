@@ -14,7 +14,8 @@ subj <- Cherry %>%
 cherry_blossom_sample <- Cherry %>%
           filter(name.yob %in% subj$name.yob) %>% 
           left_join(subj) %>% 
-          select(subject, age, net, gun, year, previous) %>% 
-          mutate(subject = as.factor(subject))
+          rename(runner = subject) %>% 
+          select(runner, age, net, gun, year, previous) %>% 
+          mutate(runner = as.factor(runner))
 
 usethis::use_data(cherry_blossom_sample, overwrite = TRUE)
