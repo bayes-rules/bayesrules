@@ -1,8 +1,8 @@
 #' Hotel Bookings Data
 #' 
-#' Data on hotel bookings originally collected by Antonio, Almeida and Nunes (2019) and distributed through the R for Data Science TidyTuesday project. 
+#' A random subset of the data on hotel bookings originally collected by Antonio, Almeida and Nunes (2019) and distributed through the R for Data Science TidyTuesday project. 
 #' 
-#' @format A data frame with 119390 hotel bookings and 32 variables on each booking. 
+#' @format A data frame with 1000 hotel bookings and 32 variables on each booking. 
 #' \describe{
 #'   \item{hotel}{"Resort Hotel" or "City Hotel"}
 #'   \item{is_canceled}{whether the booking was cancelled}

@@ -5,7 +5,7 @@
 \alias{hotel_bookings}
 \title{Hotel Bookings Data}
 \format{
-A data frame with 119390 hotel bookings and 32 variables on each booking. 
+A data frame with 1000 hotel bookings and 32 variables on each booking. 
 \describe{
   \item{hotel}{"Resort Hotel" or "City Hotel"}
   \item{is_canceled}{whether the booking was cancelled}
@@ -49,6 +49,6 @@ Nuno Antonio, Ana de Almeida, and Luis Nunes (2019). "Hotel booking demand datas
 hotel_bookings
 }
 \description{
-Data on hotel bookings originally collected by Antonio, Almeida and Nunes (2019) and distributed through the R for Data Science TidyTuesday project.
+A random subset of the data on hotel bookings originally collected by Antonio, Almeida and Nunes (2019) and distributed through the R for Data Science TidyTuesday project.
 }
 \keyword{datasets}
