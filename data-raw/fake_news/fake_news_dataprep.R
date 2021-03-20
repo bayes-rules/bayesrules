@@ -80,7 +80,8 @@ fake_news <- fake_news %>%
 
 # Resample so that not batched by real and fake status
 set.seed(84735)
-fake_news <- sample_n(fake_news, size = nrow(fake_news))
+fake_news <- sample_n(fake_news, size = nrow(fake_news)) %>% 
+  mutate(type = as.factor(type))
 
 
 
