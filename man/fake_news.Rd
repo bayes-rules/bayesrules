@@ -25,16 +25,16 @@ A data frame with 150 rows and 6 variables:
   \item{title_excl_percent}{Percent of characters that are exclamation marks in the title}
   \item{text_excl_percent}{Percent of characters that are exclamation marks in the text}
   \item{title_has_excl}{Binary variable indicating whether the title of the article includes an exlamation point or not(TRUE, FALSE)}
-  \item{anger}{Anger sentiment rating}
-  \item{anticipation}{Anticipation sentiment rating}
-  \item{disgust}{Disgust sentiment rating}
-  \item{fear}{Fear sentiment rating}
-  \item{joy}{Joy sentiment rating}
-  \item{sadness}{Sadness sentiment rating}
-  \item{surprise}{Surprise sentiment rating}
-  \item{trust}{Trust sentiment rating}
-  \item{negative}{Negative sentiment rating}
-  \item{positive}{Positive sentiment rating}
+  \item{anger}{Percent of words that are associated with anger}
+  \item{anticipation}{Percent of words that are associated with anticipation}
+  \item{disgust}{Percent of words that are associated with disgust}
+  \item{fear}{Percent of words that are associated with fear}
+  \item{joy}{Percent of words that are associated with joy}
+  \item{sadness}{Percent of words that are associated with sadness}
+  \item{surprise}{Percent of words that are associated with surprise}
+  \item{trust}{Percent of words that are associated with trust}
+  \item{negative}{Percent of words that have negative sentiment}
+  \item{positive}{Percent of words that have positive sentiment}
   \item{text_syllables}{Number of syllables in text}
   \item{text_syllables_per_word}{Number of syllables per word in text}
 }
