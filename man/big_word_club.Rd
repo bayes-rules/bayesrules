@@ -38,6 +38,7 @@ A data frame with 818 student-level observations and 31 variables:
   \item{t_financial_struggle}{teacher response to the number of their students that have families that experience financial struggle}
   \item{t_misbehavior}{teacher response to frequency that student misbehavior interferes with teaching (0 = never; 1 = rarely; 2 = occasionally; 3 = frequently)}
   \item{t_years_experience}{teacher's number of years of teaching experience}
+  \item{score_pct_change}{percent change in scores before and after the program}
   }
 }
 \source{
