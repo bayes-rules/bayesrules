@@ -1,0 +1,21 @@
+#' Coffee Ratings Data
+#' 
+#' A sub-set of data on coffee bean ratings / quality originally collected by James LeDoux (jmzledoux) and distributed through the R for Data Science TidyTuesday project.
+#' This is a simplified version of the coffee_ratings data. 
+#' 
+#' @format A data frame with 636 batches of coffee beans and 11 variables on each batch. 
+#' \describe{
+#'   \item{farm_name}{farm where beans were grown}
+#'   \item{total_cup_points}{total bean rating (0 -- 100)}
+#'   \item{aroma}{bean aroma grade}
+#'   \item{flavor}{bean flavor grade}
+#'   \item{aftertaste}{bean aftertaste grade}
+#'   \item{acidity}{bean acidity grade}
+#'   \item{body}{bean body grade}
+#'   \item{balance}{bean balance grade}
+#'   \item{uniformity}{bean uniformity grade}
+#'   \item{sweetness}{bean sweetness grade}
+#'   \item{moisture}{bean moisture grade}
+#'   }
+#' @source \url{https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2020/2020-07-07/coffee_ratings.csv}.
+"coffee_ratings_small"
