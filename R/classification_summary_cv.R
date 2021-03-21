@@ -6,7 +6,7 @@
 #' sensitivity, specificity, and overall accuracy.
 #' 
 #' @param model an rstanreg model object with binary y
-#' @param data data frame including the variables in the model, both response y and predictors x
+#' @param data data frame including the variables in the model, both response y (0 or 1) and predictors x
 #' @param k the number of folds to use for cross validation
 #' @param cutoff probability cutoff to classify a new case as positive
 #'
@@ -28,7 +28,6 @@ classification_summary_cv <- function(model, data, k = 10, cutoff = 0.5){
           levels(folds) <- 1:k
           data <- data %>% 
                     mutate(fold = sample(folds, size = length(folds), replace = FALSE))
-          data[,model$terms[[2]]] <- as.numeric(as.factor(unlist(data[,model$terms[[2]]]))) - 1
           
           # Test the model on each one of the k folds
           folds <- data.frame()

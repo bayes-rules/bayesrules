@@ -9,7 +9,7 @@ classification_summary_cv(model, data, k = 10, cutoff = 0.5)
 \arguments{
 \item{model}{an rstanreg model object with binary y}
 
-\item{data}{data frame including the variables in the model, both response y and predictors x}
+\item{data}{data frame including the variables in the model, both response y (0 or 1) and predictors x}
 
 \item{k}{the number of folds to use for cross validation}
 
