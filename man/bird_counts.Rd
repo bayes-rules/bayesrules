@@ -5,7 +5,7 @@
 \alias{bird_counts}
 \title{Bird Counts Data}
 \format{
-A data frame with 18706 rows and 6 variables. Each row represents observations for the given bird species in the given year.
+A data frame with 18706 rows and 7 variables. Each row represents observations for the given bird species in the given year.
 \describe{
   \item{year}{year of data collection}
   \item{species}{scientific name of observed bird species}
@@ -13,6 +13,7 @@ A data frame with 18706 rows and 6 variables. Each row represents observations f
   \item{count}{number of birds observed}
   \item{hours}{total person-hours of observation period}
   \item{count_per_hour}{count divided by hours}
+  \item{count_per_week}{count_per_hour multiplied by 168 hours per week}
   }
 }
 \source{
