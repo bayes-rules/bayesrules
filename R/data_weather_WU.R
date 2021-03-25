@@ -1,10 +1,11 @@
-#' Weather Data for 3 Australian Cities
+#' Weather Data for 2 Australian Cities
 #' 
-#' A sub-sample of daily weather information from the weatherAUS data in the rattle package for three Australian cities: Wollongong, Hobart, and Uluru.
+#' A sub-sample of daily weather information from the weatherAUS data in the rattle package for two Australian cities, Wollongong and Uluru.
+#' The weather_australia data in the bayesrules package combines this data with a third city
 #' 
-#' @format A data frame with 300 daily observations and 22 variables from 3 Australian weather stations:
+#' @format A data frame with 200 daily observations and 22 variables from 2 Australian weather stations:
 #' \describe{
-#'   \item{location}{one of three weather stations}
+#'   \item{location}{one of two weather stations}
 #'   \item{mintemp}{minimum temperature (degrees Celsius)}
 #'   \item{maxtemp}{maximum temperature (degrees Celsius)}
 #'   \item{rainfall}{rainfall (mm)}
@@ -28,4 +29,4 @@
 #'   \item{day_of_year}{the day of the year}
 #'   }
 #' @source Data in the original weatherAUS data set were obtained from \url{https://www.bom.gov.au/climate/data}. Copyright Commonwealth of Australia 2010, Bureau of Meteorology.
-"weather_australia"
+"weather_WU"

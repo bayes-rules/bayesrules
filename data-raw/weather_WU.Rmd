@@ -1,0 +1,8 @@
+# Load the data
+library(bayesrules)
+data(weather_australia)
+weather_WU <- weather_australia %>% 
+  filter(location %in% c("Wollongong", "Uluru")) %>%
+  droplevels()
+
+usethis::use_data(weather_WU, overwrite = TRUE)
