@@ -12,7 +12,7 @@ plot_normal(mean, sd)
 \item{sd}{standard deviation parameter of the Normal model}
 }
 \value{
-a gplot
+a ggplot
 }
 \description{
 Plots the probability density function (pdf) for a
