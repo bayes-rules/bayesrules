@@ -26,9 +26,10 @@ moma_artists_2 <- moma_artists %>%
                     year_acquired_max = max(year_acquired), department = names(which.max(table(department))))
 
 moma <- left_join(moma_artists, moma_artists_2) %>% 
-          select(artist, country, birth, death, alive, gender, department, 
+          mutate(genx = (birth >= 1965)) %>% 
+          select(artist, country, birth, death, alive, genx, gender, department, 
                  count, year_acquired_min, year_acquired_max) %>% 
-          distinct()
+          distinct() 
 
 
 set.seed(109)
