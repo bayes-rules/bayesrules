@@ -6,7 +6,8 @@ coffee_ratings <- readr::read_csv('https://raw.githubusercontent.com/rfordatasci
          number_of_bags, bag_weight, 
          species, variety, processing_method, aroma, flavor, aftertaste,
          acidity, body, balance, uniformity, clean_cup, sweetness,
-         moisture, category_one_defects, category_two_defects, color, total_cup_points)
+         moisture, category_one_defects, category_two_defects, color, total_cup_points) %>% 
+          mutate_if(is.character, as.factor)
 
 
 

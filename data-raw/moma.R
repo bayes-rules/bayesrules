@@ -29,7 +29,8 @@ moma <- left_join(moma_artists, moma_artists_2) %>%
           mutate(genx = (birth >= 1965)) %>% 
           select(artist, country, birth, death, alive, genx, gender, department, 
                  count, year_acquired_min, year_acquired_max) %>% 
-          distinct() 
+          distinct()  %>% 
+          mutate_if(is.character, as.factor)
 
 
 set.seed(109)

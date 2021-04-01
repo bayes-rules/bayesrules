@@ -10,5 +10,7 @@ bikes <- bikes %>%
           filter(temp_feel < 87, temp_feel > 45) %>% 
           mutate(humidity = 100*humidity) %>% 
           sample_n(500) %>% 
-          arrange(date)
+          arrange(date) %>% 
+          mutate_if(is.character, as.factor)
+
 usethis::use_data(bikes, overwrite = TRUE)

@@ -5,7 +5,8 @@ coffee_ratings_small <- readr::read_csv('https://raw.githubusercontent.com/rford
                  acidity, body, balance, uniformity, sweetness, moisture) %>% 
           group_by(farm_name) %>% 
           filter(n() >= 5, aroma > 0) %>% 
-          ungroup()
+          ungroup() %>% 
+          mutate_if(is.character, as.factor)
 
 
 usethis::use_data(coffee_ratings_small, overwrite = TRUE)

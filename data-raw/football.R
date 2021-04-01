@@ -10,5 +10,6 @@ football <- Lock5Data::FootballBrain %>%
       group == "Control" ~ "control"
     )
   ) %>% 
-  select(group, years, volume)
+  select(group, years, volume) %>% 
+  mutate_if(is.character, as.factor)
 usethis::use_data(football, overwrite = TRUE)

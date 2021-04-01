@@ -1,3 +1,5 @@
+library(tidyverse)
+
 # Original source: https://archive.ics.uci.edu/ml/datasets/Bike+Sharing+Dataset
 bikes <- read.csv("https://www.macalester.edu/~ajohns24/data/bike_share.csv")
 
@@ -10,5 +12,6 @@ bike_users <- bikes %>%
           mutate(user = droplevels(user)) %>% 
           filter(temp_feel < 87, temp_feel > 45) %>% 
           mutate(date = as.Date(date, format = "%m/%d/%y")) %>% 
-          arrange(date)
+          arrange(date) %>% 
+          mutate_if(is.character, as.factor)
 usethis::use_data(bike_users, overwrite = TRUE)
