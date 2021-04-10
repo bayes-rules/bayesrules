@@ -12,7 +12,7 @@ prediction_summary_data <- function(y, yrep, prob_inner = 0.5, prob_outer = 0.95
     unlist() %>% 
     matrix(., length(y), 8) %>% 
     data.frame()
-  #names(df) <- c("post_mean", "post_sd", "post_median", "post_mad", "l_outer", "l_inner", "u_inner", "u_outer")
+  names(df) <- c("post_mean", "post_sd", "post_median", "post_mad", "l_outer", "l_inner", "u_inner", "u_outer")
   data.frame(cbind(y, df))
 }
 
