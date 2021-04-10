@@ -17,7 +17,8 @@ climbers_sub <- climbers_sub %>%
           group_by(expedition_id) %>% 
           right_join(random_exp) %>% 
           left_join(peaks) %>% 
-          mutate_if(is.character, as.factor)
+          mutate_if(is.character, as.factor) %>% 
+          ungroup()
 
 
 

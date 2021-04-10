@@ -7,15 +7,14 @@ prediction_summary_data <- function(y, yrep, prob_inner = 0.5, prob_outer = 0.95
   u_outer <- function(x){quantile(x, 1 - (1-prob_outer) / 2)}
   our_mad <- function(x){mad(x, constant = 1)}
   df <- data.frame(yrep) %>% 
-    summarize_all(list(mean, sd, median, our_mad, l_outer, l_inner, u_inner, u_outer)) %>%
+    summarize_all(list(post_mean = mean, post_sd = sd, post_median = median,
+                       post_mad = our_mad, l_outer = l_outer, l_inner = l_inner, u_inner = u_inner, u_outer = u_outer)) %>%
     unlist() %>% 
     matrix(., length(y), 8) %>% 
     data.frame()
-  names(df) <- c("post_mean", "post_sd", "post_median", "post_mad", "l_outer", "l_inner", "u_inner", "u_outer")
+  #names(df) <- c("post_mean", "post_sd", "post_median", "post_mad", "l_outer", "l_inner", "u_inner", "u_outer")
   data.frame(cbind(y, df))
 }
-
-
 
 #' Posterior Predictive Summaries
 #'
@@ -57,5 +56,3 @@ prediction_summary <- function(y, yrep, prob_inner = 0.5, prob_outer = 0.95){
   
   pred_summary
 }
-
-
