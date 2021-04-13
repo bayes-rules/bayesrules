@@ -30,23 +30,25 @@ summarize_normal_normal <- function (mean,
   prior_mean <- mean
   prior_mode <- mean
   prior_var <- sd^2
+  prior_sd  <- sd
   if (is.null(y_bar) & is.null(n) & is.null(sigma)) {
     return(data.frame(model = c("prior"), 
                       alpha = alpha,
                       beta = beta, 
                       mean = prior_mean, 
                       mode = prior_mode,
-                      var = prior_var))
+                      var = prior_var,
+                      sd = prior_sd))
   }
   else {
     post_mean <- (((sigma^2)*mean) + ((sd^2)*n*y_bar))/(n*(sd^2)+(sigma^2))
     post_mode <- post_mean
     post_var <- ((sigma^2)*(sd^2))/(n*(sd^2)+(sigma^2))
+    post_sd  <- sqrt(post_var)
     return(data.frame(model = c("prior", "posterior"), 
-                      mean = c(prior_mean,
-                               post_mean), 
+                      mean = c(prior_mean, post_mean), 
                       mode = c(prior_mode, post_mode), 
-                      var = c(prior_var,
-                              post_var)))
+                      var = c(prior_var, post_var),
+                      sd = c(prior_sd, post_sd)))
   }
 }

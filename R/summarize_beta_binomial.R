@@ -36,28 +36,29 @@ summarize_beta_binomial <- function (alpha,
   prior_mean <- beta_mean(alpha, beta)
   prior_mode <- beta_mode(alpha, beta)
   prior_var <- beta_var(alpha, beta)
+  prior_sd  <- sqrt(prior_var)
   if (is.null(y) & is.null(n)) {
     return(data.frame(model = c("prior"), 
                       alpha = alpha,
                       beta = beta, 
                       mean = prior_mean, 
                       mode = prior_mode,
-                      var = prior_var))
+                      var = prior_var,
+                      sd = prior_sd))
   }
   else {
     post_alpha <- y + alpha
     post_beta <- n - y + beta
     post_mean <- beta_mean(post_alpha, post_beta)
     post_mode <- beta_mode(post_alpha, post_beta)
-    post_var <- beta_var(post_alpha, post_beta)
+    post_var  <- beta_var(post_alpha, post_beta)
+    post_sd   <- sqrt(post_var)
     return(data.frame(model = c("prior", "posterior"), 
-                      alpha = c(alpha, 
-                                post_alpha), 
+                      alpha = c(alpha, post_alpha), 
                       beta = c(beta, post_beta), 
-                      mean = c(prior_mean,
-                               post_mean), 
+                      mean = c(prior_mean, post_mean), 
                       mode = c(prior_mode, post_mode), 
-                      var = c(prior_var,
-                              post_var)))
+                      var = c(prior_var, post_var),
+                      sd = c(prior_sd, post_sd)))
   }
 }

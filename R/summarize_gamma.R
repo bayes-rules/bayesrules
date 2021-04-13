@@ -23,10 +23,12 @@ summarize_gamma <- function (shape, rate){
     mode <- NA
   }
   var <- shape/rate^2
+  sd  <- sqrt(var)
   
  data.frame(mean = mean,
             mode = mode,
-            var = var)
+            var = var,
+            sd = sd)
   
  
 }# end of function

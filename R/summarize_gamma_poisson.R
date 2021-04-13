@@ -35,12 +35,14 @@ summarize_gamma_poisson <- function (shape,
       prior_mode <- NA
     }
     prior_var <- shape/rate^2
+    prior_sd  <- sqrt(prior_var)
     return(data.frame(model = c("prior"),
                       shape = shape,
                       rate = rate,
                       mean = prior_mean,
                       mode = prior_mode,
-                      var = prior_var))
+                      var = prior_var,
+                      sd = prior_sd))
   }
   else {
     prior_mean <- shape/rate
@@ -51,6 +53,7 @@ summarize_gamma_poisson <- function (shape,
       prior_mode <- NULL
     }
     prior_var <- shape/rate^2
+    prior_sd  <- sqrt(prior_var)
     post_mean <- (shape + sum_y)/(rate + n)
     if ((shape + sum_y) >= 1) {
       post_mode <- (shape + sum_y - 1)/(rate + n)
@@ -59,6 +62,7 @@ summarize_gamma_poisson <- function (shape,
       post_mode <- NA
     }
     post_var <- (shape + sum_y)/((rate + n)^2)
+    post_sd  <- sqrt(post_var)
     post_s <- shape + sum_y
     post_r <- rate + n
     return(data.frame(model = c("prior",
@@ -67,6 +71,7 @@ summarize_gamma_poisson <- function (shape,
                       rate = c(rate, post_r),
                       mean = c(prior_mean, post_mean),
                       mode = c(prior_mode, post_mode),
-                      var = c(prior_var, post_var)))
+                      var = c(prior_var, post_var),
+                      sd = c(prior_sd, post_sd)))
   }
 }
