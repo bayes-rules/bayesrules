@@ -20,10 +20,10 @@ prediction_summary_data <- function(y, yrep, prob_inner = 0.5, prob_outer = 0.95
 #'
 #' Given a vector of observed data on quantitative variable y 
 #' and a set of posterior predictions for each y, 
-#' this function returns 4 measures of the posterior prediction quality: 
-#' median absolute prediction error (the typical difference between the observed y values and their posterior predictive medians),
-#' scaled mae (the typical number of absolute deviations between the observed y values and their posterior predictive medians),
-#' the proportion of observed y values that fall within their posterior prediction intervals, the probability levels of which are set by the user.
+#' this function returns 4 measures of the posterior prediction quality.
+#' Median absolute prediction error (mae) measures the typical difference between the observed y values and their posterior predictive medians (stable = TRUE) or means (stable = FALSE).
+#' Scaled mae (mae_scaled) measures the typical number of absolute deviations (stable = TRUE) or standard deviations (stable = FALSE) that observed y values fall from their predictive medians (stable = TRUE) or means (stable = FALSE).
+#' within_50 and within_90 report the proportion of observed y values that fall within their posterior prediction intervals, the probability levels of which are set by the user.
 #' 
 #' @param y vector of data on a quantitative response variable
 #' @param yrep a ppd object / matrix, each column containing a set of posterior predictions for the corresponding case in y
@@ -34,16 +34,17 @@ prediction_summary_data <- function(y, yrep, prob_inner = 0.5, prob_outer = 0.95
 #' @export
 #'
 #' @examples
-prediction_summary <- function(y, yrep, prob_inner = 0.5, prob_outer = 0.95){
+prediction_summary <- function(y, yrep, prob_inner = 0.5, prob_outer = 0.95, stable = FALSE){
   if(sum(is.na(y)) > 0) stop('NAs are not allowed in y')
   
   # This function summarizes the predictions across all cases
   pred_data <- prediction_summary_data(y, yrep, prob_inner = prob_inner, prob_outer = prob_outer) %>% 
-    mutate(error = y - post_median) %>% 
-    mutate(error_scaled = error / post_mad) %>% 
+    mutate(center = post_median*(stable == TRUE) + post_mean*(stable == FALSE)) %>% 
+    mutate(scale = post_mad*(stable == TRUE) + post_sd*(stable == FALSE)) %>%
+    mutate(error = y - center) %>% 
+    mutate(error_scaled = error / scale) %>% 
     mutate(within_inner = (y >= l_inner) & (y <= u_inner)) %>% 
     mutate(within_outer = (y >= l_outer) & (y <= u_outer))
-  
   
   pred_summary <- pred_data %>% 
     summarize(mae = median(abs(error)), 
