@@ -51,7 +51,7 @@ prediction_summary_cv <- function(data, group, model, k, prob_inner = 0.5, prob_
                     model_train <- update(model, data = data_train, refresh = FALSE)
                     predictions_test <- posterior_predict(model_train, newdata = data_test)
                     folds <- rbind(folds, prediction_summary(y = c(as.matrix((data_test %>% 
-                                                                                        select(y))[, 1])), yrep = predictions_test, scale = scale))
+                                                                                        select(y))[, 1])), yrep = predictions_test, stable = stable))
           }
           # Calculate the cross validated error
           cv <- folds %>% summarize_all(mean)
