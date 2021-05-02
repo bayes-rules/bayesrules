@@ -5,17 +5,17 @@
 \title{Posterior Predictive Summaries}
 \usage{
 prediction_summary(
-  y,
-  yrep,
+  model,
+  data,
   prob_inner = 0.5,
   prob_outer = 0.95,
   stable = FALSE
 )
 }
 \arguments{
-\item{y}{vector of data on a quantitative response variable}
+\item{model}{an rstanreg model object with quantitative y}
 
-\item{yrep}{a ppd object / matrix, each column containing a set of posterior predictions for the corresponding case in y}
+\item{data}{data frame including the variables in the model, both response y and predictors x}
 
 \item{prob_inner}{posterior predictive interval probability (a value between 0 and 1)}
 
@@ -25,8 +25,8 @@ prediction_summary(
 a tibble
 }
 \description{
-Given a vector of observed data on quantitative variable y 
-and a set of posterior predictions for each y, 
+Given a set of observed data including a quantitative response variable y 
+and an rstanreg model of y, 
 this function returns 4 measures of the posterior prediction quality.
 Median absolute prediction error (mae) measures the typical difference between the observed y values and their posterior predictive medians (stable = TRUE) or means (stable = FALSE).
 Scaled mae (mae_scaled) measures the typical number of absolute deviations (stable = TRUE) or standard deviations (stable = FALSE) that observed y values fall from their predictive medians (stable = TRUE) or means (stable = FALSE).

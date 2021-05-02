@@ -10,8 +10,7 @@ prediction_summary_cv(
   model,
   k,
   prob_inner = 0.5,
-  prob_outer = 0.95,
-  stable = FALSE
+  prob_outer = 0.95
 )
 }
 \arguments{

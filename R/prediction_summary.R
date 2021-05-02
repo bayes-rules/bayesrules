@@ -18,15 +18,15 @@ prediction_summary_data <- function(y, yrep, prob_inner = 0.5, prob_outer = 0.95
 
 #' Posterior Predictive Summaries
 #'
-#' Given a vector of observed data on quantitative variable y 
-#' and a set of posterior predictions for each y, 
+#' Given a set of observed data including a quantitative response variable y 
+#' and an rstanreg model of y, 
 #' this function returns 4 measures of the posterior prediction quality.
 #' Median absolute prediction error (mae) measures the typical difference between the observed y values and their posterior predictive medians (stable = TRUE) or means (stable = FALSE).
 #' Scaled mae (mae_scaled) measures the typical number of absolute deviations (stable = TRUE) or standard deviations (stable = FALSE) that observed y values fall from their predictive medians (stable = TRUE) or means (stable = FALSE).
 #' within_50 and within_90 report the proportion of observed y values that fall within their posterior prediction intervals, the probability levels of which are set by the user.
 #' 
-#' @param y vector of data on a quantitative response variable
-#' @param yrep a ppd object / matrix, each column containing a set of posterior predictions for the corresponding case in y
+#' @param model an rstanreg model object with quantitative y
+#' @param data data frame including the variables in the model, both response y and predictors x
 #' @param prob_inner posterior predictive interval probability (a value between 0 and 1)
 #' @param prob_outer posterior predictive interval probability (a value between 0 and 1)
 #'
@@ -34,8 +34,19 @@ prediction_summary_data <- function(y, yrep, prob_inner = 0.5, prob_outer = 0.95
 #' @export
 #'
 #' @examples
-prediction_summary <- function(y, yrep, prob_inner = 0.5, prob_outer = 0.95, stable = FALSE){
+prediction_summary <- function(model, data, prob_inner = 0.5, prob_outer = 0.95, stable = FALSE){
+  # Get observed y data
+  if("lmerMod" %in% class(model)){
+    y_name <- as.character(model$formula)[2]
+  } else {
+    y_name <- model$terms[[2]]
+  }
+  y <- c(data %>% select(y_name))[[1]]
   if(sum(is.na(y)) > 0) stop('NAs are not allowed in y')
+  
+  data <- data %>% ungroup()
+  
+  yrep <- posterior_predict(model, newdata = data)
   
   # This function summarizes the predictions across all cases
   pred_data <- prediction_summary_data(y, yrep, prob_inner = prob_inner, prob_outer = prob_outer) %>% 
