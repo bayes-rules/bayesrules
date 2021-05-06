@@ -4,7 +4,7 @@
 #' 
 #' @format A data frame with 374250 observations, one per survey respondent, and 4 variables:
 #' \describe{
-#'   \item{state}{the U.S. in which the respondent resides}
+#'   \item{state}{the U.S. state in which the respondent resides}
 #'   \item{region}{region in which the state falls (as defined by the U.S. Census)}
 #'   \item{word_for_cola}{how the respondent refers to fizzy cola drinks}
 #'   \item{pop}{whether or not the respondent refers to fizzy cola drinks as "pop"}
