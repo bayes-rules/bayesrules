@@ -34,7 +34,7 @@ moma <- left_join(moma_artists, moma_artists_2) %>%
 
 
 set.seed(109)
-moma_small <- moma %>% 
+moma_sample <- moma %>% 
           filter(!is.na(alive), !is.na(birth), !is.na(count), !is.na(year_acquired_min)) %>% 
           sample_n(., size = 100) %>% 
           select(-department)
@@ -42,4 +42,4 @@ moma_small <- moma %>%
 
 
 usethis::use_data(moma, overwrite = TRUE)
-usethis::use_data(moma_small, overwrite = TRUE)
+usethis::use_data(moma_sample, overwrite = TRUE)
