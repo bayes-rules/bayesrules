@@ -21,45 +21,49 @@
 #'
 #' @examples
 prediction_summary_cv <- function(data, group, model, k, prob_inner = 0.5, prob_outer = 0.95){
-          # This function summarizes the predictions across all observed cases in data
-          if(!("stanreg" %in% class(model))){ stop("the model must be a stanreg object.")}
+  # This function summarizes the predictions across all observed cases in data
+  if(!("stanreg" %in% class(model))){ stop("the model must be a stanreg object.")}
+  
+  data <- data %>% 
+    ungroup()
+  
+  # For hierarchical models, define folds from groups, not individual observations
+  
+  if("lmerMod" %in% class(model)){
+    y <- as.character(model$formula)[2]
+    
+    data <- data %>% 
+      fold(., k = k, id_col = group) %>% 
+      rename(fold = `.folds`) %>% 
+      ungroup()
+    }
           
-          data <- data %>% 
-                    ungroup()
+  # For non-hierarchical models, define folds from individual observations
           
-          # For hierarchical models, define folds from groups, not individual observations
-          if("lmerMod" %in% class(model)){
-                    y <- as.character(model$formula)[2]
-                    data <- data %>% 
-                              fold(., k = k, id_col = group) %>% 
-                              rename(fold = `.folds`) %>% 
-                              ungroup()
-          }
-          # For non-hierarchical models, define folds from individual observations
-          else{
-                    # https://gist.github.com/dsparks/3695362
-                    random_draw <- rnorm(nrow(data))
-                    k_quantiles <- quantile(random_draw, 0:k/k)
-                    folds <- cut(random_draw, k_quantiles, include.lowest = TRUE)
-                    levels(folds) <- 1:k
-                    data <- data %>% 
-                              mutate(fold = sample(folds, size = length(folds), replace = FALSE))
-                    y <- model$terms[[2]]
-          }
-          
-          # Test the model on each one of the k folds
-          
-          get_folds <- function(i){
-            data_train <- data %>% filter(fold != i) %>% dplyr::select(-fold)
-            data_test <- data %>% filter(fold == i) %>% dplyr::select(-fold)
-            model_train <- update(model, data = data_train, refresh = FALSE)
-            predictions_test <- posterior_predict(model_train, newdata = data_test)
-            
-            prediction_summary(model = model_train, data = data_test)
-          }
-          
-          folds <- map_df(1:k, get_folds)
-          cv <- folds %>% summarize_all(mean)
-          folds <- data.frame(fold = 1:k, folds)
-          return(list(folds = folds, cv = cv))
+  else{
+    # https://gist.github.com/dsparks/3695362
+                    
+    random_draw <- rnorm(nrow(data))
+    k_quantiles <- quantile(random_draw, 0:k/k)
+    folds <- cut(random_draw, k_quantiles, include.lowest = TRUE)
+    levels(folds) <- 1:k
+    data <- data %>% 
+      mutate(fold = sample(folds, size = length(folds), replace = FALSE))
+    y <- model$terms[[2]]
+    }
+  # Test the model on each one of the k folds
+  
+  get_folds <- function(i){
+    data_train <- data %>% filter(fold != i) %>% dplyr::select(-fold)
+    data_test <- data %>% filter(fold == i) %>% dplyr::select(-fold)
+    model_train <- update(model, data = data_train, refresh = FALSE)
+    predictions_test <- posterior_predict(model_train, newdata = data_test)
+    prediction_summary(model = model_train, data = data_test)
+    }
+  
+  folds <- map_df(1:k, get_folds)
+  
+  cv <- folds %>% summarize_all(mean)
+  folds <- data.frame(fold = 1:k, folds)
+  return(list(folds = folds, cv = cv))
 }
