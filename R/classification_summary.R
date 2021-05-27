@@ -50,7 +50,7 @@ classification_summary <- function(model, data, cutoff = 0.5){
                     }
           }
           # Accuracy rates
-          mat <- as.matrix(confusion_matrix)[,-1]
+          mat <- as.matrix(confusion_matrix[,-1])
           sensitivity <- mat[2,2] / sum(mat[2,])
           specificity <- mat[1,1] / sum(mat[1,])
           overall_accuracy <- sum(diag(mat)) / sum(mat)
