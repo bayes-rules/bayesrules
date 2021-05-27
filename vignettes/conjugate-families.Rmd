@@ -1,0 +1,86 @@
+---
+title: "Conjugate Families"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{beta-binomial}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+```{r setup}
+library(bayesrules)
+```
+
+The **bayesrules** package has a set of functions that support exploring Bayesian models from three conjugate families: **Beta-Binomial**, **Gamma-Poisson**, and **Normal-Normal**. 
+The functions either help with plotting (prior, likelihood, and/or posterior) or summarizing the descriptives (mean, mode, variance, and sd) of prior and/or posterior. 
+
+## The Beta-Binomial Model
+
+We use the Beta-Binomial Model to show the different set of functions and the arguments.
+
+### Prior
+
+```{r fig.align='center', fig.height=4, fig.width=5}
+plot_beta(alpha = 3, beta = 13, mean = TRUE, mode = TRUE)
+```
+
+```{r}
+summarize_beta(alpha = 3, beta = 13)
+```
+
+
+### Likelihood
+
+In addition `plot_binomial_likelihood()` helps users visualize the likelihood function and shows the maximum likelihood estimation.
+
+```{r fig.align='center', fig.height=4, fig.width=5, message = FALSE}
+plot_binomial_likelihood(y = 3, n = 15, mle = TRUE)
+```
+
+
+
+### Prior-Likelihood-Posterior
+
+The two other functions `plot_beta_binomial()` and `summarize_beta_binomial()` require both the prior parameters and the data for the likelihood. 
+
+```{r fig.align='center', warning = FALSE, fig.height=4, fig.width=5}
+plot_beta_binomial(alpha = 3, beta = 13, y = 5, n = 10, 
+                   prior = TRUE, #the default 
+                   likelihood = TRUE,  #the default
+                   posterior = TRUE #the default
+                   )
+```
+
+```{r fig.align='center', warning = FALSE, fig.height=4, fig.width=5}
+summarize_beta_binomial(alpha = 3, beta = 13, y = 5, n = 10)
+```
+
+## Other Conjugate-Families
+
+For Gamma-Poisson and Normal-Normal models, the set of functions are similar but the arguments are different for each model. Arguments of the Gamma-Poisson functions include the `shape` and `rate` of the Gamma prior and `sum_y` and `n` arguments related to observed data which represent the sum of observed data values and number of observations respectively.
+
+```{r fig.align='center', warning = FALSE, fig.height=4, fig.width=5}
+plot_gamma_poisson(
+  shape = 3,
+  rate = 4,
+  sum_y = 3,
+  n = 9,
+  prior = TRUE,
+  likelihood = TRUE,
+  posterior = TRUE
+)
+```
+
+For the Normal-Normal model functions, the prior Normal model has the `mean` and `sd` argument. The observed data has `sigma`, `y_bar`, and `n` which indicate the standard deviation, mean, and sample size of the data respectively.
+
+```{r}
+summarize_normal_normal(mean = 3.8, sd = 1.12, sigma = 5.8, y_bar = 3.35, n = 8)
+```
+
