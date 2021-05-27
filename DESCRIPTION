@@ -24,6 +24,7 @@ Imports:
     janitor,
     magrittr,
     dplyr,
-    stats
+    stats,
+    purrr
 Depends: 
     R (>= 2.10)
