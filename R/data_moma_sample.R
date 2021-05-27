@@ -1,4 +1,4 @@
-#' Museum of Modern Art (MoMA) data subset
+#' Museum of Modern Art (MoMA) data sample
 #' 
 #' A random sample of 100 artists represented in the Museum of Modern Art in New York City.
 #' The data was made available by MoMA itself and downloaded in December 2020.
@@ -18,4 +18,4 @@
 #'   \item{year_acquired_max}{most recent year MoMA acquired one of the artist's works}
 #'   }
 #' @source \url{https://media.githubusercontent.com/media/MuseumofModernArt/collection/master/Artworks.csv}.
-"moma_small"
+"moma_sample"
