@@ -1,7 +1,7 @@
 Package: bayesrules
 Type: Package
 Title: Datasets and Supplemental Functions from Bayes Rules! Book
-Version: 0.1.0
+Version: 0.0.0.9000
 Authors@R: c(
     person("Mine", "Dogucu", , "mdogucu@uci.edu", c("aut", "cre")),
     person("Alicia", "Johnson", , role = "aut"),
