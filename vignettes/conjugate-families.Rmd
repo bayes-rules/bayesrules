@@ -2,7 +2,7 @@
 title: "Conjugate Families"
 output: rmarkdown::html_vignette
 vignette: >
-  %\VignetteIndexEntry{beta-binomial}
+  %\VignetteIndexEntry{Conjugate Families}
   %\VignetteEngine{knitr::rmarkdown}
   %\VignetteEncoding{UTF-8}
 ---
