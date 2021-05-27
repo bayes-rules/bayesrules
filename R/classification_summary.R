@@ -16,7 +16,6 @@
 #' @import dplyr
 #'
 #' @examples
-
 classification_summary <- function(model, data, cutoff = 0.5){
           # This function summarizes the classifications across all cases
           if(!("stanreg" %in% class(model))){ stop("the model must be a stanreg object.")}
@@ -28,9 +27,9 @@ classification_summary <- function(model, data, cutoff = 0.5){
           
           # Turn the predictions into classifications
           if("lmerMod" %in% class(model)){
-                    y <- model$y
+                    y <- as.data.frame(data %>% dplyr::select(as.character(model$formula)[2]))[,1]
           }
-          else {
+          else{
                     y <- as.data.frame(data %>% dplyr::select(model$terms[[2]]))[,1]
           }
           classifications <- data.frame(proportion = colMeans(predictions)) %>% 
@@ -40,9 +39,18 @@ classification_summary <- function(model, data, cutoff = 0.5){
           # Confusion matrix
           confusion_matrix <- classifications %>% 
                     tabyl(y, classification)
-          
+          if(ncol(confusion_matrix) == 2){
+                    if("1" %in% names(confusion_matrix)){
+                              confusion_matrix <- confusion_matrix %>% 
+                                        mutate("0" = rep(0,nrow(.)))
+                    }
+                    if("0" %in% names(confusion_matrix)){
+                              confusion_matrix <- confusion_matrix %>% 
+                                        mutate("1" = rep(0,nrow(.)))
+                    }
+          }
           # Accuracy rates
-          mat <- table(classifications$y, classifications$classification)
+          mat <- as.matrix(confusion_matrix)[,-1]
           sensitivity <- mat[2,2] / sum(mat[2,])
           specificity <- mat[1,1] / sum(mat[1,])
           overall_accuracy <- sum(diag(mat)) / sum(mat)
@@ -52,5 +60,3 @@ classification_summary <- function(model, data, cutoff = 0.5){
           
           return(list(confusion_matrix = confusion_matrix, accuracy_rates = accuracy_rates))
 }
-
-

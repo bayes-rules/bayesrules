@@ -4,12 +4,14 @@
 \alias{classification_summary_cv}
 \title{Cross-Validated Posterior Classification Summaries}
 \usage{
-classification_summary_cv(model, data, k = 10, cutoff = 0.5)
+classification_summary_cv(model, data, group, k, cutoff = 0.5)
 }
 \arguments{
 \item{model}{an rstanreg model object with binary y}
 
 \item{data}{data frame including the variables in the model, both response y (0 or 1) and predictors x}
+
+\item{group}{a character string representing the name of the factor grouping variable, ie. random effect (only used for hierarchical models)}
 
 \item{k}{the number of folds to use for cross validation}
 
@@ -23,4 +25,5 @@ Given a set of observed data including a binary response variable y
 and an rstanreg model of y, 
 this function returns cross validated estimates of the model's posterior classification quality:
 sensitivity, specificity, and overall accuracy.
+For hierarchical models of class lmerMod, the folds are comprised by collections of groups, not individual observations.
 }

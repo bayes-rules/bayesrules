@@ -4,9 +4,11 @@
 #' and an rstanreg model of y, 
 #' this function returns cross validated estimates of the model's posterior classification quality:
 #' sensitivity, specificity, and overall accuracy.
+#' For hierarchical models of class lmerMod, the folds are comprised by collections of groups, not individual observations.
 #' 
 #' @param model an rstanreg model object with binary y
 #' @param data data frame including the variables in the model, both response y (0 or 1) and predictors x
+#' @param group a character string representing the name of the factor grouping variable, ie. random effect (only used for hierarchical models)
 #' @param k the number of folds to use for cross validation
 #' @param cutoff probability cutoff to classify a new case as positive
 #'
@@ -17,17 +19,27 @@
 #'
 #' @examples
 
-classification_summary_cv <- function(model, data, k = 10, cutoff = 0.5){
+classification_summary_cv <- function(model, data, group, k, cutoff = 0.5){
           if(!("stanreg" %in% class(model))){ stop("the model must be a stanreg object.")}
           
-          # Split data into k possibly unequal folds
-          # https://gist.github.com/dsparks/3695362
-          random_draw <- rnorm(nrow(data))
-          k_quantiles <- quantile(random_draw, 0:k/k)
-          folds <- cut(random_draw, k_quantiles, include.lowest = TRUE)
-          levels(folds) <- 1:k
-          data <- data %>% 
-                    mutate(fold = sample(folds, size = length(folds), replace = FALSE))
+          if("lmerMod" %in% class(model)){
+                    # For hierarchical models, each fold is a group
+                    y <- as.character(model$formula)[2]
+                    data <- data %>% 
+                              ungroup() %>% 
+                              mutate(fold = as.numeric(as.factor(data[,as.vector(na.omit(match(names(data), group)))][[1]])))
+                    k <- max(data$fold)
+          }
+          else{
+                    # Split data into k possibly unequal folds
+                    # https://gist.github.com/dsparks/3695362
+                    random_draw <- rnorm(nrow(data))
+                    k_quantiles <- quantile(random_draw, 0:k/k)
+                    folds <- cut(random_draw, k_quantiles, include.lowest = TRUE)
+                    levels(folds) <- 1:k
+                    data <- data %>% 
+                              mutate(fold = sample(folds, size = length(folds), replace = FALSE))
+          }
           
           # Test the model on each one of the k folds
           folds <- data.frame()
@@ -47,5 +59,3 @@ classification_summary_cv <- function(model, data, k = 10, cutoff = 0.5){
           folds <- data.frame(fold = 1:k, folds)
           return(list(folds = folds, cv = cv))
 }
-
-
