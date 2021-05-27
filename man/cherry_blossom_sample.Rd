@@ -7,7 +7,7 @@
 \format{
 A data frame with 252 Cherry Blossom outcomes and 7 variables:
 \describe{
-  \item{subject}{a unique identifier for the runner}
+  \item{runner}{a unique identifier for the runner}
   \item{age}{age of the runner}
   \item{net}{time to complete the race, from starting line to finish line (minutes)}
   \item{gun}{time between the official start of the of race and the finish line (minutes)}

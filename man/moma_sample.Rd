@@ -8,7 +8,7 @@
 A data frame with 100 rows and 10 variables. Each row represents an individual artist in the MoMA collection.
 \describe{
   \item{artist}{name}
-  \item{county}{country of origin}
+  \item{country}{country of origin}
   \item{birth}{year of birth}
   \item{death}{year of death}
   \item{alive}{whether or not the artist was living at the time of data collection (December 2020)}
