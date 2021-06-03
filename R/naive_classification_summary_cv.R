@@ -12,7 +12,8 @@
 #'
 #' @return a list
 #' @export
-#'
+#' @importFrom e1071 naiveBayes
+#' @importFrom stats as.formula predict
 #' @examples
 
 naive_classification_summary_cv <- function(model, data, y, k = 10){

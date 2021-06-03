@@ -12,7 +12,7 @@
 #'
 #' @return a list
 #' @export
-#'
+#' @importFrom stats predict
 #' @examples
 
 naive_classification_summary <- function(model, data, y){

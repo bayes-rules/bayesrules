@@ -12,8 +12,8 @@
 #'
 #' @return a list
 #' @export
-#' @import janitor
-#' @import dplyr
+#' @import janitor dplyr
+#' @importFrom rstanarm posterior_predict
 #'
 #' @examples
 classification_summary <- function(model, data, cutoff = 0.5){
@@ -21,9 +21,8 @@ classification_summary <- function(model, data, cutoff = 0.5){
           if(!("stanreg" %in% class(model))){ stop("the model must be a stanreg object.")}
           
           # Calculate probability posterior predictions
-          predictions <- posterior_predict(
-                    model, 
-                    newdata = data)
+          predictions <- posterior_predict(model, 
+                                           newdata = data)
           
           # Turn the predictions into classifications
           if("lmerMod" %in% class(model)){

@@ -33,6 +33,7 @@ prediction_summary_data <- function(y, yrep, prob_inner = 0.5, prob_outer = 0.95
 #'
 #' @return a tibble
 #' @export
+#' @importFrom stats mad sd median
 #'
 #' @examples
 prediction_summary <- function(model, data, prob_inner = 0.5, prob_outer = 0.95, stable = FALSE){

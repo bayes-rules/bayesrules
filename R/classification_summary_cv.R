@@ -14,8 +14,8 @@
 #'
 #' @return a list
 #' @export
-#' @import janitor
-#' @import dplyr
+#' @import janitor dplyr
+#' @importFrom stats na.omit rnorm quantile update
 #'
 #' @examples
 

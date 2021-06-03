@@ -10,7 +10,7 @@
 #' @return A density plot for the Beta model
 #' @export
 #' @import ggplot2
-#' @importFrom stats dbeta
+#' @importFrom stats dbeta qbeta
 #'
 #' @examples
 #' plot_beta(alpha = 1, beta = 12)

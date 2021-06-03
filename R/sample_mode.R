@@ -6,6 +6,7 @@
 #'
 #' @return sample mode 
 #' @export
+#' @importFrom stats density
 #'
 #' @examples sample_mode(c(3,4,4))
 sample_mode <- function(x){

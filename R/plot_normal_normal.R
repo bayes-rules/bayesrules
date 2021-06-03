@@ -22,8 +22,7 @@
 #' @importFrom stats dnorm
 #' @examples
 #' plot_normal_normal(mean = 0, sd = 3, sigma= 4, y_bar = 5, n = 3)
-#' plot_beta_binomial(mean = -1, sd = 5, sigma= 4, y_bar = 5, n = 3, posterior = FALSE)
-
+#' plot_normal_normal(mean = 0, sd = 3, sigma= 4, y_bar = 5, n = 3, posterior = FALSE)
 plot_normal_normal <- function (mean, 
                                      sd, 
                                      sigma = NULL,

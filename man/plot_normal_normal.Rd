@@ -44,8 +44,6 @@ this function produces a plot of any combination of the corresponding prior pdf,
 scaled likelihood function, and posterior pdf.  All three are included by default.
 }
 \examples{
-\dontrun{
 plot_normal_normal(mean = 0, sd = 3, sigma= 4, y_bar = 5, n = 3)
-plot_beta_binomial(mean = -1, sd = 5, sigma= 4, y_bar = 5, n = 3, posterior = FALSE)
-}
+plot_normal_normal(mean = 0, sd = 3, sigma= 4, y_bar = 5, n = 3, posterior = FALSE)
 }

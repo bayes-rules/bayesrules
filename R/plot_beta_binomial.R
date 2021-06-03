@@ -16,7 +16,7 @@
 #' @return a ggplot
 #' @export
 #' @import ggplot2
-#' @importFrom stats dbeta dbinom
+#' @importFrom stats dbeta dbinom integrate
 #' @examples
 #'
 #' plot_beta_binomial(alpha = 1, beta = 13, y = 25, n = 50)
