@@ -7,16 +7,16 @@
 #' this function summarizes the mean, mode, and variance of the 
 #' prior and posterior Gamma models of \eqn{\lambda}.
 #' 
-#' @param shape non-negative shape parameter of the Gamma prior
-#' @param rate non-negative rate parameter of the Gamma prior
+#' @param shape positive shape parameter of the Gamma prior
+#' @param rate positive rate parameter of the Gamma prior
 #' @param sum_y sum of observed data values for the Poisson likelihood
 #' @param n number of observations for the Poisson likelihood
 #'
 #' @return data frame
 #' @export
 #'
-#' @examples
-#' summarize_gamma_poisson(3, 4, 7, 12)
+#' @examples 
+#' summarize_gamma_poisson(shape = 3, rate = 4, sum_y = 7, n = 12)
 #' 
 summarize_gamma_poisson <- function (shape,
                                      rate,

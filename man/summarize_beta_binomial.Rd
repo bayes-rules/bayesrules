@@ -7,7 +7,7 @@
 summarize_beta_binomial(alpha, beta, y = NULL, n = NULL)
 }
 \arguments{
-\item{alpha, beta}{non-negative parameters of the prior Beta model}
+\item{alpha, beta}{positive shape parameters of the prior Beta model}
 
 \item{y}{number of successes}
 
@@ -24,6 +24,5 @@ this function summarizes the mean, mode, and variance of the
 prior and posterior Beta models of \eqn{\pi}.
 }
 \examples{
-
 summarize_beta_binomial(1, 15, y = 25, n = 50)
 }

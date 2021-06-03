@@ -4,17 +4,16 @@
 #' Beta(alpha, beta) model of variable \eqn{\pi} with markings indicating
 #' a credible interval for \eqn{\pi}.
 #'
-#' @param alpha,beta non-negative parameters of the Beta model
+#' @param alpha,beta positive shape parameters of the Beta model
 #' @param ci_level credible interval level
 #'
 #' @return A density plot for the Beta model
 #' @export
 #' @import ggplot2
+#' @importFrom stats dbeta
 #'
 #' @examples
-#' \dontrun{
-#' plot_beta(1,12)
-#' }
+#' plot_beta(alpha = 1, beta = 12)
 plot_beta_ci <- function(alpha, beta, ci_level = 0.95){
   
   

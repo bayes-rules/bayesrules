@@ -9,8 +9,10 @@
 #' @return a ggplot
 #' @export
 #' 
-#' @import magrittr
+#' @importFrom magrittr "%>%"
+#' @import ggplot2
 #' @importFrom dplyr filter
+#' @importFrom stats dbinom
 #' @examples
 #' plot_binomial_likelihood(y = 3, n = 10, mle = TRUE)
 

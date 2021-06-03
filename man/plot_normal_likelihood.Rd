@@ -18,3 +18,6 @@ a ggplot of Normal likelihood
 Plots the Normal likelihood function for variable \eqn{\mu}
 given a vector of Normal data y.
 }
+\examples{
+plot_normal_likelihood(y = rnorm(50, mean = 10, sd = 2), sigma = 1.5)
+}

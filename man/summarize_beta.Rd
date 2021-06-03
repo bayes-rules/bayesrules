@@ -7,7 +7,7 @@
 summarize_beta(alpha, beta)
 }
 \arguments{
-\item{alpha, beta}{non-negative parameters of the Beta model}
+\item{alpha, beta}{positive shape parameters of the Beta model}
 }
 \value{
 a summary table

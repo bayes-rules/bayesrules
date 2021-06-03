@@ -3,7 +3,7 @@
 #' @description Plots the probability density function (pdf) for
 #' a Beta(alpha, beta) model of variable \eqn{\pi}.
 #'
-#' @param alpha,beta non-negative parameters of the Beta model
+#' @param alpha,beta positive shape parameters of the Beta model
 #' @param mean,mode a logical value indicating whether to display the model mean and mode
 #'
 #' @return A density plot for the Beta model.
@@ -12,7 +12,7 @@
 #' @importFrom stats dbeta
 #'
 #' @examples
-#' plot_beta(alpha = 1, beta = 12)
+#' plot_beta(alpha = 1, beta = 12, mean = TRUE, mode = TRUE)
 plot_beta <- function(alpha, beta, mean = FALSE, mode = FALSE){
   
   

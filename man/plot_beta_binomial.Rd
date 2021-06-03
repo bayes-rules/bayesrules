@@ -15,7 +15,7 @@ plot_beta_binomial(
 )
 }
 \arguments{
-\item{alpha, beta}{non-negative parameters of the prior Beta model}
+\item{alpha, beta}{positive shape parameters of the prior Beta model}
 
 \item{y}{observed number of successes}
 
@@ -38,8 +38,8 @@ this function produces a plot of any combination of the corresponding prior pdf,
 scaled likelihood function, and posterior pdf.  All three are included by default.
 }
 \examples{
-\dontrun{
+
 plot_beta_binomial(alpha = 1, beta = 13, y = 25, n = 50)
 plot_beta_binomial(alpha = 1, beta = 13, y = 25, n = 50, posterior = FALSE)
-}
+
 }

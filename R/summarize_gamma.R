@@ -3,14 +3,14 @@
 #' @description Summarizes the expected value, variance, and mode of 
 #' a Gamma(shape, rate) model for variable \eqn{\lambda}.
 #'
-#' @param shape non-negative shape parameter of the Gamma model
-#' @param rate non-negative rate parameter of the Gamma model
+#' @param shape positive shape parameter of the Gamma model
+#' @param rate positive rate parameter of the Gamma model
 #'
 #' @return a summary table
 #' @export
 #'
 #' @examples
-#' summarize_gamma(1, 15)
+#' summarize_gamma(shape = 1, rate = 15)
 #' 
 
 summarize_gamma <- function (shape, rate){

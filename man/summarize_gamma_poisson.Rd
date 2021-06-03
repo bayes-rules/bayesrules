@@ -7,9 +7,9 @@
 summarize_gamma_poisson(shape, rate, sum_y = NULL, n = NULL)
 }
 \arguments{
-\item{shape}{non-negative shape parameter of the Gamma prior}
+\item{shape}{positive shape parameter of the Gamma prior}
 
-\item{rate}{non-negative rate parameter of the Gamma prior}
+\item{rate}{positive rate parameter of the Gamma prior}
 
 \item{sum_y}{sum of observed data values for the Poisson likelihood}
 
@@ -27,6 +27,6 @@ this function summarizes the mean, mode, and variance of the
 prior and posterior Gamma models of \eqn{\lambda}.
 }
 \examples{
-summarize_gamma_poisson(3, 4, 7, 12)
+summarize_gamma_poisson(shape = 3, rate = 4, sum_y = 7, n = 12)
 
 }

@@ -42,4 +42,5 @@ scaled likelihood function, and posterior pdf.  All three are included by defaul
 }
 \examples{
 plot_gamma_poisson(shape = 100, rate = 20, sum_y = 39, n = 6)
+plot_gamma_poisson(shape = 100, rate = 20, sum_y = 39, n = 6, posterior = FALSE)
 }

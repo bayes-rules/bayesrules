@@ -7,7 +7,7 @@
 plot_beta(alpha, beta, mean = FALSE, mode = FALSE)
 }
 \arguments{
-\item{alpha, beta}{non-negative parameters of the Beta model}
+\item{alpha, beta}{positive shape parameters of the Beta model}
 
 \item{mean, mode}{a logical value indicating whether to display the model mean and mode}
 }
@@ -19,5 +19,5 @@ Plots the probability density function (pdf) for
 a Beta(alpha, beta) model of variable \eqn{\pi}.
 }
 \examples{
-plot_beta(alpha = 1, beta = 12)
+plot_beta(alpha = 1, beta = 12, mean = TRUE, mode = TRUE)
 }

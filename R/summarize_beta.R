@@ -3,7 +3,7 @@
 #' @description Summarizes the expected value, variance, and mode of 
 #' a Beta(alpha, beta) model for variable \eqn{\pi}.
 #'
-#' @param alpha,beta non-negative parameters of the Beta model
+#' @param alpha,beta positive shape parameters of the Beta model
 #'
 #' @return a summary table
 #' @export

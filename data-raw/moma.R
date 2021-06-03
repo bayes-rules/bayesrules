@@ -41,5 +41,5 @@ moma_sample <- moma %>%
 
 
 
-#usethis::use_data(moma, overwrite = TRUE)
+usethis::use_data(moma, overwrite = TRUE)
 usethis::use_data(moma_sample, overwrite = TRUE)

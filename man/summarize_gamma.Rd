@@ -7,9 +7,9 @@
 summarize_gamma(shape, rate)
 }
 \arguments{
-\item{shape}{non-negative shape parameter of the Gamma model}
+\item{shape}{positive shape parameter of the Gamma model}
 
-\item{rate}{non-negative rate parameter of the Gamma model}
+\item{rate}{positive rate parameter of the Gamma model}
 }
 \value{
 a summary table
@@ -19,6 +19,6 @@ Summarizes the expected value, variance, and mode of
 a Gamma(shape, rate) model for variable \eqn{\lambda}.
 }
 \examples{
-summarize_gamma(1, 15)
+summarize_gamma(shape = 1, rate = 15)
 
 }

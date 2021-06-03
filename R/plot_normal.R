@@ -9,8 +9,10 @@
 #' @return a ggplot
 #' @export
 #' @import ggplot2
+#' @importFrom stats dnorm
 #'
 #' @examples
+#' plot_normal(mean = 3.5, sd = 0.5)
 plot_normal <- function(mean, sd){
   x <- c(mean - 4*sd, mean +4*sd)
   

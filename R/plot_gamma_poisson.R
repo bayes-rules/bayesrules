@@ -19,9 +19,11 @@
 #' @export
 #'
 #' @import ggplot2
+#' @importFrom stats dgamma qgamma
 #'
 #' @examples
 #' plot_gamma_poisson(shape = 100, rate = 20, sum_y = 39, n = 6)
+#' plot_gamma_poisson(shape = 100, rate = 20, sum_y = 39, n = 6, posterior = FALSE)
 
 plot_gamma_poisson <- function (shape, rate,
                                 sum_y = NULL,

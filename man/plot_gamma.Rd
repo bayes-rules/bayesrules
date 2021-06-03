@@ -21,8 +21,6 @@ Plots the probability density function (pdf) for
 a Gamma(shape, rate) model of variable \eqn{\lambda}.
 }
 \examples{
-\dontrun{
-plot_gamma(shape = 2, rate = 11)
-}
+plot_gamma(shape = 2, rate = 11, mean = TRUE, mode = TRUE)
 
 }

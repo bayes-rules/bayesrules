@@ -17,6 +17,7 @@
 #' @export 
 #'
 #' @examples
+#' summarize_normal_normal(mean = 2.3, sd = 0.3, sigma = 5.1, y_bar = 128.5, n = 20)
 summarize_normal_normal <- function (mean, 
                                      sd, 
                                      sigma = NULL,

@@ -18,3 +18,6 @@ a ggplot
 Plots the probability density function (pdf) for a
 Normal(mean, sd^2) model of variable \eqn{\mu}.
 }
+\examples{
+plot_normal(mean = 3.5, sd = 0.5)
+}

@@ -11,16 +11,14 @@
 #' @export
 #'
 #' @import ggplot2
+#' @importFrom stats dgamma
 #'
 #' @examples
-#' \dontrun{
-#' plot_gamma(shape = 2, rate = 11)
-#' }
+#' plot_gamma(shape = 2, rate = 11, mean = TRUE, mode = TRUE)
 #' 
 plot_gamma <- function(shape, rate, 
                        mean = FALSE,
                        mode = FALSE){
-  
   x_min <- qgamma(1e-25, shape, rate)
                 
   x_max <- qgamma(0.99999, shape, rate)

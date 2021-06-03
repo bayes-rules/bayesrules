@@ -7,7 +7,7 @@
 plot_beta_ci(alpha, beta, ci_level = 0.95)
 }
 \arguments{
-\item{alpha, beta}{non-negative parameters of the Beta model}
+\item{alpha, beta}{positive shape parameters of the Beta model}
 
 \item{ci_level}{credible interval level}
 }
@@ -20,7 +20,5 @@ Beta(alpha, beta) model of variable \eqn{\pi} with markings indicating
 a credible interval for \eqn{\pi}.
 }
 \examples{
-\dontrun{
-plot_beta(1,12)
-}
+plot_beta(alpha = 1, beta = 12)
 }

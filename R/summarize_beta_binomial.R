@@ -6,7 +6,7 @@
 #' this function summarizes the mean, mode, and variance of the 
 #' prior and posterior Beta models of \eqn{\pi}.
 #' 
-#' @param alpha,beta non-negative parameters of the prior Beta model
+#' @param alpha,beta positive shape parameters of the prior Beta model
 #' @param y number of successes
 #' @param n number of trials
 #'
@@ -14,7 +14,6 @@
 #' @export
 #'
 #' @examples 
-#' 
 #' summarize_beta_binomial(1, 15, y = 25, n = 50)
 summarize_beta_binomial <- function (alpha, 
                                      beta, 

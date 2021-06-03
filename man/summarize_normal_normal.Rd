@@ -28,3 +28,6 @@ and data (the sample size n, mean y_bar, and standard deviation sigma),
 this function summarizes the mean, mode, and variance of the 
 prior and posterior Normal models of \eqn{\mu}.
 }
+\examples{
+summarize_normal_normal(mean = 2.3, sd = 0.3, sigma = 5.1, y_bar = 128.5, n = 20)
+}
