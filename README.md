@@ -6,9 +6,9 @@
 <!-- badges: start -->
 <!-- badges: end -->
 
-**bayesrules** is a package to supplement the Bayes Rules! book. It
-contains datasets and functions that are used in the book. Currently it
-is under development.
+**bayesrules** is a package to supplement the [Bayes Rules!
+book](https://www.bayesrulesbook.com/). It contains datasets and
+functions that are used in the book. Currently it is under development.
 
 ## Installation
 
