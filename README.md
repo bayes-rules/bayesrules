@@ -4,11 +4,12 @@
 # bayesrules
 
 <!-- badges: start -->
-
 <!-- badges: end -->
 
-bayesrules is a package to supplement the Bayes Rules\! book. It
-contains datasets and functions that are used in the book. 
+bayesrules is a package to supplement the Bayes Rules! book. It contains
+datasets and functions that are used in the book. Currently it is under
+development. It is current purpose is to supplement our teaching of
+Bayesian courses as we continue to write our book.
 
 ## Installation
 
@@ -19,5 +20,3 @@ to install the devtools package if you do not have it installed already.
 #install.packages("devtools") 
 devtools::install_github("mdogucu/bayesrules")
 ```
-
-

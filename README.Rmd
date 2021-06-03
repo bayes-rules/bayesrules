@@ -25,7 +25,7 @@ You can install the development version from Github. You would also need to inst
 
 ``` r
 #install.packages("devtools") 
-install.packages("mdogucu/bayesrules")
+devtools::install_github("mdogucu/bayesrules")
 ```
 
 
