@@ -14,7 +14,7 @@
 #' @export
 #'
 #' @examples 
-#' summarize_beta_binomial(1, 15, y = 25, n = 50)
+#' summarize_beta_binomial(alpha = 1, beta = 15, y = 25, n = 50)
 summarize_beta_binomial <- function (alpha, 
                                      beta, 
                                      y = NULL, 

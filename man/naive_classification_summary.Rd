@@ -23,3 +23,8 @@ this function returns summaries of the model's posterior classification quality.
 These summaries include a confusion matrix as well as an estimate of the model's
 overall accuracy.
 }
+\examples{
+data(penguins_bayes, package = "bayesrules")
+example_model <- e1071::naiveBayes(species ~ bill_length_mm, data = penguins_bayes)
+naive_classification_summary(model = example_model, data = penguins_bayes, y = "species")
+}

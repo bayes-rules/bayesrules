@@ -15,6 +15,9 @@
 #' @importFrom e1071 naiveBayes
 #' @importFrom stats as.formula predict
 #' @examples
+#' data(penguins_bayes, package = "bayesrules")
+#' example_model <- e1071::naiveBayes(species ~ bill_length_mm, data = penguins_bayes)
+#' naive_classification_summary_cv(model = example_model, data = penguins_bayes, y = "species", k = 2)
 
 naive_classification_summary_cv <- function(model, data, y, k = 10){
           if(!("naiveBayes" %in% class(model))){ stop("the model must be a naiveBayes object.")}

@@ -24,5 +24,5 @@ this function summarizes the mean, mode, and variance of the
 prior and posterior Beta models of \eqn{\pi}.
 }
 \examples{
-summarize_beta_binomial(1, 15, y = 25, n = 50)
+summarize_beta_binomial(alpha = 1, beta = 15, y = 25, n = 50)
 }

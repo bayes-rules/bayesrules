@@ -23,3 +23,12 @@ this function returns summaries of the model's posterior classification quality.
 These summaries include a confusion matrix as well as estimates of the model's
 sensitivity, specificity, and overall accuracy.
 }
+\examples{
+x <- rnorm(20)
+z <- 3*x
+prob <- 1/(1+exp(-z))
+y <- rbinom(20, 1, prob)
+example_data <- data.frame(x = x, y = y)
+example_model <- rstanarm::stan_glm(y ~ x, data = example_data, family = binomial)
+classification_summary(model = example_model, data = example_data, cutoff = 0.5)                   
+}

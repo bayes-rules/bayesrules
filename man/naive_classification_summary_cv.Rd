@@ -24,3 +24,8 @@ and a naiveBayes model of y,
 this function returns a cross validated confusion matrix by which to assess 
 the model's posterior classification quality.
 }
+\examples{
+data(penguins_bayes, package = "bayesrules")
+example_model <- e1071::naiveBayes(species ~ bill_length_mm, data = penguins_bayes)
+naive_classification_summary_cv(model = example_model, data = penguins_bayes, y = "species", k = 2)
+}

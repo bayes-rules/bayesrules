@@ -20,6 +20,10 @@
 #' @importFrom purrr map_df
 #'
 #' @examples
+#' example_data <- data.frame(x = sample(1:100, 20))
+#' example_data$y <- example_data$x*3 + rnorm(20, 0, 5)
+#' example_model <- rstanarm::stan_glm(y ~ x,  data = example_data)
+#' prediction_summary_cv(model = example_model, data = example_data, k = 2)
 prediction_summary_cv <- function(data, group, model, k, prob_inner = 0.5, prob_outer = 0.95){
   # This function summarizes the predictions across all observed cases in data
   if(!("stanreg" %in% class(model))){ stop("the model must be a stanreg object.")}
@@ -58,7 +62,7 @@ prediction_summary_cv <- function(data, group, model, k, prob_inner = 0.5, prob_
     data_test <- data %>% filter(fold == i) %>% dplyr::select(-fold)
     model_train <- update(model, data = data_train, refresh = FALSE)
     predictions_test <- posterior_predict(model_train, newdata = data_test)
-    prediction_summary(model = model_train, data = data_test)
+    prediction_summary(model = model_train, data = data_test, prob_inner = prob_inner, prob_outer = prob_outer)
     }
   
   folds <- map_df(1:k, get_folds)

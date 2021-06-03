@@ -18,6 +18,13 @@
 #' @importFrom stats na.omit rnorm quantile update
 #'
 #' @examples
+#' x <- rnorm(20)
+#' z <- 3*x
+#' prob <- 1/(1+exp(-z))
+#' y <- rbinom(20, 1, prob)
+#' example_data <- data.frame(x = x, y = y)
+#' example_model <- rstanarm::stan_glm(y ~ x, data = example_data, family = binomial)
+#' classification_summary_cv(model = example_model, data = example_data, k = 2, cutoff = 0.5)                   
 
 classification_summary_cv <- function(model, data, group, k, cutoff = 0.5){
           if(!("stanreg" %in% class(model))){ stop("the model must be a stanreg object.")}

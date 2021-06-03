@@ -38,3 +38,9 @@ Scaled mae (mae_scaled) measures the typical number of absolute deviations (stab
 within_50 and within_90 report the proportion of observed y values that fall within their posterior prediction intervals, the probability levels of which are set by the user.
 For hierarchical models of class lmerMod, the folds are comprised by collections of groups, not individual observations.
 }
+\examples{
+example_data <- data.frame(x = sample(1:100, 20))
+example_data$y <- example_data$x*3 + rnorm(20, 0, 5)
+example_model <- rstanarm::stan_glm(y ~ x,  data = example_data)
+prediction_summary_cv(model = example_model, data = example_data, k = 2)
+}

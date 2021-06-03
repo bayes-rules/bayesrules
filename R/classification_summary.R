@@ -16,6 +16,13 @@
 #' @importFrom rstanarm posterior_predict
 #'
 #' @examples
+#' x <- rnorm(20)
+#' z <- 3*x
+#' prob <- 1/(1+exp(-z))
+#' y <- rbinom(20, 1, prob)
+#' example_data <- data.frame(x = x, y = y)
+#' example_model <- rstanarm::stan_glm(y ~ x, data = example_data, family = binomial)
+#' classification_summary(model = example_model, data = example_data, cutoff = 0.5)                   
 classification_summary <- function(model, data, cutoff = 0.5){
           # This function summarizes the classifications across all cases
           if(!("stanreg" %in% class(model))){ stop("the model must be a stanreg object.")}
@@ -26,26 +33,28 @@ classification_summary <- function(model, data, cutoff = 0.5){
           
           # Turn the predictions into classifications
           if("lmerMod" %in% class(model)){
-                    y <- as.data.frame(data %>% dplyr::select(as.character(model$formula)[2]))[,1]
+            y <- as.data.frame(data %>% dplyr::select(as.character(model$formula)[2]))[,1]
           }
           else{
-                    y <- as.data.frame(data %>% dplyr::select(model$terms[[2]]))[,1]
+            y <- as.data.frame(data %>% dplyr::select(model$terms[[2]]))[,1]
           }
+          
           classifications <- data.frame(proportion = colMeans(predictions)) %>% 
-                    mutate(classification = as.numeric(proportion >= cutoff)) %>% 
-                    mutate(y = y)
+            mutate(classification = as.numeric(proportion >= cutoff)) %>% 
+            mutate(y = y)
           
           # Confusion matrix
           confusion_matrix <- classifications %>% 
                     tabyl(y, classification)
           if(ncol(confusion_matrix) == 2){
                     if("1" %in% names(confusion_matrix)){
-                              confusion_matrix <- confusion_matrix %>% 
-                                        mutate("0" = rep(0,nrow(.)))
+                      
+                      confusion_matrix <- confusion_matrix %>% 
+                        mutate("0" = rep(0,nrow(.)))
                     }
                     if("0" %in% names(confusion_matrix)){
-                              confusion_matrix <- confusion_matrix %>% 
-                                        mutate("1" = rep(0,nrow(.)))
+                      confusion_matrix <- confusion_matrix %>% 
+                        mutate("1" = rep(0,nrow(.)))
                     }
           }
           # Accuracy rates
