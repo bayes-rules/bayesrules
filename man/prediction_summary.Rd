@@ -20,6 +20,8 @@ prediction_summary(
 \item{prob_inner}{posterior predictive interval probability (a value between 0 and 1)}
 
 \item{prob_outer}{posterior predictive interval probability (a value between 0 and 1)}
+
+\item{stable}{TRUE returns the number of absolute deviations and FALSE returns the standard deviations that observed y values fall from their predictive medians}
 }
 \value{
 a tibble

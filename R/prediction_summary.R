@@ -29,6 +29,7 @@ prediction_summary_data <- function(y, yrep, prob_inner = 0.5, prob_outer = 0.95
 #' @param data data frame including the variables in the model, both response y and predictors x
 #' @param prob_inner posterior predictive interval probability (a value between 0 and 1)
 #' @param prob_outer posterior predictive interval probability (a value between 0 and 1)
+#' @param stable TRUE returns the number of absolute deviations and FALSE returns the standard deviations that observed y values fall from their predictive medians
 #'
 #' @return a tibble
 #' @export
