@@ -1,0 +1,44 @@
+#' WNBA Basketball Data
+#' 
+#' The WNBA Basketball Data was scraped from https://www.basketball-reference.com/wnba/players/ and contains information on basketball players from the 2019 season.
+#' 
+#' @format A data frame with 146 rows and 30 variables. Each row represents a single WNBA basketball player.
+#' \describe{
+#'   \item{player_name}{the first and last name of the player}
+#'   \item{height}{the height of the player in inches}
+#'   \item{weight}{the weight of the player in pounds}
+#'   \item{year}{the year of the WNBA season}
+#'   \item{team}{the team that the WNBA player is a member of}
+#'   \item{age}{the age of the player in years}
+#'   \item{games_played}{the number of games played by the player in that season}
+#'   \item{games_started}{the number of games the player started in that season}
+#'   \item{avg_minutes_played}{the average nuymber of minutes played by the player in the games in which they played}
+#'   \item{avg_field_goals}{the average number of field goals the player made per game in which the player played}
+#'   \item{avg_field_goal_attempts}{the average number of field goals the player attempted per game in which the player played}
+#'   \item{field_goal_pct}{the percent of field goals the player made throughout the season}
+#'   \item{avg_three_pointers}{the average number of three pointers the player made per game in which the player played}
+#'   \item{avg_three_pointer_attempts}{the average number of three pointers the player attempted per game in which the player played}
+#'   \item{three_pointer_pct}{the percent of three pointers the player made throughout the season}
+#'   \item{avg_two_pointers}{the average number of two pointers the player made per game in which the player played}
+#'   \item{avg_two_pointer_attempts}{the average number of two pointers the player attempted per game in which the player played}
+#'   \item{two_pointer_pct}{the percent of two pointers the player made throughout the season}
+#'   \item{avg_free_throws}{the average number of free throws the player made per game in which the player played}
+#'   \item{avg_free_throw_attempts}{the average number of free throws the player attempted per game in which the player played}
+#'   \item{free_throw_pct}{the percent of free throws the player made throughout the season}
+#'   \item{avg_offensive_rb}{the average number of offensive rebounds the player made per game in which the player played}
+#'   \item{avg_defensive_rb}{the average number of defensive rebounds the player made per game in which the player played}
+#'   \item{avg_rb}{the average number of rebounds (both offensive and defensive) the player made per game in which the player played}
+#'   \item{avg_assists}{the average number of assists the player made per game in which the player played}
+#'   \item{avg_steals}{the average number of steals the player made per game in which the player played}
+#'   \item{avg_blocks}{the average number of blocks the player made per game in which the player played}
+#'   \item{avg_turnovers}{the average number of turnovers the player made per game in which the player played}
+#'   \item{avg_personal_fouls}{the average number of personal fouls the player made per game in which the player played. Note: after 5 fouls the player is not allowed to play in that game anymore}
+#'   \item{avg_points}{the average number of points the player made per game in which the player played}
+
+
+
+
+#' }
+#' @source  \url{https://www.basketball-reference.com}
+
+"basketball"
