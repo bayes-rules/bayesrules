@@ -80,7 +80,7 @@ basketball <- map_df(all_players, get_player_info)
 vnames<-c("player_name", "height", "weight", "year", "team", 
           "age","games_played",
           "games_started", "avg_minutes_played", "avg_field_goals",
-          "avg_field_goal_attempts", "filed_goal_pct", "avg_three_pointers",
+          "avg_field_goal_attempts", "field_goal_pct", "avg_three_pointers",
           "avg_three_pointer_attempts", "three_pointer_pct",
           "avg_two_pointers", "avg_two_pointer_attempts", "two_pointer_pct",
           "avg_free_throws", "avg_free_throw_attempts", "free_throw_pct",
@@ -91,7 +91,7 @@ vnames<-c("player_name", "height", "weight", "year", "team",
 names(basketball) <- vnames
 
 
-basketball<-basketball %>% 
+basketball <- basketball %>% 
    mutate(
       weight=as.integer(weight),
       age=as.integer(age),

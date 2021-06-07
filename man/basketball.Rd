@@ -15,7 +15,7 @@ A data frame with 146 rows and 30 variables. Each row represents a single WNBA b
   \item{age}{the age of the player in years}
   \item{games_played}{the number of games played by the player in that season}
   \item{games_started}{the number of games the player started in that season}
-  \item{avg_minutes_played}{the average nuymber of minutes played by the player in the games in which they played}
+  \item{avg_minutes_played}{the average number of minutes played by the player in the games in which they played}
   \item{avg_field_goals}{the average number of field goals the player made per game in which the player played}
   \item{avg_field_goal_attempts}{the average number of field goals the player attempted per game in which the player played}
   \item{field_goal_pct}{the percent of field goals the player made throughout the season}
