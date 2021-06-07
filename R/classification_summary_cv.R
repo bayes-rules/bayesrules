@@ -52,14 +52,22 @@ fold <- function(data, k = 5, cat_col = NULL, num_col = NULL, id_col = NULL,
 classification_summary_cv <- function(model, data, group, k, cutoff = 0.5){
           if(!("stanreg" %in% class(model))){ stop("the model must be a stanreg object.")}
           
+          data <- data %>% 
+                    ungroup()
+          
+          # For hierarchical models, define folds from groups, not individual observations
+          
           if("lmerMod" %in% class(model)){
                     # For hierarchical models, each fold is a group
                     y <- as.character(model$formula)[2]
                     data <- data %>% 
-                              ungroup() %>% 
-                              mutate(fold = as.numeric(as.factor(data[,as.vector(na.omit(match(names(data), group)))][[1]])))
-                    k <- max(data$fold)
+                              fold(., k = k, id_col = paste(group)) %>% 
+                              rename(fold = `.folds`) %>% 
+                              ungroup()
           }
+          
+          # For non-hierarchical models, define folds from individual observations
+          
           else{
                     # Split data into k possibly unequal folds
                     # https://gist.github.com/dsparks/3695362

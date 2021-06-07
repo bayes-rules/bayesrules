@@ -60,7 +60,7 @@ prediction_summary_cv <- function(data, group, model, k, prob_inner = 0.5, prob_
     y <- as.character(model$formula)[2]
     
     data <- data %>% 
-      fold(., k = k, id_col = group) %>% 
+      fold(., k = k, id_col = paste(group)) %>% 
       rename(fold = `.folds`) %>% 
       ungroup()
     }
@@ -68,8 +68,8 @@ prediction_summary_cv <- function(data, group, model, k, prob_inner = 0.5, prob_
   # For non-hierarchical models, define folds from individual observations
           
   else{
+    # Split data into k possibly unequal folds
     # https://gist.github.com/dsparks/3695362
-                    
     random_draw <- rnorm(nrow(data))
     k_quantiles <- quantile(random_draw, 0:k/k)
     folds <- cut(random_draw, k_quantiles, include.lowest = TRUE)
