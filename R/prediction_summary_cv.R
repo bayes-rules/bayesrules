@@ -17,6 +17,7 @@
 #'
 #' @return list
 #' @export
+#' @import groupdata2
 #' @importFrom purrr map_df
 #' @importFrom groupdata2 fold
 #'

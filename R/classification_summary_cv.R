@@ -14,7 +14,7 @@
 #'
 #' @return a list
 #' @export
-#' @import janitor dplyr
+#' @import janitor dplyr groupdata2
 #' @importFrom stats na.omit rnorm quantile update
 #' @importFrom groupdata2 fold
 #'
