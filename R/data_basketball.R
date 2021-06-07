@@ -34,10 +34,6 @@
 #'   \item{avg_turnovers}{the average number of turnovers the player made per game in which the player played}
 #'   \item{avg_personal_fouls}{the average number of personal fouls the player made per game in which the player played. Note: after 5 fouls the player is not allowed to play in that game anymore}
 #'   \item{avg_points}{the average number of points the player made per game in which the player played}
-
-
-
-
 #' }
 #' @source  \url{https://www.basketball-reference.com}
 

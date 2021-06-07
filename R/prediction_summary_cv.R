@@ -1,26 +1,3 @@
-# The fold() function is from the groupdata2 package
-fold <- function(data, k = 5, cat_col = NULL, num_col = NULL, id_col = NULL, 
-                 method = "n_dist", id_aggregation_fn = sum, extreme_pairing_levels = 1, 
-                 num_fold_cols = 1, unique_fold_cols_only = TRUE, max_iters = 5, 
-                 handle_existing_fold_cols = "keep_warn", parallel = FALSE) 
-{
-  check_fold_once(data = data, k = k, cat_col = cat_col, num_col = num_col, 
-                  id_col = id_col, method = method, id_aggregation_fn = id_aggregation_fn, 
-                  extreme_pairing_levels = extreme_pairing_levels, num_fold_cols = num_fold_cols, 
-                  unique_fold_cols_only = unique_fold_cols_only, max_iters = max_iters, 
-                  handle_existing_fold_cols = handle_existing_fold_cols, 
-                  parallel = parallel)
-  if (dplyr::is_grouped_df(data)) {
-    message_once_about_group_by("fold")
-  }
-  run_by_group_df(data = data, .fn = run_fold_, k = k, cat_col = cat_col, 
-                  num_col = num_col, id_col = id_col, method = method, 
-                  id_aggregation_fn = id_aggregation_fn, extreme_pairing_levels = extreme_pairing_levels, 
-                  num_fold_cols = num_fold_cols, unique_fold_cols_only = unique_fold_cols_only, 
-                  max_iters = max_iters, handle_existing_fold_cols = handle_existing_fold_cols, 
-                  parallel = parallel)
-}
-
 #' Cross-Validated Posterior Predictive Summaries
 #' 
 #' Given a set of observed data including a quantitative response variable y 
@@ -41,6 +18,7 @@ fold <- function(data, k = 5, cat_col = NULL, num_col = NULL, id_col = NULL,
 #' @return list
 #' @export
 #' @importFrom purrr map_df
+#' @importFrom groupdata2 fold
 #'
 #' @examples
 #' example_data <- data.frame(x = sample(1:100, 20))
