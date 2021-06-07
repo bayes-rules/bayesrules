@@ -39,7 +39,7 @@ classification_summary_cv <- function(model, data, group, k, cutoff = 0.5){
                     # For hierarchical models, each fold is a group
                     y <- as.character(model$formula)[2]
                     data <- data %>% 
-                              fold(., k = k, id_col = paste(group)) %>% 
+                              groupdata2::fold(., k = k, id_col = paste(group)) %>% 
                               rename(fold = `.folds`) %>% 
                               ungroup()
           }

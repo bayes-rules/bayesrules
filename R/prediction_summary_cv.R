@@ -39,7 +39,7 @@ prediction_summary_cv <- function(data, group, model, k, prob_inner = 0.5, prob_
     y <- as.character(model$formula)[2]
     
     data <- data %>% 
-      fold(., k = k, id_col = paste(group)) %>% 
+      groupdata2::fold(., k = k, id_col = paste(group)) %>% 
       rename(fold = `.folds`) %>% 
       ungroup()
     }
