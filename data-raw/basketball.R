@@ -96,7 +96,8 @@ basketball<-basketball %>%
       weight=as.integer(weight),
       age=as.integer(age),
       year=as.integer(year),
-      height=12*as.numeric(str_match(height, "(.)-(.)")[,2])+as.numeric(str_match(height, "(.)-(.)")[,3]))
+      height=12*as.numeric(str_match(height, "(.)-(.)")[,2])+as.numeric(str_match(height, "(.)-(.)")[,3]),
+      team = as.factor(team))
 
 
 usethis::use_data(basketball, overwrite = TRUE)
