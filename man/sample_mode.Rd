@@ -16,5 +16,5 @@ sample mode
 Calculate the sample mode of vector x.
 }
 \examples{
-sample_mode(c(3,4,4))
+sample_mode(rbeta(100, 2, 7))
 }

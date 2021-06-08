@@ -20,5 +20,5 @@ Beta(alpha, beta) model of variable \eqn{\pi} with markings indicating
 a credible interval for \eqn{\pi}.
 }
 \examples{
-plot_beta(alpha = 1, beta = 12)
+plot_beta_ci(alpha = 7, beta = 12, ci_level = 0.80)
 }

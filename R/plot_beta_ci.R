@@ -13,7 +13,7 @@
 #' @importFrom stats dbeta qbeta
 #'
 #' @examples
-#' plot_beta(alpha = 1, beta = 12)
+#' plot_beta_ci(alpha = 7, beta = 12, ci_level = 0.80)
 plot_beta_ci <- function(alpha, beta, ci_level = 0.95){
   
   
