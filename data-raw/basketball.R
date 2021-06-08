@@ -97,7 +97,10 @@ basketball <- basketball %>%
       age=as.integer(age),
       year=as.integer(year),
       height=12*as.numeric(str_match(height, "(.)-(.)")[,2])+as.numeric(str_match(height, "(.)-(.)")[,3]),
-      team = as.factor(team))
+      team = as.factor(team),
+      total_minutes = round(games_played*avg_minutes_played),
+      starter = games_started / games_played > 0.5
+   )
 
 
 usethis::use_data(basketball, overwrite = TRUE)
