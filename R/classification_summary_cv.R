@@ -16,7 +16,7 @@
 #' @export
 #' @import janitor dplyr groupdata2
 #' @importFrom stats na.omit rnorm quantile update
-#' @importFrom groupdata2 fold check_fold_once
+#' @importFrom groupdata2 fold
 #'
 #' @examples
 #' x <- rnorm(20)

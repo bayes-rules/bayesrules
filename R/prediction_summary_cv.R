@@ -19,7 +19,7 @@
 #' @export
 #' @import groupdata2
 #' @importFrom purrr map_df
-#' @importFrom groupdata2 fold check_fold_once
+#' @importFrom groupdata2 fold
 #'
 #' @examples
 #' example_data <- data.frame(x = sample(1:100, 20))

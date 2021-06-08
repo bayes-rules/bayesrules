@@ -3,9 +3,9 @@ Type: Package
 Title: Datasets and Supplemental Functions from Bayes Rules! Book
 Version: 0.0.0.9000
 Authors@R: c(
-    person("Mine", "Dogucu", , "mdogucu@uci.edu", c("aut", "cre")),
+    person("Mine", "Dogucu", , "mdogucu@uci.edu", c("aut", "cre"), comment = c(ORCID = "0000-0002-8007-934X")),
     person("Alicia", "Johnson", , role = "aut"),
-    person("Miles", "Ott", , role = "aut")
+    person("Miles", "Ott", , role = "aut", comment = c(ORCID = "0000-0003-4457-6565"))
     )
 Description: Provides datasets and functions used for analysis 
   and visualizations in the Bayes Rules! book.
@@ -27,6 +27,7 @@ Imports:
     stats,
     purrr,
     rstanarm,
-    e1071
+    e1071,
+    groupdata2
 Depends: 
     R (>= 2.10)
