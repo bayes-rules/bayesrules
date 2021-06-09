@@ -4,11 +4,14 @@
 # bayesrules
 
 <!-- badges: start -->
+
+[![R-CMD-check](https://github.com/bayes-rules/bayesrules/workflows/R-CMD-check/badge.svg)](https://github.com/bayes-rules/bayesrules/actions)
 <!-- badges: end -->
 
 **bayesrules** is a package to supplement the [Bayes Rules!
 book](https://www.bayesrulesbook.com/). It contains datasets and
-functions that are used in the book. You can find vignettes on the [package website](https://bayes-rules.github.io/bayesrules/docs/).
+functions that are used in the book. You can find vignettes on the
+[package website](https://bayes-rules.github.io/bayesrules/docs/).
 
 <hr>
 
