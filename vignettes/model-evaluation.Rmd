@@ -147,7 +147,7 @@ Similarly `naive_classification_summary_cv()` returns the cross validated confus
 The `k` argument represents the number of folds to use for cross-validation.
 
 
-```{r}
+```{r comment=""}
 naive_classification_summary_cv(model = example_model, data = penguins_bayes, 
                                 y = "species", k = 2)
 ```
