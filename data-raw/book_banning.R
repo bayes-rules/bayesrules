@@ -11,6 +11,7 @@ book_banning <- read.csv(text = x) %>%
           mutate(year = lubridate::year(date)) %>% 
           select(title, book_id, author, date, year, removed, 
                  explicit, antifamily, occult, language, lgbtq, violent,
-                 state, political_value_index, median_income, hs_grad_rate, college_grad_rate)
+                 state, political_value_index, median_income, hs_grad_rate, college_grad_rate) %>% 
+          mutate_if(is.integer, as.factor)
 
 usethis::use_data(book_banning, overwrite = TRUE)
