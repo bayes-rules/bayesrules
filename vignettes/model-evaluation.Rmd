@@ -1,0 +1,154 @@
+---
+title: "Model Evaluation"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Model Evaluation}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+
+```{r setup}
+library(bayesrules)
+```
+
+For Bayesian model evaluation **bayesrules** package has three functions `prediction_summary()`, 
+`classification_summary()` and `naive_classification_summary()` as well as their cross-validation counterparts as `prediction_summary_cv()`, `classification_summary_cv()`, and `naive_classification_summary_cv()` respectively. 
+
+
+<style type="text/css">
+.tg  {border-collapse:collapse;border-spacing:0;}
+.tg td{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+  overflow:hidden;padding:10px 5px;word-break:normal;}
+.tg th{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+  font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
+.tg .tg-0pky{border-color:inherit;text-align:left;vertical-align:top}
+</style>
+<table class="tg">
+<thead>
+  <tr>
+    <th class="tg-0pky">**Functions**</th>
+    <th class="tg-0pky">**Response**</th>
+    <th class="tg-0pky">**Model**</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td class="tg-0pky">`prediction_summary()`<br>`prediction_summary_cv()`</td>
+    <td class="tg-0pky">Quantitative</td>
+    <td class="tg-0pky">rstanreg</td>
+  </tr>
+  <tr>
+    <td class="tg-0pky">`classification_summary()`<br>`classification_summary_cv()`</td>
+    <td class="tg-0pky">Binary</td>
+    <td class="tg-0pky">rstanreg</td>
+  </tr>
+  <tr>
+    <td class="tg-0pky">`naive_classification_summary()`<br>`naive_classification_summary_cv()`</td>
+    <td class="tg-0pky">Categorical</td>
+    <td class="tg-0pky">naiveBayes</td>
+  </tr>
+</tbody>
+</table>
+
+## Prediction Summary
+
+Given a set of observed data including a quantitative response variable y and an rstanreg model of y, `prediction_summary()` returns 4 measures of the posterior prediction quality. 
+
+1. **Median absolute prediction error (mae)** measures the typical difference between the observed y values and their posterior predictive medians (stable = TRUE) or means (stable = FALSE). 
+
+2. **Scaled mae (mae_scaled)** measures the typical number of absolute deviations (stable = TRUE) or standard deviations (stable = FALSE) that observed y values fall from their predictive medians (stable = TRUE) or means (stable = FALSE). 
+
+3. and 4. **within_50** and **within_90** report the proportion of observed y values that fall within their posterior prediction intervals, the probability levels of which are set by the user. 
+Although 50% and 90% are the defaults for the posterior prediction intervals, these probability levels can be changed with `prob_inner` and `prob_outer` arguments. 
+The example below shows the 60% and 80% posterior prediction intervals.
+
+```{r comment =""}
+# Data generation
+example_data <- data.frame(x = sample(1:100, 20)) 
+example_data$y <- example_data$x*3 + rnorm(20, 0, 5)
+
+
+# rstanreg model
+example_model <- rstanarm::stan_glm(y ~ x,  data = example_data, refresh = FALSE)
+
+# Prediction Summary
+prediction_summary(example_model, example_data, 
+                   prob_inner = 0.6, prob_outer = 0.80, 
+                   stable = TRUE)
+
+```
+
+
+Similarly, `prediction_summary_cv()` returns the 4 cross-validated measures of the model_s posterior prediction quality for each fold as well as a pooled result. 
+The `k` argument represents the number of folds to use for cross-validation.
+
+```{r comment =""}
+prediction_summary_cv(model = example_model, data = example_data, 
+                      k = 2, prob_inner = 0.6, prob_outer = 0.80)
+```
+
+
+
+## Classification Summary
+
+Given a set of observed data including a binary response variable y and an rstanreg model of y, `classification_summary()` function returns summaries of the model's posterior classification quality. These summaries include a **confusion matrix** as well as estimates of the model's **sensitivity**, **specificity**, and **overall accuracy**.
+The `cutoff` argument represents the probability cutoff to classify a new case as positive.
+
+```{r comment =""}
+# Data generation
+x <- rnorm(20)
+z <- 3*x
+prob <- 1/(1+exp(-z))
+y <- rbinom(20, 1, prob)
+example_data <- data.frame(x = x, y = y)
+
+
+# rstanreg model
+example_model <- rstanarm::stan_glm(y ~ x, data = example_data, 
+                                    family = binomial, refresh = FALSE)
+
+# Prediction Summary
+classification_summary(model = example_model, data = example_data, cutoff = 0.5)                   
+```
+
+The `classification_summary_cv()` returns the same measures but for cross-validated estimates.
+The `k` argument represents the number of folds to use for cross-validation.
+
+
+```{r comment =""}
+classification_summary_cv(model = example_model, data = example_data, k = 2, cutoff = 0.5)                   
+```
+
+
+## Naive Classification Summary
+
+Given a set of observed data including a categorical response variable y and a naiveBayes model of y, naive_classification_summary() function returns summaries of the model's posterior classification quality. These summaries include a **confusion matrix** as well as an estimate of the model's overall **accuracy**.
+
+```{r comment=""}
+# Data
+data(penguins_bayes, package = "bayesrules")
+
+# naiveBayes model
+example_model <- e1071::naiveBayes(species ~ bill_length_mm, data = penguins_bayes)
+
+# Naive Classification Summary
+naive_classification_summary(model = example_model, data = penguins_bayes, y = "species")
+```
+
+Similarly `naive_classification_summary_cv()` returns the cross validated confusion matrix. 
+The `k` argument represents the number of folds to use for cross-validation.
+
+
+```{r}
+naive_classification_summary_cv(model = example_model, data = penguins_bayes, 
+                                y = "species", k = 2)
+```
+
