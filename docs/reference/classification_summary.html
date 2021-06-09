@@ -76,7 +76,7 @@ sensitivity, specificity, and overall accuracy." />
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">bayesrules</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.0.0.9000</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.0.1</span>
       </span>
     </div>
 
@@ -109,7 +109,7 @@ sensitivity, specificity, and overall accuracy." />
       </ul>
       <ul class="nav navbar-nav navbar-right">
         <li>
-  <a href="https://github.com/mdogucu/bayesrules/">
+  <a href="https://github.com/bayes-rules/bayesrules/">
     <span class="fab fa-github fa-lg"></span>
      
   </a>
@@ -128,7 +128,7 @@ sensitivity, specificity, and overall accuracy." />
   <div class="col-md-9 contents">
     <div class="page-header">
     <h1>Posterior Classification Summaries</h1>
-    <small class="dont-index">Source: <a href='https://github.com/mdogucu/bayesrules/blob/master/R/classification_summary.R'><code>R/classification_summary.R</code></a></small>
+    <small class="dont-index">Source: <a href='https://github.com/bayes-rules/bayesrules/blob/master/R/classification_summary.R'><code>R/classification_summary.R</code></a></small>
     <div class="hidden name"><code>classification_summary.Rd</code></div>
     </div>
 
@@ -173,8 +173,8 @@ sensitivity, specificity, and overall accuracy.</p>
 </div><div class='output co'>#&gt; 
 #&gt; SAMPLING FOR MODEL 'bernoulli' NOW (CHAIN 1).
 #&gt; Chain 1: 
-#&gt; Chain 1: Gradient evaluation took 4.1e-05 seconds
-#&gt; Chain 1: 1000 transitions using 10 leapfrog steps per transition would take 0.41 seconds.
+#&gt; Chain 1: Gradient evaluation took 4.3e-05 seconds
+#&gt; Chain 1: 1000 transitions using 10 leapfrog steps per transition would take 0.43 seconds.
 #&gt; Chain 1: Adjust your expectations accordingly!
 #&gt; Chain 1: 
 #&gt; Chain 1: 
@@ -191,9 +191,9 @@ sensitivity, specificity, and overall accuracy.</p>
 #&gt; Chain 1: Iteration: 1800 / 2000 [ 90%]  (Sampling)
 #&gt; Chain 1: Iteration: 2000 / 2000 [100%]  (Sampling)
 #&gt; Chain 1: 
-#&gt; Chain 1:  Elapsed Time: 0.018535 seconds (Warm-up)
-#&gt; Chain 1:                0.020981 seconds (Sampling)
-#&gt; Chain 1:                0.039516 seconds (Total)
+#&gt; Chain 1:  Elapsed Time: 0.018331 seconds (Warm-up)
+#&gt; Chain 1:                0.020853 seconds (Sampling)
+#&gt; Chain 1:                0.039184 seconds (Total)
 #&gt; Chain 1: 
 #&gt; 
 #&gt; SAMPLING FOR MODEL 'bernoulli' NOW (CHAIN 2).
@@ -216,9 +216,9 @@ sensitivity, specificity, and overall accuracy.</p>
 #&gt; Chain 2: Iteration: 1800 / 2000 [ 90%]  (Sampling)
 #&gt; Chain 2: Iteration: 2000 / 2000 [100%]  (Sampling)
 #&gt; Chain 2: 
-#&gt; Chain 2:  Elapsed Time: 0.017559 seconds (Warm-up)
-#&gt; Chain 2:                0.016066 seconds (Sampling)
-#&gt; Chain 2:                0.033625 seconds (Total)
+#&gt; Chain 2:  Elapsed Time: 0.017304 seconds (Warm-up)
+#&gt; Chain 2:                0.016095 seconds (Sampling)
+#&gt; Chain 2:                0.033399 seconds (Total)
 #&gt; Chain 2: 
 #&gt; 
 #&gt; SAMPLING FOR MODEL 'bernoulli' NOW (CHAIN 3).
@@ -241,9 +241,9 @@ sensitivity, specificity, and overall accuracy.</p>
 #&gt; Chain 3: Iteration: 1800 / 2000 [ 90%]  (Sampling)
 #&gt; Chain 3: Iteration: 2000 / 2000 [100%]  (Sampling)
 #&gt; Chain 3: 
-#&gt; Chain 3:  Elapsed Time: 0.017609 seconds (Warm-up)
-#&gt; Chain 3:                0.018313 seconds (Sampling)
-#&gt; Chain 3:                0.035922 seconds (Total)
+#&gt; Chain 3:  Elapsed Time: 0.017939 seconds (Warm-up)
+#&gt; Chain 3:                0.018155 seconds (Sampling)
+#&gt; Chain 3:                0.036094 seconds (Total)
 #&gt; Chain 3: 
 #&gt; 
 #&gt; SAMPLING FOR MODEL 'bernoulli' NOW (CHAIN 4).
@@ -266,9 +266,9 @@ sensitivity, specificity, and overall accuracy.</p>
 #&gt; Chain 4: Iteration: 1800 / 2000 [ 90%]  (Sampling)
 #&gt; Chain 4: Iteration: 2000 / 2000 [100%]  (Sampling)
 #&gt; Chain 4: 
-#&gt; Chain 4:  Elapsed Time: 0.017129 seconds (Warm-up)
-#&gt; Chain 4:                0.018507 seconds (Sampling)
-#&gt; Chain 4:                0.035636 seconds (Total)
+#&gt; Chain 4:  Elapsed Time: 0.016852 seconds (Warm-up)
+#&gt; Chain 4:                0.018459 seconds (Sampling)
+#&gt; Chain 4:                0.035311 seconds (Total)
 #&gt; Chain 4: </div><div class='input'><span class='fu'>classification_summary</span><span class='op'>(</span>model <span class='op'>=</span> <span class='va'>example_model</span>, data <span class='op'>=</span> <span class='va'>example_data</span>, cutoff <span class='op'>=</span> <span class='fl'>0.5</span><span class='op'>)</span>                   
 </div><div class='output co'>#&gt; $confusion_matrix
 #&gt;  y 0  1
