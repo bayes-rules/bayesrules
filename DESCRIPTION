@@ -1,24 +1,23 @@
 Package: bayesrules
 Type: Package
 Title: Datasets and Supplemental Functions from Bayes Rules! Book
-Version: 0.0.0.9000
+Version: 0.0.1
 Authors@R: c(
     person("Mine", "Dogucu", , "mdogucu@uci.edu", c("aut", "cre"), comment = c(ORCID = "0000-0002-8007-934X")),
     person("Alicia", "Johnson", , role = "aut"),
     person("Miles", "Ott", , role = "aut", comment = c(ORCID = "0000-0003-4457-6565"))
     )
 Description: Provides datasets and functions used for analysis 
-  and visualizations in the Bayes Rules! book.
+  and visualizations in the Bayes Rules! book (<https://www.bayesrulesbook.com>). 
+  The package contains a set of functions that summarize and plot Bayesian models from some conjugate families 
+  and another set of functions for evaluation of some Bayesian models.
 License: GPL (>= 3)
 Encoding: UTF-8
 LazyData: true
 RoxygenNote: 7.1.1
-URL: https://github.com/mdogucu/bayesrules
-BugReports: https://github.com/mdogucu/bayesrules/issues
 Suggests: 
     knitr,
     rmarkdown
-VignetteBuilder: knitr
 Imports: 
     ggplot2,
     janitor,
@@ -31,3 +30,6 @@ Imports:
     groupdata2
 Depends: 
     R (>= 2.10)
+URL: https://bayes-rules.github.io/bayesrules/docs/, https://github.com/bayes-rules/bayesrules/
+BugReports: https://github.com/bayes-rules/bayesrules/issues
+VignetteBuilder: knitr
