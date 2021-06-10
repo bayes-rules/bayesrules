@@ -19,11 +19,11 @@ library(bayesrules)
 ```
 
 The **bayesrules** package has a set of functions that support exploring Bayesian models from three conjugate families: **Beta-Binomial**, **Gamma-Poisson**, and **Normal-Normal**. 
-The functions either help with plotting (prior, likelihood, and/or posterior) or summarizing the descriptives (mean, mode, variance, and sd) of prior and/or posterior. 
+The functions either help with plotting (prior, likelihood, and/or posterior) or summarizing the descriptives (mean, mode, variance, and sd) of the prior and/or posterior. 
 
 ## The Beta-Binomial Model
 
-We use the Beta-Binomial Model to show the different set of functions and the arguments.
+We use the Beta-Binomial model to show the different set of functions and the arguments.
 
 ### Prior
 
@@ -38,7 +38,7 @@ summarize_beta(alpha = 3, beta = 13)
 
 ### Likelihood
 
-In addition `plot_binomial_likelihood()` helps users visualize the likelihood function and shows the maximum likelihood estimation.
+In addition, `plot_binomial_likelihood()` helps users visualize the Binomial likelihood function and shows the maximum likelihood estimate.
 
 ```{r fig.align='center', fig.height=4, fig.width=5, message = FALSE}
 plot_binomial_likelihood(y = 3, n = 15, mle = TRUE)

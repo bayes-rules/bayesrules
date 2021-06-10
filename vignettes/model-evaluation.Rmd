@@ -19,8 +19,8 @@ knitr::opts_chunk$set(
 library(bayesrules)
 ```
 
-For Bayesian model evaluation **bayesrules** package has three functions `prediction_summary()`, 
-`classification_summary()` and `naive_classification_summary()` as well as their cross-validation counterparts as `prediction_summary_cv()`, `classification_summary_cv()`, and `naive_classification_summary_cv()` respectively. 
+For Bayesian model evaluation, the **bayesrules** package has three functions `prediction_summary()`, 
+`classification_summary()` and `naive_classification_summary()` as well as their cross-validation counterparts `prediction_summary_cv()`, `classification_summary_cv()`, and `naive_classification_summary_cv()` respectively. 
 
 
 <style type="text/css">
@@ -87,7 +87,7 @@ prediction_summary(example_model, example_data,
 ```
 
 
-Similarly, `prediction_summary_cv()` returns the 4 cross-validated measures of the model_s posterior prediction quality for each fold as well as a pooled result. 
+Similarly, `prediction_summary_cv()` returns the 4 cross-validated measures of a model's posterior prediction quality for each fold as well as a pooled result. 
 The `k` argument represents the number of folds to use for cross-validation.
 
 ```{r comment =""}
@@ -99,7 +99,7 @@ prediction_summary_cv(model = example_model, data = example_data,
 
 ## Classification Summary
 
-Given a set of observed data including a binary response variable y and an rstanreg model of y, `classification_summary()` function returns summaries of the model's posterior classification quality. These summaries include a **confusion matrix** as well as estimates of the model's **sensitivity**, **specificity**, and **overall accuracy**.
+Given a set of observed data including a binary response variable y and an rstanreg model of y, the `classification_summary()` function returns summaries of the model's posterior classification quality. These summaries include a **confusion matrix** as well as estimates of the model's **sensitivity**, **specificity**, and **overall accuracy**.
 The `cutoff` argument represents the probability cutoff to classify a new case as positive.
 
 ```{r comment =""}
@@ -130,7 +130,7 @@ classification_summary_cv(model = example_model, data = example_data, k = 2, cut
 
 ## Naive Classification Summary
 
-Given a set of observed data including a categorical response variable y and a naiveBayes model of y, naive_classification_summary() function returns summaries of the model's posterior classification quality. These summaries include a **confusion matrix** as well as an estimate of the model's overall **accuracy**.
+Given a set of observed data including a categorical response variable y and a naiveBayes model of y, the `naive_classification_summary()` function returns summaries of the model's posterior classification quality. These summaries include a **confusion matrix** as well as an estimate of the model's overall **accuracy**.
 
 ```{r comment=""}
 # Data
