@@ -16,7 +16,7 @@ A data frame with 931 rows and 17 variables. Each row represents a single book c
   \item{explicit}{whether the book was challenged for sexually explicit material}
   \item{antifamily}{whether the book was challenged for anti-family material}
   \item{occult}{whether the book was challenged for occult material}
-  \item{language}{whether the book was challenged for innapropriate language}
+  \item{language}{whether the book was challenged for inapropriate language}
   \item{lgbtq}{whether the book was challenged for LGBTQ material}
   \item{violent}{whether the book was challenged for violent material}
   \item{state}{US state in which the challenge was made}

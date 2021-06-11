@@ -26,7 +26,7 @@ functions that are used in the book. You can find vignettes on the [package webs
 
 ## Installation
 
-You can install the development version from Github. You would also need to install the devtools package if you do not have it installed already.
+You can install the development version from GitHub. You would also need to install the devtools package if you do not have it installed already.
 
 ``` r
 #install.packages("devtools") 
