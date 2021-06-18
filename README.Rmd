@@ -9,13 +9,14 @@ knitr::opts_chunk$set(
   collapse = TRUE,
   comment = "#>",
   fig.path = "man/figures/README-",
-  out.width = "100%"
+  out.width = "80%"
 )
 ```
-# bayesrules
+# bayesrules <<img src="man/figures/bayes-rules-hex.png" align="right" alt="a hex shaped logo with shiny green-pink disco ball and purple starry background. There is text that says Bayes Rules!" width="120" />
 
 <!-- badges: start -->
 [![R-CMD-check](https://github.com/bayes-rules/bayesrules/workflows/R-CMD-check/badge.svg)](https://github.com/bayes-rules/bayesrules/actions)
+
 <!-- badges: end -->
 
 **bayesrules** is a package to supplement the [Bayes Rules!
