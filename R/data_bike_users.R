@@ -19,5 +19,5 @@
 #'   \item{user}{rider type (casual or registered)}
 #'   \item{rides}{number of bikeshare rides}
 #'   }
-#' @source Fanaee-T, Hadi and Gama, Joao (2013). Event labeling combining ensemble detectors and background knowledge. Progress in Artificial Intelligence. \url{https://archive.ics.uci.edu/ml/datasets/Bike+Sharing+Dataset}
+#' @source Fanaee-T, Hadi and Gama, Joao (2013). Event labeling combining ensemble detectors and background knowledge. Progress in Artificial Intelligence. \url{https://archive.ics.uci.edu/ml/datasets/Bike+Sharing+Dataset/}
 "bike_users"

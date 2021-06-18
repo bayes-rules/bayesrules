@@ -13,7 +13,7 @@ A data frame with 1794 rows and 3 variables:
 }
 }
 \source{
-<https://github.com/fivethirtyeight/data/tree/master/bechdel>
+<https://github.com/fivethirtyeight/data/tree/master/bechdel/>
 }
 \usage{
 bechdel

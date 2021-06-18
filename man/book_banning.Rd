@@ -29,7 +29,7 @@ A data frame with 931 rows and 17 variables. Each row represents a single book c
 \source{
 Shannon Fast and Thomas Hegland (2011). Book Challenges: A Statistical Examination. Project for Statistics 316-Advanced Statistical Modeling, St. Olaf College.
 Julie Legler and Paul Roback (2019). Broadening Your Statistical Horizons: Generalized Linear Models and Multilevel Models. \url{https://bookdown.org/roback/bookdown-bysh/}.
-\url{https://github.com/proback/BeyondMLR/blob/master/data/bookbanningNoTex.csv}
+\url{https://github.com/proback/BeyondMLR/blob/master/data/bookbanningNoTex.csv/}
 }
 \usage{
 book_banning

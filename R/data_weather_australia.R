@@ -27,5 +27,5 @@
 #'   \item{month}{the month of the date}
 #'   \item{day_of_year}{the day of the year}
 #'   }
-#' @source Data in the original weatherAUS data set were obtained from \url{https://www.bom.gov.au/climate/data}. Copyright Commonwealth of Australia 2010, Bureau of Meteorology.
+#' @source Data in the original weatherAUS data set were obtained from \url{https://www.bom.gov.au/climate/data/}. Copyright Commonwealth of Australia 2010, Bureau of Meteorology.
 "weather_australia"

@@ -31,7 +31,7 @@ A data frame with 1000 daily observations and 21 variables:
   }
 }
 \source{
-Data in the original weatherAUS data set were obtained from \url{https://www.bom.gov.au/climate/data}. Copyright Commonwealth of Australia 2010, Bureau of Meteorology.
+Data in the original weatherAUS data set were obtained from \url{https://www.bom.gov.au/climate/data/}. Copyright Commonwealth of Australia 2010, Bureau of Meteorology.
 }
 \usage{
 weather_perth

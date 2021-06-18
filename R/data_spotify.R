@@ -28,5 +28,5 @@
 #'   \item{tempo}{song tempo (beats per minute)}
 #'   \item{duration_ms}{song duration (ms)}
 #'   }
-#' @source \url{https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2020/2020-01-21/spotify_songs.csv}.
+#' @source \url{https://github.com/rfordatascience/tidytuesday/blob/master/data/2020/2020-01-21/spotify_songs.csv/}.
 "spotify"

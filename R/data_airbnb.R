@@ -21,6 +21,6 @@
 #' }
 #' @source Ly Trinh and Pony Ameri (2018). Airbnb Price Determinants: A Multilevel Modeling Approach. Project for Statistics 316-Advanced Statistical Modeling, St. Olaf College.
 #' Julie Legler and Paul Roback (2019). Broadening Your Statistical Horizons: Generalized Linear Models and Multilevel Models. \url{https://bookdown.org/roback/bookdown-bysh/}.
-#' \url{https://github.com/proback/BeyondMLR/blob/master/data/airbnb.csv}
+#' \url{https://github.com/proback/BeyondMLR/blob/master/data/airbnb.csv/}
 
 "airbnb"

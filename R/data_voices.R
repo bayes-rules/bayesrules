@@ -14,6 +14,6 @@
 #'   \item{pitch}{average voice pitch (Hz)}
 #'   }
 #' @source Winter, B., & Grawunder, S. (2012). The Phonetic Profile of Korean Formal and Informal Speech Registers. Journal of Phonetics, 40, 808-815. 
-#' \url{http://www.bodowinter.com/uploads/1/2/9/3/129362560/politeness_data.csv}.
-#' \url{https://web.stanford.edu/class/psych252/section/Mixed_models_tutorial.html}.
+#' \url{https://bodo-winter.net/data_and_scripts/POP.csv/}.
+#' \url{https://bodo-winter.net/tutorial/bw_LME_tutorial2.pdf}.
 "voices"

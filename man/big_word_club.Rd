@@ -42,7 +42,7 @@ A data frame with 818 student-level observations and 31 variables:
   }
 }
 \source{
-These data correspond to the following study: Ariel Kalil, Susan Mayer, Philip Oreopoulos (2020). Closing the word gap with Big Word Club: Evaluating the Impact of a Tech-Based Early Childhood Vocabulary Program. Data was obtained through the was obtained through the Inter-university Consortium for Political and Social Research (ICPSR) \url{https://www.openicpsr.org/openicpsr/project/117330/version/V1/view}.
+These data correspond to the following study: Ariel Kalil, Susan Mayer, Philip Oreopoulos (2020). Closing the word gap with Big Word Club: Evaluating the Impact of a Tech-Based Early Childhood Vocabulary Program. Data was obtained through the was obtained through the Inter-university Consortium for Political and Social Research (ICPSR) \url{https://www.openicpsr.org/openicpsr/project/117330/version/V1/view/}.
 }
 \usage{
 big_word_club

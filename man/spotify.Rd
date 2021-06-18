@@ -33,7 +33,7 @@ A data frame with 350 songs (or tracks) and 23 variables:
   }
 }
 \source{
-\url{https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2020/2020-01-21/spotify_songs.csv}.
+\url{https://github.com/rfordatascience/tidytuesday/blob/master/data/2020/2020-01-21/spotify_songs.csv/}.
 }
 \usage{
 spotify

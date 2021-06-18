@@ -17,7 +17,7 @@ A data frame with 18706 rows and 7 variables. Each row represents observations f
   }
 }
 \source{
-\url{https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2019/2019-06-18/bird_counts.csv}.
+\url{https://github.com/rfordatascience/tidytuesday/blob/master/data/2019/2019-06-18/bird_counts.csv/}.
 }
 \usage{
 bird_counts

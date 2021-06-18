@@ -32,7 +32,7 @@ A data frame with 300 daily observations and 22 variables from 3 Australian weat
   }
 }
 \source{
-Data in the original weatherAUS data set were obtained from \url{https://www.bom.gov.au/climate/data}. Copyright Commonwealth of Australia 2010, Bureau of Meteorology.
+Data in the original weatherAUS data set were obtained from \url{https://www.bom.gov.au/climate/data/}. Copyright Commonwealth of Australia 2010, Bureau of Meteorology.
 }
 \usage{
 weather_australia

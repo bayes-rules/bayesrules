@@ -15,7 +15,7 @@ A data frame with 18 rows and 5 variables. Each row represents loon observations
   }
 }
 \source{
-\url{https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2019/2019-06-18/bird_counts.csv}.
+\url{https://github.com/rfordatascience/tidytuesday/blob/master/data/2019/2019-06-18/bird_counts.csv}.
 }
 \usage{
 loons

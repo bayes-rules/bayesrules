@@ -13,5 +13,5 @@
 #'   \item{count_per_hour}{count divided by hours}
 #'   \item{count_per_week}{count_per_hour multiplied by 168 hours per week}
 #'   }
-#' @source \url{https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2019/2019-06-18/bird_counts.csv}.
+#' @source \url{https://github.com/rfordatascience/tidytuesday/blob/master/data/2019/2019-06-18/bird_counts.csv/}.
 "bird_counts"

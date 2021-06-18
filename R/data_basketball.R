@@ -1,6 +1,6 @@
 #' WNBA Basketball Data
 #' 
-#' The WNBA Basketball Data was scraped from https://www.basketball-reference.com/wnba/players/ and contains information on basketball players from the 2019 season.
+#' The WNBA Basketball Data was scraped from \url{https://www.basketball-reference.com/wnba/players/} and contains information on basketball players from the 2019 season.
 #' 
 #' @format A data frame with 146 rows and 30 variables. Each row represents a single WNBA basketball player. The variables on each player are as follows.
 #' \describe{
@@ -37,6 +37,6 @@
 #'   \item{total_minutes}{total number of minutes played throughout the season}
 #'   \item{starter}{whether or not the player started in more than half of the games they played}
 #' }
-#' @source  \url{https://www.basketball-reference.com}
+#' @source  \url{https://www.basketball-reference.com/}
 
 "basketball"

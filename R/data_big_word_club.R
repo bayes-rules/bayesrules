@@ -37,5 +37,5 @@
 #'   \item{t_years_experience}{teacher's number of years of teaching experience}
 #'   \item{score_pct_change}{percent change in scores before and after the program}
 #'   }
-#' @source These data correspond to the following study: Ariel Kalil, Susan Mayer, Philip Oreopoulos (2020). Closing the word gap with Big Word Club: Evaluating the Impact of a Tech-Based Early Childhood Vocabulary Program. Data was obtained through the was obtained through the Inter-university Consortium for Political and Social Research (ICPSR) \url{https://www.openicpsr.org/openicpsr/project/117330/version/V1/view}.
+#' @source These data correspond to the following study: Ariel Kalil, Susan Mayer, Philip Oreopoulos (2020). Closing the word gap with Big Word Club: Evaluating the Impact of a Tech-Based Early Childhood Vocabulary Program. Data was obtained through the was obtained through the Inter-university Consortium for Political and Social Research (ICPSR) \url{https://www.openicpsr.org/openicpsr/project/117330/version/V1/view/}.
 "big_word_club"

@@ -42,12 +42,12 @@ A data frame with 146 rows and 30 variables. Each row represents a single WNBA b
 }
 }
 \source{
-\url{https://www.basketball-reference.com}
+\url{https://www.basketball-reference.com/}
 }
 \usage{
 basketball
 }
 \description{
-The WNBA Basketball Data was scraped from https://www.basketball-reference.com/wnba/players/ and contains information on basketball players from the 2019 season.
+The WNBA Basketball Data was scraped from \url{https://www.basketball-reference.com/wnba/players/} and contains information on basketball players from the 2019 season.
 }
 \keyword{datasets}

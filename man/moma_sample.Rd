@@ -20,7 +20,7 @@ A data frame with 100 rows and 10 variables. Each row represents an individual a
   }
 }
 \source{
-\url{https://media.githubusercontent.com/media/MuseumofModernArt/collection/master/Artworks.csv}.
+\url{https://github.com/MuseumofModernArt/collection/blob/master/Artworks.csv/}.
 }
 \usage{
 moma_sample

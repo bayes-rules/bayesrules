@@ -21,7 +21,7 @@ A data frame with 10964 rows and 11 variables. Each row represents an individual
   }
 }
 \source{
-\url{https://media.githubusercontent.com/media/MuseumofModernArt/collection/master/Artworks.csv}.
+\url{https://github.com/MuseumofModernArt/collection/blob/master/Artworks.csv/}.
 }
 \usage{
 moma

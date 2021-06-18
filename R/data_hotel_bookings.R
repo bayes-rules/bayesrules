@@ -39,5 +39,5 @@
 #'   }
 #' @source 
 #' Nuno Antonio, Ana de Almeida, and Luis Nunes (2019). "Hotel booking demand datasets." Data in Brief (22): 41-49.
-#' \url{https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2020/2020-02-11/hotels.csv}.
+#' \url{https://github.com/rfordatascience/tidytuesday/blob/master/data/2020/2020-02-11/hotels.csv/}.
 "hotel_bookings"

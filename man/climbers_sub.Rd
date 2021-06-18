@@ -34,7 +34,7 @@ A data frame with 2076 observations (1 per climber) and 22 variables:
   }
 }
 \source{
-Original source: \url{https://www.himalayandatabase.com/}. Complete dataset distributed by: \url{https://github.com/rfordatascience/tidytuesday/tree/master/data/2020/2020-09-22}.
+Original source: \url{https://www.himalayandatabase.com/}. Complete dataset distributed by: \url{https://github.com/rfordatascience/tidytuesday/tree/master/data/2020/2020-09-22/}.
 }
 \usage{
 climbers_sub

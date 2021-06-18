@@ -11,5 +11,5 @@
 #'   \item{historical}{political leaning of the state over time (gop = Republican, dem = Democrat, swing = swing state)}
 #'   \item{percent_urban}{percent of state's residents that live in urban areas (by the 2010 census)}
 #'   }
-#' @source Data on LGBTQ+ laws were obtained from Warbelow, Sarah, Courtnay Avant, and Colin Kutney (2020). 2019 State Equality Index. Washington, DC. Human Rights Campaign Foundation. \url{https://assets2.hrc.org/files/assets/resources/HRC-SEI-2019-Report.pdf?_ga=2.148925686.1325740687.1594310864-1928808113.1594310864&_gac=1.213124768.1594312278.EAIaIQobChMI9dP2hMzA6gIVkcDACh21GgLEEAAYASAAEgJiJvD_BwE}. Data on urban residency obtained from \url{https://www.icip.iastate.edu/tables/population/urban-pct-states}. 
+#' @source Data on LGBTQ+ laws were obtained from Warbelow, Sarah, Courtnay Avant, and Colin Kutney (2020). 2019 State Equality Index. Washington, DC. Human Rights Campaign Foundation. \url{https://assets2.hrc.org/files/assets/resources/HRC-SEI-2019-Report.pdf?_ga=2.148925686.1325740687.1594310864-1928808113.1594310864&_gac=1.213124768.1594312278.EAIaIQobChMI9dP2hMzA6gIVkcDACh21GgLEEAAYASAAEgJiJvD_BwE/}. Data on urban residency obtained from \url{https://www.icip.iastate.edu/tables/population/urban-pct-states/}. 
 "equality_index"
