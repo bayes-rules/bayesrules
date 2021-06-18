@@ -1,7 +1,7 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
-# bayesrules &lt;<img src="man/figures/bayes-rules-hex.png" align="right" alt="a hex shaped logo with shiny green-pink disco ball and purple starry background. There is text that says Bayes Rules!" width="120" />
+# bayesrules <img src="man/figures/bayes-rules-hex.png" align="right" alt="a hex shaped logo with shiny green-pink disco ball and purple starry background. There is text that says Bayes Rules!" width="120" />
 
 <!-- badges: start -->
 
