@@ -168,19 +168,19 @@ naiveBayes
 <span id="cb2-10"><a href="#cb2-10"></a><span class="kw">prediction_summary</span>(example_model, example_data, </span>
 <span id="cb2-11"><a href="#cb2-11"></a>                   <span class="dt">prob_inner =</span> <span class="fl">0.6</span>, <span class="dt">prob_outer =</span> <span class="fl">0.80</span>, </span>
 <span id="cb2-12"><a href="#cb2-12"></a>                   <span class="dt">stable =</span> <span class="ot">TRUE</span>)</span>
-<span id="cb2-13"><a href="#cb2-13"></a>       mae mae_scaled within_<span class="dv">60</span> within_<span class="dv">80</span></span>
-<span id="cb2-14"><a href="#cb2-14"></a><span class="dv">1</span> <span class="fl">2.030284</span>  <span class="fl">0.5796324</span>      <span class="fl">0.65</span>       <span class="fl">0.9</span></span></code></pre></div>
+<span id="cb2-13"><a href="#cb2-13"></a>     mae mae_scaled within_<span class="dv">60</span> within_<span class="dv">80</span></span>
+<span id="cb2-14"><a href="#cb2-14"></a><span class="dv">1</span> <span class="fl">4.0336</span>   <span class="fl">1.246907</span>      <span class="fl">0.55</span>      <span class="fl">0.95</span></span></code></pre></div>
 <p>Similarly, <code><a href="../reference/prediction_summary_cv.html">prediction_summary_cv()</a></code> returns the 4 cross-validated measures of a model’s posterior prediction quality for each fold as well as a pooled result. The <code>k</code> argument represents the number of folds to use for cross-validation.</p>
 <div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1"></a><span class="kw">prediction_summary_cv</span>(<span class="dt">model =</span> example_model, <span class="dt">data =</span> example_data, </span>
 <span id="cb3-2"><a href="#cb3-2"></a>                      <span class="dt">k =</span> <span class="dv">2</span>, <span class="dt">prob_inner =</span> <span class="fl">0.6</span>, <span class="dt">prob_outer =</span> <span class="fl">0.80</span>)</span>
 <span id="cb3-3"><a href="#cb3-3"></a><span class="op">$</span>folds</span>
 <span id="cb3-4"><a href="#cb3-4"></a>  fold      mae mae_scaled within_<span class="dv">60</span> within_<span class="dv">80</span></span>
-<span id="cb3-5"><a href="#cb3-5"></a><span class="dv">1</span>    <span class="dv">1</span> <span class="fl">2.723958</span>  <span class="fl">0.6315139</span>       <span class="fl">0.6</span>       <span class="fl">0.8</span></span>
-<span id="cb3-6"><a href="#cb3-6"></a><span class="dv">2</span>    <span class="dv">2</span> <span class="fl">2.417747</span>  <span class="fl">0.3178638</span>       <span class="fl">0.8</span>       <span class="fl">1.0</span></span>
+<span id="cb3-5"><a href="#cb3-5"></a><span class="dv">1</span>    <span class="dv">1</span> <span class="fl">3.833566</span>  <span class="fl">0.6461875</span>       <span class="fl">0.6</span>       <span class="fl">0.9</span></span>
+<span id="cb3-6"><a href="#cb3-6"></a><span class="dv">2</span>    <span class="dv">2</span> <span class="fl">3.757893</span>  <span class="fl">0.5409914</span>       <span class="fl">0.8</span>       <span class="fl">1.0</span></span>
 <span id="cb3-7"><a href="#cb3-7"></a></span>
 <span id="cb3-8"><a href="#cb3-8"></a><span class="op">$</span>cv</span>
-<span id="cb3-9"><a href="#cb3-9"></a>       mae mae_scaled within_<span class="dv">60</span> within_<span class="dv">80</span></span>
-<span id="cb3-10"><a href="#cb3-10"></a><span class="dv">1</span> <span class="fl">2.570853</span>  <span class="fl">0.4746889</span>       <span class="fl">0.7</span>       <span class="fl">0.9</span></span></code></pre></div>
+<span id="cb3-9"><a href="#cb3-9"></a>      mae mae_scaled within_<span class="dv">60</span> within_<span class="dv">80</span></span>
+<span id="cb3-10"><a href="#cb3-10"></a><span class="dv">1</span> <span class="fl">3.79573</span>  <span class="fl">0.5935894</span>       <span class="fl">0.7</span>      <span class="fl">0.95</span></span></code></pre></div>
 </div>
 <div id="classification-summary" class="section level2">
 <h2 class="hasAnchor">
@@ -201,25 +201,25 @@ naiveBayes
 <span id="cb4-13"><a href="#cb4-13"></a><span class="co"># Prediction Summary</span></span>
 <span id="cb4-14"><a href="#cb4-14"></a><span class="kw">classification_summary</span>(<span class="dt">model =</span> example_model, <span class="dt">data =</span> example_data, <span class="dt">cutoff =</span> <span class="fl">0.5</span>)                   </span>
 <span id="cb4-15"><a href="#cb4-15"></a><span class="op">$</span>confusion_matrix</span>
-<span id="cb4-16"><a href="#cb4-16"></a> y  <span class="dv">0</span>  <span class="dv">1</span></span>
-<span id="cb4-17"><a href="#cb4-17"></a> <span class="dv">0</span> <span class="dv">10</span>  <span class="dv">0</span></span>
-<span id="cb4-18"><a href="#cb4-18"></a> <span class="dv">1</span>  <span class="dv">0</span> <span class="dv">10</span></span>
+<span id="cb4-16"><a href="#cb4-16"></a> y <span class="dv">0</span> <span class="dv">1</span></span>
+<span id="cb4-17"><a href="#cb4-17"></a> <span class="dv">0</span> <span class="dv">8</span> <span class="dv">2</span></span>
+<span id="cb4-18"><a href="#cb4-18"></a> <span class="dv">1</span> <span class="dv">1</span> <span class="dv">9</span></span>
 <span id="cb4-19"><a href="#cb4-19"></a></span>
 <span id="cb4-20"><a href="#cb4-20"></a><span class="op">$</span>accuracy_rates</span>
-<span id="cb4-21"><a href="#cb4-21"></a>                  </span>
-<span id="cb4-22"><a href="#cb4-22"></a>sensitivity      <span class="dv">1</span></span>
-<span id="cb4-23"><a href="#cb4-23"></a>specificity      <span class="dv">1</span></span>
-<span id="cb4-24"><a href="#cb4-24"></a>overall_accuracy <span class="dv">1</span></span></code></pre></div>
+<span id="cb4-21"><a href="#cb4-21"></a>                     </span>
+<span id="cb4-22"><a href="#cb4-22"></a>sensitivity      <span class="fl">0.90</span></span>
+<span id="cb4-23"><a href="#cb4-23"></a>specificity      <span class="fl">0.80</span></span>
+<span id="cb4-24"><a href="#cb4-24"></a>overall_accuracy <span class="fl">0.85</span></span></code></pre></div>
 <p>The <code><a href="../reference/classification_summary_cv.html">classification_summary_cv()</a></code> returns the same measures but for cross-validated estimates. The <code>k</code> argument represents the number of folds to use for cross-validation.</p>
 <div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1"></a><span class="kw">classification_summary_cv</span>(<span class="dt">model =</span> example_model, <span class="dt">data =</span> example_data, <span class="dt">k =</span> <span class="dv">2</span>, <span class="dt">cutoff =</span> <span class="fl">0.5</span>)                   </span>
 <span id="cb5-2"><a href="#cb5-2"></a><span class="op">$</span>folds</span>
 <span id="cb5-3"><a href="#cb5-3"></a>  fold sensitivity specificity overall_accuracy</span>
-<span id="cb5-4"><a href="#cb5-4"></a><span class="dv">1</span>    <span class="dv">1</span>           <span class="dv">1</span>           <span class="dv">1</span>                <span class="dv">1</span></span>
-<span id="cb5-5"><a href="#cb5-5"></a><span class="dv">2</span>    <span class="dv">2</span>           <span class="dv">1</span>           <span class="dv">1</span>                <span class="dv">1</span></span>
+<span id="cb5-4"><a href="#cb5-4"></a><span class="dv">1</span>    <span class="dv">1</span>   <span class="fl">0.7142857</span>   <span class="fl">1.0000000</span>              <span class="fl">0.8</span></span>
+<span id="cb5-5"><a href="#cb5-5"></a><span class="dv">2</span>    <span class="dv">2</span>   <span class="fl">1.0000000</span>   <span class="fl">0.5714286</span>              <span class="fl">0.7</span></span>
 <span id="cb5-6"><a href="#cb5-6"></a></span>
 <span id="cb5-7"><a href="#cb5-7"></a><span class="op">$</span>cv</span>
 <span id="cb5-8"><a href="#cb5-8"></a>  sensitivity specificity overall_accuracy</span>
-<span id="cb5-9"><a href="#cb5-9"></a><span class="dv">1</span>           <span class="dv">1</span>           <span class="dv">1</span>                <span class="dv">1</span></span></code></pre></div>
+<span id="cb5-9"><a href="#cb5-9"></a><span class="dv">1</span>   <span class="fl">0.8571429</span>   <span class="fl">0.7857143</span>             <span class="fl">0.75</span></span></code></pre></div>
 </div>
 <div id="naive-classification-summary" class="section level2">
 <h2 class="hasAnchor">
@@ -245,15 +245,15 @@ naiveBayes
 <div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1"></a><span class="kw">naive_classification_summary_cv</span>(<span class="dt">model =</span> example_model, <span class="dt">data =</span> penguins_bayes, </span>
 <span id="cb7-2"><a href="#cb7-2"></a>                                <span class="dt">y =</span> <span class="st">"species"</span>, <span class="dt">k =</span> <span class="dv">2</span>)</span>
 <span id="cb7-3"><a href="#cb7-3"></a><span class="op">$</span>folds</span>
-<span id="cb7-4"><a href="#cb7-4"></a>  fold    Adelie  Chinstrap    Gentoo overall_accuracy</span>
-<span id="cb7-5"><a href="#cb7-5"></a><span class="dv">1</span>    <span class="dv">1</span> <span class="fl">0.9855072</span> <span class="fl">0.35135135</span> <span class="fl">0.8030303</span>        <span class="fl">0.7790698</span></span>
-<span id="cb7-6"><a href="#cb7-6"></a><span class="dv">2</span>    <span class="dv">2</span> <span class="fl">0.9036145</span> <span class="fl">0.03225806</span> <span class="fl">0.9310345</span>        <span class="fl">0.7558140</span></span>
+<span id="cb7-4"><a href="#cb7-4"></a>  fold Adelie  Chinstrap   Gentoo overall_accuracy</span>
+<span id="cb7-5"><a href="#cb7-5"></a><span class="dv">1</span>    <span class="dv">1</span>    <span class="fl">1.0</span> <span class="fl">0.08333333</span> <span class="fl">0.828125</span>         <span class="fl">0.744186</span></span>
+<span id="cb7-6"><a href="#cb7-6"></a><span class="dv">2</span>    <span class="dv">2</span>    <span class="fl">0.9</span> <span class="fl">0.09375000</span> <span class="fl">0.900000</span>         <span class="fl">0.750000</span></span>
 <span id="cb7-7"><a href="#cb7-7"></a></span>
 <span id="cb7-8"><a href="#cb7-8"></a><span class="op">$</span>cv</span>
-<span id="cb7-9"><a href="#cb7-9"></a>   species       Adelie   Chinstrap       Gentoo</span>
-<span id="cb7-10"><a href="#cb7-10"></a>    Adelie <span class="fl">94.08</span><span class="op">% (143)  0.00%</span><span class="st">  </span>(<span class="dv">0</span>)  <span class="fl">5.92</span>%   (<span class="dv">9</span>)</span>
-<span id="cb7-11"><a href="#cb7-11"></a> Chinstrap  <span class="fl">7.35</span><span class="op">%   (5) 20.59%</span><span class="st"> </span>(<span class="dv">14</span>) <span class="fl">72.06</span>%  (<span class="dv">49</span>)</span>
-<span id="cb7-12"><a href="#cb7-12"></a>    Gentoo  <span class="fl">6.45</span><span class="op">%   (8)  7.26%</span><span class="st">  </span>(<span class="dv">9</span>) <span class="fl">86.29</span>% (<span class="dv">107</span>)</span></code></pre></div>
+<span id="cb7-9"><a href="#cb7-9"></a>   species       Adelie Chinstrap       Gentoo</span>
+<span id="cb7-10"><a href="#cb7-10"></a>    Adelie <span class="fl">94.74</span><span class="op">% (144) 0.00%</span><span class="st"> </span>(<span class="dv">0</span>)  <span class="fl">5.26</span>%   (<span class="dv">8</span>)</span>
+<span id="cb7-11"><a href="#cb7-11"></a> Chinstrap  <span class="fl">7.35</span><span class="op">%   (5) 8.82%</span><span class="st"> </span>(<span class="dv">6</span>) <span class="fl">83.82</span>%  (<span class="dv">57</span>)</span>
+<span id="cb7-12"><a href="#cb7-12"></a>    Gentoo  <span class="fl">8.87</span><span class="op">%  (11) 4.84%</span><span class="st"> </span>(<span class="dv">6</span>) <span class="fl">86.29</span>% (<span class="dv">107</span>)</span></code></pre></div>
 </div>
   </div>
 
