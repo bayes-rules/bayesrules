@@ -6,7 +6,8 @@
 <!-- badges: start -->
 
 [![R-CMD-check](https://github.com/bayes-rules/bayesrules/workflows/R-CMD-check/badge.svg)](https://github.com/bayes-rules/bayesrules/actions)
-
+[![CRAN
+status](https://www.r-pkg.org/badges/version/bayesrules)](https://cran.r-project.org/package=bayesrules)
 <!-- badges: end -->
 
 **bayesrules** is a package to supplement the [Bayes Rules!
@@ -17,6 +18,12 @@ functions that are used in the book. You can find vignettes on the
 <hr>
 
 ## Installation
+
+You can install bayesrules from CRAN.
+
+``` r
+install.packages("bayesrules") 
+```
 
 You can install the development version from GitHub. You would also need
 to install the devtools package if you do not have it installed already.
