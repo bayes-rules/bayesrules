@@ -10,7 +10,7 @@
 status](https://www.r-pkg.org/badges/version/bayesrules)](https://cran.r-project.org/package=bayesrules)
 <!-- badges: end -->
 
-**bayesrules** is a package to supplement the [Bayes Rules!
+**bayesrules** is an R package to supplement the [Bayes Rules!
 book](https://www.bayesrulesbook.com/). It contains datasets and
 functions that are used in the book. You can find vignettes on the
 [package website](https://bayes-rules.github.io/bayesrules/docs/).
