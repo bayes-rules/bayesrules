@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>A collection of 150 news articles — fake_news • bayesrules</title>
+<title>Changelog • bayesrules</title>
 
 
 <!-- jquery -->
@@ -39,11 +39,7 @@
 
 
 
-<meta property="og:title" content="A collection of 150 news articles — fake_news" />
-<meta property="og:description" content="A dataset containing data behind the study
-&quot;FakeNewsNet: A Data Repository with News Content, Social Context and Spatialtemporal Information for Studying Fake News on Social Media&quot;
-https://arxiv.org/abs/1809.01286/.
-The news articles in this dataset were posted to Facebook in September 2016, in the run-up to the U.S. presidential election." />
+<meta property="og:title" content="Changelog" />
 
 
 
@@ -70,7 +66,7 @@ The news articles in this dataset were posted to Facebook in September 2016, in 
   <body data-spy="scroll" data-target="#toc">
     
 
-    <div class="container template-reference-topic">
+    <div class="container template-news">
       <header>
       <div class="navbar navbar-default navbar-fixed-top" role="navigation">
   <div class="container">
@@ -131,67 +127,27 @@ The news articles in this dataset were posted to Facebook in September 2016, in 
 <div class="row">
   <div class="col-md-9 contents">
     <div class="page-header">
-    <h1>A collection of 150 news articles</h1>
-    <small class="dont-index">Source: <a href='https://github.com/bayes-rules/bayesrules/blob/master/R/data_fake_news.R'><code>R/data_fake_news.R</code></a></small>
-    <div class="hidden name"><code>fake_news.Rd</code></div>
+      <h1 data-toc-skip>Changelog <small></small></h1>
+      <small>Source: <a href='https://github.com/bayes-rules/bayesrules/blob/master/NEWS.md'><code>NEWS.md</code></a></small>
     </div>
 
-    <div class="ref-description">
-    <p>A dataset containing data behind the study
-"FakeNewsNet: A Data Repository with News Content, Social Context and Spatialtemporal Information for Studying Fake News on Social Media"
-<a href='https://arxiv.org/abs/1809.01286/'>https://arxiv.org/abs/1809.01286/</a>.
-The news articles in this dataset were posted to Facebook in September 2016, in the run-up to the U.S. presidential election.</p>
-    </div>
-
-    <div class="ref-usage sourceCode"><pre class='sourceCode r'><code><span class='va'>fake_news</span></code></pre></div>
-
-
-    <h2 class="hasAnchor" id="format"><a class="anchor" href="#format"></a>Format</h2>
-
-    <p>A data frame with 150 rows and 6 variables:</p><dl>
-  <dt>title</dt><dd><p>The title of the news article</p></dd>
-  <dt>text</dt><dd><p>Text of the article</p></dd>
-  <dt>url</dt><dd><p>Hyperlink for the article</p></dd>
-  <dt>authors</dt><dd><p>Authors of the article</p></dd>
-  <dt>type</dt><dd><p>Binary variable indicating whether the article presents fake or real news(fake, real)</p></dd>
-  <dt>title_words</dt><dd><p>Number of words in the title</p></dd>
-  <dt>text_words</dt><dd><p>Number of words in the text</p></dd>
-  <dt>title_char</dt><dd><p>Number of characters in the title</p></dd>
-  <dt>text_char</dt><dd><p>Number of characters in the text</p></dd>
-  <dt>title_caps</dt><dd><p>Number of words that are all capital letters in the title</p></dd>
-  <dt>text_caps</dt><dd><p>Number of words that are all capital letters in the text</p></dd>
-  <dt>title_caps_percent</dt><dd><p>Percent of words that are all capital letters in the title</p></dd>
-  <dt>text_caps_percent</dt><dd><p>Percent of words that are all capital letters in the text</p></dd>
-  <dt>title_excl</dt><dd><p>Number of characters that are exclamation marks in the title</p></dd>
-  <dt>text_excl</dt><dd><p>Number of characters that are exclamation marks in the text</p></dd>
-  <dt>title_excl_percent</dt><dd><p>Percent of characters that are exclamation marks in the title</p></dd>
-  <dt>text_excl_percent</dt><dd><p>Percent of characters that are exclamation marks in the text</p></dd>
-  <dt>title_has_excl</dt><dd><p>Binary variable indicating whether the title of the article includes an exlamation point or not(TRUE, FALSE)</p></dd>
-  <dt>anger</dt><dd><p>Percent of words that are associated with anger</p></dd>
-  <dt>anticipation</dt><dd><p>Percent of words that are associated with anticipation</p></dd>
-  <dt>disgust</dt><dd><p>Percent of words that are associated with disgust</p></dd>
-  <dt>fear</dt><dd><p>Percent of words that are associated with fear</p></dd>
-  <dt>joy</dt><dd><p>Percent of words that are associated with joy</p></dd>
-  <dt>sadness</dt><dd><p>Percent of words that are associated with sadness</p></dd>
-  <dt>surprise</dt><dd><p>Percent of words that are associated with surprise</p></dd>
-  <dt>trust</dt><dd><p>Percent of words that are associated with trust</p></dd>
-  <dt>negative</dt><dd><p>Percent of words that have negative sentiment</p></dd>
-  <dt>positive</dt><dd><p>Percent of words that have positive sentiment</p></dd>
-  <dt>text_syllables</dt><dd><p>Number of syllables in text</p></dd>
-  <dt>text_syllables_per_word</dt><dd><p>Number of syllables per word in text</p></dd>
-
-</dl>
-
-    <h2 class="hasAnchor" id="source"><a class="anchor" href="#source"></a>Source</h2>
-
-    <p>Shu, K., Mahudeswaran, D., Wang, S., Lee, D. and Liu, H. (2018) FakeNewsNet: A Data Repository with News Content, Social Context and Dynamic Information for Studying Fake News on Social Media</p>
-
+    <div id="bayesrules-development-version" class="section level1">
+<h1 class="page-header" data-toc-text="development version">
+<a href="#bayesrules-development-version" class="anchor" aria-hidden="true"></a>bayesrules (development version)<small> Unreleased </small></h1>
+<div id="bug-fixes" class="section level2">
+<h2 class="hasAnchor">
+<a href="#bug-fixes" class="anchor" aria-hidden="true"></a>bug fixes</h2>
+<ul><li>Beta mode calculation has been fixed in <code><a href="../reference/summarize_beta.html">summarize_beta()</a></code> and <code><a href="../reference/summarize_beta_binomial.html">summarize_beta_binomial()</a></code> function for situations when alpha &lt; 1 and/or beta &lt; 1.</li>
+</ul></div>
+</div>
   </div>
+
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
     <nav id="toc" data-toggle="toc" class="sticky-top">
       <h2 data-toc-skip>Contents</h2>
     </nav>
   </div>
+
 </div>
 
 
