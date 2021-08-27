@@ -8,7 +8,7 @@ bibentry(bibtype = "Manual",
                           family = "Ott")),
   year         = "2021",
   url = "https://github.com/bayes-rules/bayesrules",
-  note = {R package version 0.0.2.9000},
+  note = "R package version 0.0.2.9000",
   header       = "To cite bayesrules package in publications use:",
   textVersion  =
   paste("Mine Dogucu, Alicia Johnson, Miles Ott (2021).",
