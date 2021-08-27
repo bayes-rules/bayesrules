@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Plot a Poisson Likelihood Function — plot_poisson_likelihood • bayesrules</title>
+<title>Changelog • bayesrules</title>
 
 
 <!-- jquery -->
@@ -39,9 +39,7 @@
 
 
 
-<meta property="og:title" content="Plot a Poisson Likelihood Function — plot_poisson_likelihood" />
-<meta property="og:description" content="Plots the Poisson likelihood function for variable \(\lambda\)
-given a vector of Poisson counts y." />
+<meta property="og:title" content="Changelog" />
 
 
 
@@ -60,7 +58,7 @@ given a vector of Poisson counts y." />
   </head>
 
   <body data-spy="scroll" data-target="#toc">
-    <div class="container template-reference-topic">
+    <div class="container template-news">
       <header>
       <div class="navbar navbar-default navbar-fixed-top" role="navigation">
   <div class="container">
@@ -127,44 +125,30 @@ given a vector of Poisson counts y." />
 <div class="row">
   <div class="col-md-9 contents">
     <div class="page-header">
-    <h1>Plot a Poisson Likelihood Function</h1>
-    <small class="dont-index">Source: <a href='https://github.com/bayes-rules/bayesrules/blob/master/R/plot_poisson_likelihood.R'><code>R/plot_poisson_likelihood.R</code></a></small>
-    <div class="hidden name"><code>plot_poisson_likelihood.Rd</code></div>
+      <h1 data-toc-skip>Changelog <small></small></h1>
+      <small>Source: <a href='https://github.com/bayes-rules/bayesrules/blob/master/NEWS.md'><code>NEWS.md</code></a></small>
     </div>
 
-    <div class="ref-description">
-    <p>Plots the Poisson likelihood function for variable \(\lambda\)
-given a vector of Poisson counts y.</p>
-    </div>
-
-    <pre class="usage"><span class='fu'>plot_poisson_likelihood</span><span class='op'>(</span><span class='va'>y</span>, lambda_upper_bound <span class='op'>=</span> <span class='fl'>10</span><span class='op'>)</span></pre>
-
-    <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
-    <table class="ref-arguments">
-    <colgroup><col class="name" /><col class="desc" /></colgroup>
-    <tr>
-      <th>y</th>
-      <td><p>vector of observed Poisson counts</p></td>
-    </tr>
-    <tr>
-      <th>lambda_upper_bound</th>
-      <td><p>upper bound for lambda values to display on x-axis</p></td>
-    </tr>
-    </table>
-
-    <h2 class="hasAnchor" id="value"><a class="anchor" href="#value"></a>Value</h2>
-
-    <p>a ggplot of Poisson likelihood</p>
-
-    <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'><span class='fu'>plot_poisson_likelihood</span><span class='op'>(</span>y <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='fl'>4</span>, <span class='fl'>2</span>, <span class='fl'>7</span><span class='op'>)</span>, lambda_upper_bound <span class='op'>=</span> <span class='fl'>10</span><span class='op'>)</span>
-</div><div class='img'><img src='plot_poisson_likelihood-1.png' alt='' width='700' height='433' /></div></pre>
+    <div id="bayesrules-development-version" class="section level1">
+<h1 class="page-header" data-toc-text="development version">
+<a href="#bayesrules-development-version" class="anchor"></a>bayesrules (development version)<small> Unreleased </small>
+</h1>
+<div id="bug-fixes" class="section level2">
+<h2 class="hasAnchor">
+<a href="#bug-fixes" class="anchor"></a>bug fixes</h2>
+<ul>
+<li>Beta mode calculation has been fixed in <code><a href="../reference/summarize_beta.html">summarize_beta()</a></code> and <code><a href="../reference/summarize_beta_binomial.html">summarize_beta_binomial()</a></code> function for situations when alpha &lt; 1 and/or beta &lt; 1.</li>
+</ul>
+</div>
+</div>
   </div>
+
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
     <nav id="toc" data-toggle="toc" class="sticky-top">
       <h2 data-toc-skip>Contents</h2>
     </nav>
   </div>
+
 </div>
 
 
