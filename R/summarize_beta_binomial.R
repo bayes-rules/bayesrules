@@ -27,7 +27,16 @@ summarize_beta_binomial <- function (alpha,
     a/(a + b)
   }
   beta_mode <- function(a, b) {
-    (a - 1)/(a + b - 2)
+    if(a < 1 & b <1){
+      mode <- "0 and 1"
+    }else if (a <= 1 & b > 1){
+      mode <- 0
+    }else if (a > 1 & b < 1){
+      mode <- 1
+    }
+    else{
+      mode <- (a - 1)/(a + b - 2)
+    }
   }
   beta_var <- function(a, b) {
     a * b/((a + b)^2 * (a + b + 1))

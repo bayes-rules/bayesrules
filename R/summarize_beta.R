@@ -15,9 +15,20 @@
 summarize_beta <- function (alpha, beta){
 
   mean <- alpha / (alpha + beta)
-  mode <- (alpha - 1)/(alpha + beta - 2)
   var  <-  alpha * beta / ((alpha + beta)^2 * (alpha + beta + 1))
   sd   <- sqrt(var)
+  
+  if(alpha < 1 & beta <1){
+    mode <- "0 and 1"
+  }else if (alpha <= 1 & beta > 1){
+    mode <- 0
+  }else if (alpha > 1 & beta < 1){
+    mode <- 1
+  }
+  else{
+    mode <- (alpha - 1)/(alpha + beta - 2)
+  }
+  
   return(data.frame(mean = mean,
                     mode = mode,
                     var = var,
