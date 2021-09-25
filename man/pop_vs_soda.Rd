@@ -14,7 +14,7 @@ A data frame with 374250 observations, one per survey respondent, and 4 variable
   }
 }
 \source{
-The survey responses were obtained at \url{http://popvssoda.com/} which is maintained by Alan McConchie.
+The survey responses were obtained at \url{https://popvssoda.com/} which is maintained by Alan McConchie.
 }
 \usage{
 pop_vs_soda

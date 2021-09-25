@@ -9,5 +9,5 @@
 #'   \item{word_for_cola}{how the respondent refers to fizzy cola drinks}
 #'   \item{pop}{whether or not the respondent refers to fizzy cola drinks as "pop"}
 #'   }
-#' @source The survey responses were obtained at \url{http://popvssoda.com/} which is maintained by Alan McConchie.
+#' @source The survey responses were obtained at \url{https://popvssoda.com/} which is maintained by Alan McConchie.
 "pop_vs_soda"

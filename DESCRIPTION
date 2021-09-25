@@ -1,7 +1,7 @@
 Package: bayesrules
 Type: Package
 Title: Datasets and Supplemental Functions from Bayes Rules! Book
-Version: 0.0.2.9000
+Version: 0.0.2
 Authors@R: c(
     person("Mine", "Dogucu", , "mdogucu@gmail.com", c("aut", "cre"), comment = c(ORCID = "0000-0002-8007-934X")),
     person("Alicia", "Johnson", , role = "aut"),
@@ -14,7 +14,7 @@ Description: Provides datasets and functions used for analysis
 License: GPL (>= 3)
 Encoding: UTF-8
 LazyData: true
-RoxygenNote: 7.1.1
+RoxygenNote: 7.1.2
 Suggests: 
     knitr,
     rmarkdown
