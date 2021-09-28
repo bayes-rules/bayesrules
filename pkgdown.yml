@@ -1,8 +1,8 @@
 pandoc: 2.7.3
 pkgdown: 1.6.1.9001
-pkgdown_sha: 9ac9c8d5a6ca30325100205161441df8cf427035
+pkgdown_sha: 632889250b23aae88d6b3adcc0afd48160cb17ca
 articles:
   conjugate-families: conjugate-families.html
   model-evaluation: model-evaluation.html
-last_built: 2021-09-25T02:31Z
+last_built: 2021-09-28T17:12Z
 
