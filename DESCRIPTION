@@ -1,7 +1,7 @@
 Package: bayesrules
 Type: Package
 Title: Datasets and Supplemental Functions from Bayes Rules! Book
-Version: 0.0.2
+Version: 0.0.3.9000
 Authors@R: c(
     person("Mine", "Dogucu", , "mdogucu@gmail.com", c("aut", "cre"), comment = c(ORCID = "0000-0002-8007-934X")),
     person("Alicia", "Johnson", , role = "aut"),

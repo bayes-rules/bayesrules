@@ -124,7 +124,8 @@ The `k` argument represents the number of folds to use for cross-validation.
 
 
 ```{r comment =""}
-classification_summary_cv(model = example_model, data = example_data, k = 2, cutoff = 0.5)                   
+classification_summary_cv(model = example_model, data = example_data,
+                          k = 2, cutoff = 0.5)                   
 ```
 
 
@@ -140,7 +141,8 @@ data(penguins_bayes, package = "bayesrules")
 example_model <- e1071::naiveBayes(species ~ bill_length_mm, data = penguins_bayes)
 
 # Naive Classification Summary
-naive_classification_summary(model = example_model, data = penguins_bayes, y = "species")
+naive_classification_summary(model = example_model, data = penguins_bayes, 
+                             y = "species")
 ```
 
 Similarly `naive_classification_summary_cv()` returns the cross validated confusion matrix. 
