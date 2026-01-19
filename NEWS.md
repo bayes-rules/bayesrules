@@ -2,9 +2,9 @@
 
 ## Documentation fixes
 
-- Outline the `NEWS.md` per CRAN policy
-- Quit the dollar sign in the `data_pulse_of_the_nation.Rd`
-
+- Outline the `NEWS.md` per CRAN policy.
+- Quit the dollar sign in the `data_pulse_of_the_nation.Rd`.
+- Update the url for `cherry_blossom_sample` data.
 
 # bayesrules 0.0.2 (2021-09-25)
 

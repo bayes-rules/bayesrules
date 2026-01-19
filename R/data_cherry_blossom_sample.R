@@ -11,5 +11,5 @@
 #'   \item{year}{year of the race}
 #'   \item{previous}{the number of previous years in which the subject ran in the race}
 #'   }
-#' @source Data in the original Cherry data set were obtained from \url{https://www.cherryblossom.org/post-race/race-results/}.
+#' @source Data in the original Cherry data set were obtained from \url{https://cherryblossom.org/post-race/race-results/}.
 "cherry_blossom_sample"

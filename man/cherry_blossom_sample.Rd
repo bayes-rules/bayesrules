@@ -16,7 +16,7 @@ A data frame with 252 Cherry Blossom outcomes and 7 variables:
   }
 }
 \source{
-Data in the original Cherry data set were obtained from \url{https://www.cherryblossom.org/post-race/race-results/}.
+Data in the original Cherry data set were obtained from \url{https://cherryblossom.org/post-race/race-results/}.
 }
 \usage{
 cherry_blossom_sample
