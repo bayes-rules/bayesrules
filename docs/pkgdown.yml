@@ -1,8 +1,7 @@
-pandoc: 2.14.0.3
-pkgdown: 2.0.2
+pandoc: 3.6.3
+pkgdown: 2.2.0
 pkgdown_sha: ~
 articles:
   conjugate-families: conjugate-families.html
   model-evaluation: model-evaluation.html
-last_built: 2022-03-14T16:27Z
-
+last_built: 2026-01-19T23:03Z
