@@ -17,6 +17,7 @@ knitr::opts_chunk$set(
 <!-- badges: start -->
 [![R-CMD-check](https://github.com/bayes-rules/bayesrules/workflows/R-CMD-check/badge.svg)](https://github.com/bayes-rules/bayesrules/actions)
 [![CRAN status](https://www.r-pkg.org/badges/version/bayesrules)](https://cran.r-project.org/package=bayesrules)
+[![R-CMD-check](https://github.com/bayes-rules/bayesrules/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/bayes-rules/bayesrules/actions/workflows/R-CMD-check.yaml)
 <!-- badges: end -->
 
 **bayesrules** is an R package to supplement the [Bayes Rules!
