@@ -7,7 +7,7 @@
 \format{
 A data frame with observations on 1000 survey respondents with 15 variables:
 \describe{
-  \item{income}{income in \out{&#36;}1000s}
+  \item{income}{income in \code{$}1000s}
   \item{age}{age in years}
   \item{party}{political party affiliation}
   \item{trump_approval}{approval level of Donald Trump's job performance}
