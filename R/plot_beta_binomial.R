@@ -2,7 +2,7 @@
 #'
 #' Consider a Beta-Binomial Bayesian model for parameter \eqn{\pi} with 
 #' a Beta(alpha, beta) prior on \eqn{\pi} and Binomial likelihood with n trials
-#' and y successes. Given information on the prior (alpha and data) and data (y and n),
+#' and y successes. Given information on the prior (alpha and beta) and data (y and n),
 #' this function produces a plot of any combination of the corresponding prior pdf, 
 #' scaled likelihood function, and posterior pdf.  All three are included by default.
 #'
